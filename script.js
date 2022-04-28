@@ -9,85 +9,134 @@ $(document).ready(function() {
     $('select[name^="121"]').change(check121Topics);
 });
 
-function checkPrevCourse() {
+function checkPrevCourse(event) {
     let resp = $('input[name="previousCourse"]:checked').val();
     console.log(resp);
-    showAndHide(resp, ['No'], [$('#prevExp')], []);
-    showAndHide(resp, ['Yes'], [$('#lastCourse')], [$('#prevExp')]);
+    if (resp == 'Yes') {
+        showQuestion($(event.target), $('#lastCourse'));
+    } else {
+        showQuestion($(event.target), $('#prevExp'));
+    }
 }
 
-function checkPrevExp() {
+function checkPrevExp(event) {
     let resp = $('input[name="previousExp"]:checked').val();
     console.log(resp);
-    showAndHide(resp, ['No'], [$('#result-121')], []);
-    showAndHide(resp, ['Yes'], [$('#121topics')], []);
+    if (resp == 'Yes') {
+        showQuestion($(event.target), $('#121topics'));
+    } else {
+        showQuestion($(event.target), $('#result-121'));
+    }
 }
 
-function checkLastCouse() {
-    $('input[name="142Score"]').prop("checked", false);
-    $('input[name="apScore"]').prop("checked", false);
-    $('input[name="ibScore"]').prop("checked", false);
+function checkLastCouse(event) {
+    $('.gradeCheck').prop("checked", false);
+    $('.gradeCheck').hide();
+
     let course = $('select[name="lastCourse"]').val();
     console.log(course);
-
-    showAndHide(course, ['CSE142'], [$('#142Score')], [$('#grades').children(), $('#121topics')]);
-    showAndHide(course, ['AP-A'], [$('#apScore')], [$('#grades').children(), $('#121topics')]);
-    showAndHide(course, ['IB-SL', 'IB-HL'], [$('#ibScore')], [$('#grades').children(), $('#121topics')]);
-
-    showAndHide(course, ['ECS', 'AP-P'], [$('#result-adv')], []);
-    showAndHide(course, ['Other'], [$('#121topics')], []);
+    switch(course) {
+        case 'CSE142': 
+            showQuestion($(event.target), $('#142Score')); 
+            break;
+        case 'AP-A':
+            showQuestion($(event.target), $('#apScore'));
+            break;
+        case 'IB-SL':
+        case 'IB-HL':
+            showQuestion($(event.target), $('#ibScore'));
+            break;
+        case 'ECS':
+        case 'AP-P':
+            showQuestion($(event.target), $('#result-adv'))
+            break;        
+        default:
+            showQuestion($(event.target), $('#121topics'));
+            break;
+    }
 }
 
-function check142Grade() {
+function check142Grade(event) {
     $('input[name="apScore"]').prop("checked", false);
     $('input[name="ibScore"]').prop("checked", false);
+
     let grade = $('input[name="142Score"]:checked').val();
     console.log(grade);
-
-    showAndHide(grade, ['2', '3', 'S', 'X'], [$('#121topics')], []);
-    showAndHide(grade, ['0', '1', 'NS'], [$('#result-adv')], [$('#121topics')]);
+    switch (grade) {
+        case '2':
+        case '3':
+        case 'S':
+        case 'X':
+            showQuestion($(event.target), $('#121topics'));
+            break;
+        default:
+            showQuestion($(event.target), $('#result-adv'));
+            break;
+    }
 }
 
-function checkAPGrade() {
+function checkAPGrade(event) {
     $('input[name="142Score"]').prop("checked", false);
     $('input[name="ibScore"]').prop("checked", false);
+
     let grade = $('input[name="apScore"]:checked').val();
     console.log(grade);
-
-    showAndHide(grade, ['3', '4', '5', 'X'], [$('#121topics')], []);
-    showAndHide(grade, ['0', '1', '2'], [$('#result-adv')], [$('#121topics')]);    
+    switch (grade) {
+        case '3':
+        case '4':
+        case '5':
+        case 'X':
+            showQuestion($(event.target), $('#121topics'));
+            break;
+        default:
+            showQuestion($(event.target), $('#result-adv'));
+            break;        
+    }
 }
 
-function checkIBGrade() {
+function checkIBGrade(event) {
     $('input[name="apScore"]').prop("checked", false);
     $('input[name="142Score"]').prop("checked", false);
+
     let grade = $('input[name="ibScore"]:checked').val();
     console.log(grade);
-    
-    showAndHide(grade, ['4', '5', '6', '7', 'X'], [$('#121topics')], []);
-    showAndHide(grade, ['0', '1', '2', '3'], [$('#result-adv')], [$('#121topics')]);   
+    switch (grade) {
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case 'X':
+            showQuestion($(event.target), $('#121topics'));
+            break;
+        default:
+            showQuestion($(event.target), $('#result-adv'));
+            break;
+    }
 }
 
-function check121Topics() {
+function check121Topics(event) {
     let topics = $('#121topics').find('select');
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
-    if (responses.every(x => x) && responses.every(x => x == 2)) {
-        $('#121p1').show();
-        $('#121p1').children().show();
+    if (responses.every(x => x == 2)) {
+        showQuestion($(event.target), $('#121p1'));
+    } else if (responses.every(x => x)) {
+        showQuestion($(event.target), $('#result-121'));
     } else {
-        $('#121p1').hide();
-        $('#121p1').children().hide();
+        showQuestion($(event.target), null);
     }
 }
 
-function showAndHide(val, targets, showList, hideList) {
-    // always hide all results after an update
-    // $('#results').children().hide();
+function showQuestion(prev, target) {
+    // hide all later questions
+    prev.parents('.question').nextAll('.question').hide();
 
-    if (targets.includes(val)) {
-        for (let item of hideList) item.hide();
-        for (let item of showList) item.show();
+    // hide results
+    $('#results').children().hide();
+
+    if (target) {
+        target.show();
+        target.children().show();
     }
 }
