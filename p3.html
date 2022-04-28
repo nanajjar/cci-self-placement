@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Prism syntax highlighting -->
+    <script src="prism.js"></script>
+    <link rel="stylesheet" href="prism.css" type="text/css" />
+
+    <title>CSE 12X Self-Placement</title>
+  </head>
+  <body>
+    <!-- Nav tabs -->
+    <ul class="nav nav-pills" id="lang" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="java-tab" data-bs-toggle="tab" data-bs-target="#java" type="button" role="tab" aria-controls="java" aria-selected="true">Java</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="python-tab" data-bs-toggle="tab" data-bs-target="#python" type="button" role="tab" aria-controls="python" aria-selected="false">Python</button>
+      </li>
+    </ul>
+
+    <!-- Commmon content -->
+    <h2>In one or two short sentences, describe what the following code does.</h2>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      <!-- **JAVA** -->
+      <div width="900px" class="tab-pane active" id="java" role="tabpanel" aria-labelledby="java-tab">
+         <pre><code class="language-java">
+import java.util.*;
+
+public class Example3 {
+    public static void main(String[] args) {
+        inputLoop();
+    }
+
+    public static void inputLoop() {
+        Scanner console = new Scanner(System.in);
+        int totalChars = 0;
+        String sentinel = "quit";
+        System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+        String word = console.next();
+        while (!word.equals(sentinel)) {
+            totalChars += word.length();
+            System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+            word = console.next();
+        }
+        System.out.println("The total number of characters is: " + totalChars);
+    }
+}
+         </code></pre>
+      </div>
+
+      <!-- **PYTHON** -->
+      <div width="900px" class="tab-pane" id="python" role="tabpanel" aria-labelledby="python-tab">
+        <pre><code class="language-python">
+def inputLoop():
+    total_chars = 0;
+    sentinel = "quit";
+    word = input(f'Type a word (or "{sentinel}" to quit): ')
+    while word != sentinel:
+        total_chars += len(word)
+        word = input(f'Type a word (or "{sentinel}" to quit): ')
+    print(f'The total number of characters is: {total_chars}')
+
+inputLoop()
+        </code></pre>
+      </div>
+    </div>
+
+    <!-- **SOLUTION** -->
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#solution" role="button" aria-expanded="false" aria-controls="solution">
+        Show solution
+      </a>
+    </p>
+    <div class="collapse" id="solution">
+      <div class="card card-body">
+        <samp>
+Reads in input from the user one word at a time until the word "quit" is entered, then prints the total number of characters entered
+(not including the word "quit").
+        </samp>
+      </div>
+    </div>
+
+  </body>
+</html>
