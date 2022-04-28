@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $('input[name="previousCourse"]').change(checkPrevCourse);
+    $('input[name="previousExp"]').change(checkPrevExp);
     $('select[name="lastCourse"]').change(checkLastCouse);
     $('input[name="142Score"]').change(check142Grade);
     $('input[name="apScore"]').change(checkAPGrade);
@@ -16,7 +17,10 @@ function checkPrevCourse() {
 }
 
 function checkPrevExp() {
-    console.log($('input[name="previousExp"]:checked').val());
+    let resp = $('input[name="previousExp"]:checked').val();
+    console.log(resp);
+    showAndHide(resp, ['No'], [$('#result-121')], []);
+    showAndHide(resp, ['Yes'], [$('#121topics')], []);
 }
 
 function checkLastCouse() {
@@ -29,6 +33,9 @@ function checkLastCouse() {
     showAndHide(course, ['CSE142'], [$('#142Score')], [$('#grades').children(), $('#121topics')]);
     showAndHide(course, ['AP-A'], [$('#apScore')], [$('#grades').children(), $('#121topics')]);
     showAndHide(course, ['IB-SL', 'IB-HL'], [$('#ibScore')], [$('#grades').children(), $('#121topics')]);
+
+    showAndHide(course, ['ECS', 'AP-P'], [$('#result-adv')], []);
+    showAndHide(course, ['Other'], [$('#121topics')], []);
 }
 
 function check142Grade() {
@@ -38,7 +45,7 @@ function check142Grade() {
     console.log(grade);
 
     showAndHide(grade, ['2', '3', 'S', 'X'], [$('#121topics')], []);
-    showAndHide(grade, ['0', '1', 'NS'], [], [$('#121topics')]);
+    showAndHide(grade, ['0', '1', 'NS'], [$('#result-adv')], [$('#121topics')]);
 }
 
 function checkAPGrade() {
@@ -48,7 +55,7 @@ function checkAPGrade() {
     console.log(grade);
 
     showAndHide(grade, ['3', '4', '5', 'X'], [$('#121topics')], []);
-    showAndHide(grade, ['0', '1', '2'], [], [$('#121topics')]);    
+    showAndHide(grade, ['0', '1', '2'], [$('#result-adv')], [$('#121topics')]);    
 }
 
 function checkIBGrade() {
@@ -58,7 +65,7 @@ function checkIBGrade() {
     console.log(grade);
     
     showAndHide(grade, ['4', '5', '6', '7', 'X'], [$('#121topics')], []);
-    showAndHide(grade, ['0', '1', '2', '3'], [], [$('#121topics')]);   
+    showAndHide(grade, ['0', '1', '2', '3'], [$('#result-adv')], [$('#121topics')]);   
 }
 
 function check121Topics() {
@@ -76,6 +83,9 @@ function check121Topics() {
 }
 
 function showAndHide(val, targets, showList, hideList) {
+    // always hide all results after an update
+    // $('#results').children().hide();
+
     if (targets.includes(val)) {
         for (let item of hideList) item.hide();
         for (let item of showList) item.show();
