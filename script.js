@@ -7,6 +7,7 @@ $(document).ready(function() {
     $('input[name="apScore"]').change(checkAPGrade);
     $('input[name="ibScore"]').change(checkIBGrade);
     $('#121topics').find('select').change(check121Topics);
+    $('#122topics').find('select').change(check122Topics);
     $('input[name^="121p"]').change(check121Problem);
 });
 
@@ -124,6 +125,20 @@ function check121Topics(event) {
         showNextQuestion($(event.target));
     } else if (responses.every(x => x)) {
         showQuestion($(event.target), $('#result-121'));
+    } else {
+        showQuestion($(event.target), null);
+    }
+}
+
+function check122Topics(event) {
+    let topics = $('#122topics').find('select');
+    console.log(topics);
+
+    let responses = topics.get().map(x => $(x).val());
+    if (responses.every(x => x == 2)) {
+        showNextQuestion($(event.target));
+    } else if (responses.every(x => x)) {
+        showQuestion($(event.target), $('#result-122'));
     } else {
         showQuestion($(event.target), null);
     }
