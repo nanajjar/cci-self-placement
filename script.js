@@ -6,7 +6,8 @@ $(document).ready(function() {
     $('input[name="142Score"]').change(check142Grade);
     $('input[name="apScore"]').change(checkAPGrade);
     $('input[name="ibScore"]').change(checkIBGrade);
-    $('select[name^="121"]').change(check121Topics);
+    $('#121topics').find('select').change(check121Topics);
+    $('input[name^="121p"]').change(check121Problem);
 });
 
 function checkPrevCourse(event) {
@@ -15,17 +16,17 @@ function checkPrevCourse(event) {
     if (resp == 'Yes') {
         showQuestion($(event.target), $('#lastCourse'));
     } else {
-        showQuestion($(event.target), $('#prevExp'));
+        showNextQuestion($(event.target));
     }
 }
 
 function checkPrevExp(event) {
     let resp = $('input[name="previousExp"]:checked').val();
     console.log(resp);
-    if (resp == 'Yes') {
-        showQuestion($(event.target), $('#121topics'));
-    } else {
+    if (resp == 'No') {
         showQuestion($(event.target), $('#result-121'));
+    } else {
+        showQuestion($(event.target), $('#121topics'));
     }
 }
 
@@ -120,11 +121,24 @@ function check121Topics(event) {
 
     let responses = topics.get().map(x => $(x).val());
     if (responses.every(x => x == 2)) {
-        showQuestion($(event.target), $('#121p1'));
+        showNextQuestion($(event.target));
     } else if (responses.every(x => x)) {
         showQuestion($(event.target), $('#result-121'));
     } else {
         showQuestion($(event.target), null);
+    }
+}
+
+function check121Problem(event) {
+    let resp = $(event.target).filter(':checked').val();
+    console.log(resp);
+
+    if (resp <= 3) {
+        showQuestion($(event.target), $('#result-121'));
+    } else if (resp == 4) {
+        showQuestion($(event.target), $('#result-adv'));
+    } else {
+        showNextQuestion($(event.target));
     }
 }
 
@@ -139,4 +153,8 @@ function showQuestion(prev, target) {
         target.show();
         target.children().show();
     }
+}
+
+function showNextQuestion(prev) {
+    showQuestion(prev, prev.parents('.question').next('.question'));
 }

@@ -7,11 +7,12 @@
 
     <!-- Bootstrap CSS & JS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsp2UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
 
     <title>CSE 12X Self-Placement</title>
@@ -217,31 +218,88 @@
             <label for="prob1">Read and work on this problem, then answer the next question:</label><br/>
             <iframe src="p1.html" width="1000" height="550" id="prob1"></iframe>
 
-            <div class="mb-3" id="p1react" style="display:none">
-                <label class="form-label" for="p1react">Which of the following best describes your experience with the preceding problem?</label>
+            <div class="mb-3" id="121p1react" style="display:none">
+                <label class="form-label" for="121p1react">Which of the following best describes your experience with the preceding problem?</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="p1react" id="p1react1" value="1">
-                    <label class="form-check-label" for="p1react1">I did not understand the problem.</label>
+                    <input class="form-check-input" type="radio" name="121p1react" id="121p1react1" value="1">
+                    <label class="form-check-label" for="121p1react1">I did not understand the problem.</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="p1react" id="p1react2" value="2">
-                    <label class="form-check-label" for="p1react2">I understood the problem but did not know how to begin solving it.</label>
+                    <input class="form-check-input" type="radio" name="121p1react" id="121p1react2" value="2">
+                    <label class="form-check-label" for="121p1react2">I understood the problem but did not know how to begin solving it.</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="p1react" id="p1react3" value="3">
-                    <label class="form-check-label" for="p1react3">I was able to begin solving the problem but was not able to complete it.</label>
+                    <input class="form-check-input" type="radio" name="121p1react" id="121p1react3" value="3">
+                    <label class="form-check-label" for="121p1react3">I was able to begin solving the problem but was not able to complete it.</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="p1react" id="p1react4" value="4">
-                    <label class="form-check-label" for="p1react4">I was able to solve the problem but struggled to do so.</label>
+                    <input class="form-check-input" type="radio" name="121p1react" id="121p1react4" value="4">
+                    <label class="form-check-label" for="121p1react4">I was able to solve the problem but struggled to do so.</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="p1react" id="p1react5" value="5">
-                    <label class="form-check-label" for="p1react5">I was able to solve the problem easily.</label>
+                    <input class="form-check-input" type="radio" name="121p1react" id="121p1react5" value="5">
+                    <label class="form-check-label" for="121p1react5">I was able to solve the problem easily.</label>
                 </div>
-
             </div>             
         </div>
+
+        <div class="mb-3 question" id="121p2" style="display:none">
+            <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
+            <iframe src="p2.html" width="1000" height="550" id="prob1"></iframe>
+
+            <div class="mb-3" id="121p2react" style="display:none">
+                <label class="form-label" for="121p2react">Which of the following best describes your experience with the preceding problem?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p2react" id="121p2react1" value="1">
+                    <label class="form-check-label" for="121p2react1">I did not understand the problem.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p2react" id="121p2react2" value="2">
+                    <label class="form-check-label" for="121p2react2">I understood the problem but did not know how to begin solving it.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p2react" id="121p2react3" value="3">
+                    <label class="form-check-label" for="121p2react3">I was able to begin solving the problem but was not able to complete it.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p2react" id="121p2react4" value="4">
+                    <label class="form-check-label" for="121p2react4">I was able to solve the problem but struggled to do so.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p2react" id="121p2react5" value="5">
+                    <label class="form-check-label" for="121p2react5">I was able to solve the problem easily.</label>
+                </div>
+            </div>             
+        </div>        
+
+        <div class="mb-3 question" id="121p3" style="display:none">
+            <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
+            <iframe src="p3.html" width="1000" height="550" id="prob1"></iframe>
+
+            <div class="mb-3" id="121p3react" style="display:none">
+                <label class="form-label" for="121p3react">Which of the following best describes your experience with the preceding problem?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p3react" id="121p3react1" value="1">
+                    <label class="form-check-label" for="121p3react1">I did not understand the problem.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p3react" id="121p3react2" value="2">
+                    <label class="form-check-label" for="121p3react2">I understood the problem but did not know how to begin solving it.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p3react" id="121p3react3" value="3">
+                    <label class="form-check-label" for="121p3react3">I was able to begin solving the problem but was not able to complete it.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p3react" id="121p3react4" value="4">
+                    <label class="form-check-label" for="121p3react4">I was able to solve the problem but struggled to do so.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="121p3react" id="121p3react5" value="5">
+                    <label class="form-check-label" for="121p3react5">I was able to solve the problem easily.</label>
+                </div>
+            </div>             
+        </div>   
 
         <div id="results">
             <div class="mb-3" id="result-121" style="display:none">
