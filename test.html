@@ -20,7 +20,7 @@
       <h1>Welcome!</h1>
 
       <form>
-        <div class="mb-3" id="prevCourse">
+        <div class="mb-3 question" id="prevCourse">
             <label class="form-label" for="previousCourse">Have you taken a previous computer science course?</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="previousCourse" id="previousCourseYes" value="Yes">
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="mb-3" id ="prevExp" style="display:none">
+        <div class="mb-3 question" id ="prevExp" style="display:none">
             <label class="form-label" for="previousExp">Do you have previous programming experience outside of a course?</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="previousExp" id="previousExpYes" value="Yes">
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="mb-3" id="lastCourse" style="display:none">
+        <div class="mb-3 question" id="lastCourse" style="display:none">
             <label class="form-label" for="lastCourse">What is the most recent computer science course you have completed?</label>
             <select class="form-select" name="lastCourse" aria-label="Most recent course">
                 <option selected></option>
@@ -58,105 +58,103 @@
             </select>
         </div>
 
-        <div id="grades">
-            <div class="mb-3" id="142Score" style="display:none">
-                <label class="form-label" for="142Score">What was your grade in CSE 142?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="142Score" id="142-0" value="0">
-                    <label class="form-check-label" for="142-0">0.0-0.9</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="142Score" id="142-1" value="1">
-                    <label class="form-check-label" for="142-1">1.0-1.9</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="142Score" id="142-2" value="2">
-                    <label class="form-check-label" for="142-2">2.0-2.9</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="142Score" id="142-3" value="3">
-                    <label class="form-check-label" for="142-3">3.0-4.0</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="142Score" id="142-S" value="S">
-                    <label class="form-check-label" for="142-S">S</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="142Score" id="142-NS" value="NS">
-                    <label class="form-check-label" for="142-NS">NS</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="142Score" id="142-X" value="X">
-                    <label class="form-check-label" for="142-X">I do not have a grade in CSE 142</label>
-                </div>
+        <div class="mb-3 question gradeCheck" id="142Score" style="display:none">
+            <label class="form-label" for="142Score">What was your grade in CSE 142?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="142Score" id="142-0" value="0">
+                <label class="form-check-label" for="142-0">0.0-0.9</label>
             </div>
-
-            <div class="mb-3" id="apScore" style="display:none">
-                <label class="form-label" for="apScore">What was your score on the AP Computer Science A exam?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="apScore" id="ap1" value="1">
-                    <label class="form-check-label" for="ap1">1</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="apScore" id="ap2" value="2">
-                    <label class="form-check-label" for="ap2">2</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="apScore" id="ap3" value="3">
-                    <label class="form-check-label" for="ap3">3</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="apScore" id="ap4" value="4">
-                    <label class="form-check-label" for="ap4">4</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="apScore" id="ap5" value="5">
-                    <label class="form-check-label" for="ap5">5</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="apScore" id="ap0" value="X">
-                    <label class="form-check-label" for="ap0">I did not take the exam or do not have a score</label>
-                </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="142Score" id="142-1" value="1">
+                <label class="form-check-label" for="142-1">1.0-1.9</label>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="142Score" id="142-2" value="2">
+                <label class="form-check-label" for="142-2">2.0-2.9</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="142Score" id="142-3" value="3">
+                <label class="form-check-label" for="142-3">3.0-4.0</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="142Score" id="142-S" value="S">
+                <label class="form-check-label" for="142-S">S</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="142Score" id="142-NS" value="NS">
+                <label class="form-check-label" for="142-NS">NS</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="142Score" id="142-X" value="X">
+                <label class="form-check-label" for="142-X">I do not have a grade in CSE 142</label>
+            </div>
+        </div>
 
-            <div class="mb-3" id="ibScore" style="display:none">
-                <label class="form-label" for="ibScore">What was your score on the IB Computer Science exam?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib1" value="1">
-                    <label class="form-check-label" for="ib1">1</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib2" value="2">
-                    <label class="form-check-label" for="ib2">2</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib3" value="3">
-                    <label class="form-check-label" for="ib3">3</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib4" value="4">
-                    <label class="form-check-label" for="ib4">4</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib5" value="5">
-                    <label class="form-check-label" for="ib5">5</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib6" value="6">
-                    <label class="form-check-label" for="ib6">6</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib7" value="7">
-                    <label class="form-check-label" for="ib7">7</label>                
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ibScore" id="ib0" value="X">
-                    <label class="form-check-label" for="ib0">I did not take the exam or do not have a score</label>
-                </div>
-            </div>   
-        </div>     
+        <div class="mb-3 question gradeCheck" id="apScore" style="display:none">
+            <label class="form-label" for="apScore">What was your score on the AP Computer Science A exam?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="apScore" id="ap1" value="1">
+                <label class="form-check-label" for="ap1">1</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="apScore" id="ap2" value="2">
+                <label class="form-check-label" for="ap2">2</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="apScore" id="ap3" value="3">
+                <label class="form-check-label" for="ap3">3</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="apScore" id="ap4" value="4">
+                <label class="form-check-label" for="ap4">4</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="apScore" id="ap5" value="5">
+                <label class="form-check-label" for="ap5">5</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="apScore" id="ap0" value="X">
+                <label class="form-check-label" for="ap0">I did not take the exam or do not have a score</label>
+            </div>
+        </div>
 
-        <div class="mb-3" id="121topics" style="display:none">
+        <div class="mb-3 question gradeCheck" id="ibScore" style="display:none">
+            <label class="form-label" for="ibScore">What was your score on the IB Computer Science exam?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib1" value="1">
+                <label class="form-check-label" for="ib1">1</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib2" value="2">
+                <label class="form-check-label" for="ib2">2</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib3" value="3">
+                <label class="form-check-label" for="ib3">3</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib4" value="4">
+                <label class="form-check-label" for="ib4">4</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib5" value="5">
+                <label class="form-check-label" for="ib5">5</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib6" value="6">
+                <label class="form-check-label" for="ib6">6</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib7" value="7">
+                <label class="form-check-label" for="ib7">7</label>                
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ibScore" id="ib0" value="X">
+                <label class="form-check-label" for="ib0">I did not take the exam or do not have a score</label>
+            </div>
+        </div>   
+
+        <div class="mb-3 question" id="121topics" style="display:none">
             <label class="form-label" for="121topics">How familiar and comfortable are you with each of 
                 the following programming topics/constructs?</label>
             <div class="row mb-3 input-group">
@@ -215,7 +213,7 @@
             </div>
         </div>
 
-        <div class="mb-3" id="121p1" style="display:none">
+        <div class="mb-3 question" id="121p1" style="display:none">
             <label for="prob1">Read and work on this problem, then answer the next question:</label><br/>
             <iframe src="p1.html" width="1000" height="550" id="prob1"></iframe>
 
