@@ -16,49 +16,71 @@
     <title>CSE 12X Self-Placement</title>
   </head>
   <body>
-    <!-- Nav tabs -->
-    <ul class="nav nav-pills" id="lang" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="java-tab" data-bs-toggle="tab" data-bs-target="#java" type="button" role="tab" aria-controls="java" aria-selected="true">Java</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="python-tab" data-bs-toggle="tab" data-bs-target="#python" type="button" role="tab" aria-controls="python" aria-selected="false">Python</button>
-      </li>
-    </ul>
+      <!-- Commmon content -->
+      <h3>What is output after executing the following code?</h3>
 
-    <!-- Commmon content -->
-    <h2>What is output after executing the following code?</h2>
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills" id="lang" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="java-tab" data-bs-toggle="tab" data-bs-target="#java" type="button" role="tab" aria-controls="java" aria-selected="true">Java</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="python-tab" data-bs-toggle="tab" data-bs-target="#python" type="button" role="tab" aria-controls="python" aria-selected="false">Python</button>
+          </li>
+        </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- **JAVA** -->
+          <div class="tab-pane active" id="java" role="tabpanel" aria-labelledby="java-tab">
+            <div class="row">
+            <div class="col-8" id="java-problem-col">
+              <pre><code class="language-java">
+public class Example {
+  public static void main(String[] args) {
+      String[] list = {"hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"};
+      boolean mystery1 = mystery(3, list);
+      System.out.println("Mystery 1: " + mystery1);
+      boolean mystery2 = mystery(5, list);
+      System.out.println("Mystery 2: " + mystery2);
+  }
 
-      <!-- **JAVA** -->
-      <div width="900px" class="tab-pane active" id="java" role="tabpanel" aria-labelledby="java-tab">
-         <pre><code class="language-java">
-public class Example1 {
-    public static void main(String[] args) {
-        String[] list = {"hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"};
-        boolean mystery1 = mystery(3, list);
-        System.out.println("Mystery 1: " + mystery1);
-        boolean mystery2 = mystery(5, list);
-        System.out.println("Mystery 2: " + mystery2);
-    }
-
-    public static boolean mystery(int x, String[] list) {
-        for (int i = 0; i < list.length; i++) {
-            if (list[i].length() &lt; x) {
-                return true;
-            }
-        }
-        return false;
-    }
+  public static boolean mystery(int x, String[] list) {
+      for (int i = 0; i < list.length; i++) {
+          if (list[i].length() &lt; x) {
+              return true;
+          }
+      }
+      return false;
+  }
 }
-         </code></pre>
-      </div>
+            </code></pre>
+          </div>
 
-      <!-- **PYTHON** -->
-      <div width="900px" class="tab-pane" id="python" role="tabpanel" aria-labelledby="python-tab">
-        <pre><code class="language-python">
+          <div class="col-3" id="java-solution-col">
+            <!-- **SOLUTION** -->
+            <p>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#java-solution" role="button" aria-expanded="false" aria-controls="java-solution">
+                Toggle solution
+              </a>
+            </p>
+            <div class="collapse" id="java-solution">
+              <div class="card card-body">
+                <samp>
+                  Mystery 1: false<br />
+                  Mystery 2: true
+                </samp>
+              </div>
+            </div>
+          </div>  
+          </div>    
+        </div>    
+
+        <!-- **PYTHON** -->
+        <div class="tab-pane" id="python" role="tabpanel" aria-labelledby="python-tab">
+          <div class="row">
+          <div class="col-8" id="python-problem-col">
+            <pre><code class="language-python">
 def mystery(x, list):
     for el in list:
         if len(el) < x:
@@ -71,24 +93,27 @@ mystery1 = mystery(3, list)
 print(f'Mystery 1: {mystery1}')
 mystery2 = mystery(5, list)
 print(f'Mystery 2: {mystery2}')
-        </code></pre>
-      </div>
-    </div>
+            </code></pre>
+          </div>
 
-    <!-- **SOLUTION** -->
-    <p>
-      <a class="btn btn-primary" data-bs-toggle="collapse" href="#solution" role="button" aria-expanded="false" aria-controls="solution">
-        Show solution
-      </a>
-    </p>
-    <div class="collapse" id="solution">
-      <div class="card card-body">
-        <samp>
-Mystery 1: false<br />
-Mystery 2: true
-        </samp>
+          <div class="col-3" id="python-solution-col">
+            <!-- **SOLUTION** -->
+            <p>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#python-solution" role="button" aria-expanded="false" aria-controls="python-solution">
+                Toggle solution
+              </a>
+            </p>
+            <div class="collapse" id="python-solution">
+              <div class="card card-body">
+                <samp>
+                  Mystery 1: False<br />
+                  Mystery 2: True
+                </samp>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
-    </div>
-
   </body>
 </html>
