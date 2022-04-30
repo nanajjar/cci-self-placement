@@ -18,9 +18,42 @@
     <title>CSE 12X Self-Placement</title>
   </head>
   <body>
-      <h1>Welcome!</h1>
+      <div id="welcome">
+        <h1>Welcome to the CSE 12X Guided Self-Placement!</h1>
 
-      <form>
+        <p>
+            We're excited that you are interested in taking an introductory computer science course! Our
+            <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">CSE 121, 122 and 123 
+            programming courses</a> are designed for all students, regardless of how much prior experience you do or do not have and 
+            regardless of your goals or reasons for taking the course. In that spirit, we want everyone to take the right first course 
+            for them, especially since prior experience can come in many differnt forms. This self-placement will help you find that 
+            course.
+        </p>
+        <p>
+            If you have never programmed before, or if your programming experience is limited, you will probably begin with CSE 121, 
+            which is designed for students with no previous experience whatsoever. If you took a high-school programming course intended
+            to be similiar to a first college course, like AP Computer Science A or IB Computer Science, you will probably start with CSE 
+            122. If you have substantial previous experience you might even want to enroll in CSE 123. This guided self-placement will 
+            help you make this decision by asking you questions about your background. These will include questions about the specific
+            courses and experience you have, how familiar you are with various topics and concepts, and how comfortable you are solving
+            practice problems. We hope this will help most people pick the right course for them, but if you still have questions at the
+            end, you can always contact our helpful <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+            advising team</a> for more support.
+        </p>
+        <p>
+            This self-placement is <em>adaptive</em>, meaning which questions you see and in which order will depend on your responses. So
+            each student will have a slightly different experience, and if you go back and change your answers, you may see different questions
+            appear. This is to help make sure we get the information that will most help us recommend the best course for you. As you go through
+            the self-placement, you may also encounter terms or concepts you haven't heard of before. Don't be intimiated-- if you haven't seen
+            a topic or concept, that just means you should probably be in the course that teaches it! We encourage you to answer all questions
+            based on your <em>current</em> experience and not go searching for answers or information elsewhere.
+        </p>
+
+        <p>When you're ready, click the button below to begin.</p>
+        <button type="button" class="btn btn-success" id="start-btn">Begin Self-Assessment</button>
+      </div>
+
+      <form style="display:none" id="main">
         <div class="mb-3 question" id="prevCourse">
             <label class="form-label" for="previousCourse">Have you taken a previous computer science course?</label>
             <div class="form-check">

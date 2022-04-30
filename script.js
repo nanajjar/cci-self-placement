@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('button#start-btn').click(() => $('#main').show() );
 
     $('input[name="previousCourse"]').change(checkPrevCourse);
     $('input[name="previousExp"]').change(checkPrevExp);
