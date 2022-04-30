@@ -382,7 +382,101 @@ figure(8)</code></pre>
 
         <div class="mb-3 question" id="121p2" style="display:none">
             <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
-            <iframe src="p2.html" width="1000" height="550" id="prob1"></iframe>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" id="p2-lang" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="p2-java-tab" data-bs-toggle="tab" data-bs-target="#p2-java" type="button" role="tab" aria-controls="p2-java" aria-selected="true">Java</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="p2-python-tab" data-bs-toggle="tab" data-bs-target="#p2-python" type="button" role="tab" aria-controls="p2-python" aria-selected="false">Python</button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- **JAVA** -->
+                <div class="tab-pane active" id="p2-java" role="tabpanel" aria-labelledby="p2-java-tab">
+                    <div class="row">
+                        <div class="col-8" id="p2-java-problem-col">
+                            <pre><code class="language-java">public class Example {
+    public static void main(String[] args) {
+        String[] list = {"hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"};
+        boolean mystery1 = mystery(3, list);
+        System.out.println("Mystery 1: " + mystery1);
+        boolean mystery2 = mystery(5, list);
+        System.out.println("Mystery 2: " + mystery2);
+    }
+
+    public static boolean mystery(int x, String[] list) {
+        for (int i = 0; i &lt; list.length; i++) {
+            if (list[i].length() &lt; x) {
+                return true;
+            }
+        }
+        return false;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p2-java-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p2-java-solution" role="button" aria-expanded="false" aria-controls="p2-java-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p2-java-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Mystery 1: false<br/>
+                                        Mystery 2: true
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- **PYTHON** -->
+                <div class="tab-pane" id="p2-python" role="tabpanel" aria-labelledby="p2-python-tab">
+                    <div class="row">
+                        <div class="col-8" id="p2-python-problem-col">
+                            <pre><code class="language-python">def mystery(x, list):
+    for el in list:
+        if len(el) &gt; x:
+            return True
+    return False
+
+
+list = ["hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"]
+mystery1 = mystery(3, list)
+print(f'Mystery 1: {mystery1}')
+mystery2 = mystery(5, list)
+print(f'Mystery 2: {mystery2}')
+                            </code></pre>
+                        </div>
+
+                        <div class="col-3" id="p2-python-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p2-python-solution" role="button" aria-expanded="false" aria-controls="p2-python-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p2-python-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Mystery 1: False</br>
+                                        Mystery 2: True
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="mb-3" id="121p2react" style="display:none">
                 <label class="form-label" for="121p2react">Which of the following best describes your experience with the preceding problem?</label>
