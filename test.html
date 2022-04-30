@@ -505,7 +505,102 @@ print(f'Mystery 2: {mystery2}')
 
         <div class="mb-3 question" id="121p3" style="display:none">
             <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
-            <iframe src="p3.html" width="1000" height="550" id="prob1"></iframe>
+
+            <h3>What is output after executing the following code?</h3>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" id="p3-lang" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="p3-java-tab" data-bs-toggle="tab" data-bs-target="#p3-java" type="button" role="tab" aria-controls="p3-java" aria-selected="true">Java</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="p3-python-tab" data-bs-toggle="tab" data-bs-target="#p3-python" type="button" role="tab" aria-controls="p3-python" aria-selected="false">Python</button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- **JAVA** -->
+                <div class="tab-pane active" id="p3-java" role="tabpanel" aria-labelledby="p3-java-tab">
+                    <div class="row">
+                        <div class="col-8" id="p3-java-problem-col">
+                            <pre><code class="language-java">import java.util.*;
+
+public class Example {
+    public static void main(String[] args) {
+        inputLoop();
+    }
+
+    public static void inputLoop() {
+        Scanner console = new Scanner(System.in);
+        int totalChars = 0;
+        String sentinel = "quit";
+        System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+        String word = console.next();
+        while (!word.equals(sentinel)) {
+            totalChars += word.length();
+            System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+            word = console.next();
+        }
+        System.out.println("The total number of characters is: " + totalChars);
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p3-java-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p3-java-solution" role="button" aria-expanded="false" aria-controls="p3-java-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p3-java-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Reads in input from the user one word at a time until the word "quit" is entered, then prints the total number of characters entered
+                                        (not including the word "quit").
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- **PYTHON** -->
+                <div class="tab-pane" id="p3-python" role="tabpanel" aria-labelledby="p3-python-tab">
+                    <div class="row">
+                        <div class="col-8" id="p3-python-problem-col">
+                            <pre><code class="language-python">def inputLoop():
+    total_chars = 0;
+    sentinel = "quit";
+    word = input(f'Type a word (or "{sentinel}" to quit): ')
+    while word != sentinel:
+        total_chars += len(word)
+        word = input(f'Type a word (or "{sentinel}" to quit): ')
+    print(f'The total number of characters is: {total_chars}')
+
+inputLoop()</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p3-python-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p3-python-solution" role="button" aria-expanded="false" aria-controls="p3-python-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p3-python-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Reads in input from the user one word at a time until the word "quit" is entered, then prints the total number of characters entered
+                                        (not including the word "quit").
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="mb-3" id="121p3react" style="display:none">
                 <label class="form-label" for="121p3react">Which of the following best describes your experience with the preceding problem?</label>
