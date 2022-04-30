@@ -14,3 +14,8 @@ label.form-label {
 select {
     max-width: 40%;
 }
+
+/* Fix a weird alignment issue, not sure if this is a hack */
+#topics-121 .input-group {
+    --bs-gutter-x: 0;
+}
