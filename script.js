@@ -136,7 +136,8 @@ function check122Topics(event) {
 
     let responses = topics.get().map(x => $(x).val());
     if (responses.every(x => x == 2)) {
-        showNextQuestion($(event.target));
+        // showNextQuestion($(event.target));
+        showQuestion($(event.target), $("#result-123"))
     } else if (responses.every(x => x)) {
         showQuestion($(event.target), $('#result-122'));
     } else {
