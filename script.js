@@ -26,7 +26,7 @@ function checkPrevExp(event) {
     let resp = $('input[name="previousExp"]:checked').val();
     console.log(resp);
     if (resp == 'No') {
-        showQuestion($(event.target), $('#result-121'));
+        showQuestion($(event.target), $('#result-121-noexp'));
     } else {
         showQuestion($(event.target), $('#121topics'));
     }
@@ -125,7 +125,7 @@ function check121Topics(event) {
     if (responses.every(x => x == 2)) {
         showNextQuestion($(event.target));
     } else if (responses.every(x => x)) {
-        showQuestion($(event.target), $('#result-121'));
+        showQuestion($(event.target), $('#result-121-topics'));
     } else {
         showQuestion($(event.target), null);
     }
@@ -140,7 +140,11 @@ function check122Topics(event) {
         // showNextQuestion($(event.target));
         showQuestion($(event.target), $("#result-123"))
     } else if (responses.every(x => x)) {
-        showQuestion($(event.target), $('#result-122'));
+        if ($('select[name="lastCourse"]').val() == 'CSE142') {
+            showQuestion($(event.target), $('#result-122-from-142'));
+        } else {
+            showQuestion($(event.target), $('#result-122'));
+        }
     } else {
         showQuestion($(event.target), null);
     }
@@ -151,7 +155,7 @@ function check121Problem(event) {
     console.log(resp);
 
     if (resp <= 3) {
-        showQuestion($(event.target), $('#result-121'));
+        showQuestion($(event.target), $('#result-121-topics'));
     } else if (resp == 4) {
         showQuestion($(event.target), $('#result-adv'));
     } else {
