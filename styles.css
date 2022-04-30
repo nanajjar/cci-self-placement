@@ -1,3 +1,13 @@
-.question:not(:first-child) {
-    border-top: 1px solid black;
+.question {
+    margin-top: 1.5em;
+    padding-top: 1.5em;
 }
+
+.question:not(:first-child) {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+label.form-label {
+    font-weight: bold;
+}
+
