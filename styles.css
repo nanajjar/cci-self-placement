@@ -19,3 +19,11 @@ select {
 #topics-121 .input-group {
     --bs-gutter-x: 0;
 }
+
+.question .nav {
+    margin-top: 1em;
+}
+
+.question .toggle-solutions {
+    margin-top: 0.5rem;
+}
