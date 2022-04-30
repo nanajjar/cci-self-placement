@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('input[name="apScore"]').change(checkAPGrade);
     $('input[name="ibScore"]').change(checkIBGrade);
     $('#topics-121').find('select').change(check121Topics);
-    $('#122topics').find('select').change(check122Topics);
+    $('#topics-122').find('select').change(check122Topics);
     $('input[name^="121p"]').change(check121Problem);
 });
 
@@ -132,7 +132,7 @@ function check121Topics(event) {
 }
 
 function check122Topics(event) {
-    let topics = $('#122topics').find('select');
+    let topics = $('#topics-122').find('select');
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
