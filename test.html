@@ -5,15 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS & JS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsp2UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 
+    <!-- Bootstrap CSS & JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Prism syntax highlighting -->
+    <script src="prism.js"></script>
+    <link rel="stylesheet" href="prism.css" type="text/css" />
+
+    <!-- Custom styling and CSS -->
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
+
 
     <title>CSE 12X Self-Placement</title>
   </head>
@@ -23,21 +29,21 @@
 
         <p>
             We're excited that you are interested in taking an introductory computer science course! Our
-            <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">CSE 121, 122 and 123 
-            programming courses</a> are designed for all students, regardless of how much prior experience you do or do not have and 
-            regardless of your goals or reasons for taking the course. In that spirit, we want everyone to take the right first course 
-            for them, especially since prior experience can come in many differnt forms. This self-placement will help you find that 
+            <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">CSE 121, 122 and 123
+            programming courses</a> are designed for all students, regardless of how much prior experience you do or do not have and
+            regardless of your goals or reasons for taking the course. In that spirit, we want everyone to take the right first course
+            for them, especially since prior experience can come in many differnt forms. This self-placement will help you find that
             course.
         </p>
         <p>
-            If you have never programmed before, or if your programming experience is limited, you will probably begin with CSE 121, 
+            If you have never programmed before, or if your programming experience is limited, you will probably begin with CSE 121,
             which is designed for students with no previous experience whatsoever. If you took a high-school programming course intended
-            to be similiar to a first college course, like AP Computer Science A or IB Computer Science, you will probably start with CSE 
-            122. If you have substantial previous experience you might even want to enroll in CSE 123. This guided self-placement will 
+            to be similiar to a first college course, like AP Computer Science A or IB Computer Science, you will probably start with CSE
+            122. If you have substantial previous experience you might even want to enroll in CSE 123. This guided self-placement will
             help you make this decision by asking you questions about your background. These will include questions about the specific
             courses and experience you have, how familiar you are with various topics and concepts, and how comfortable you are solving
             practice problems. We hope this will help most people pick the right course for them, but if you still have questions at the
-            end, you can always contact our helpful <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+            end, you can always contact our helpful <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
             advising team</a> for more support.
         </p>
         <p>
@@ -180,16 +186,16 @@
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="ibScore" id="ib7" value="7">
-                <label class="form-check-label" for="ib7">7</label>                
+                <label class="form-check-label" for="ib7">7</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="ibScore" id="ib0" value="X">
                 <label class="form-check-label" for="ib0">I did not take the exam or do not have a score</label>
             </div>
-        </div>   
+        </div>
 
         <div class="mb-3 question" id="121topics" style="display:none">
-            <label class="form-label" for="121topics">How familiar and comfortable are you with each of 
+            <label class="form-label" for="121topics">How familiar and comfortable are you with each of
                 the following programming topics/constructs?</label>
             <div class="row mb-3 input-group">
                 <label class="col-auto input-group-text" for="121vars" id="varLabel">Variables</label>
@@ -249,7 +255,105 @@
 
         <div class="mb-3 question" id="121p1" style="display:none">
             <label for="prob1">Read and work on this problem, then answer the next question:</label><br/>
-            <iframe src="p1.html" width="1000" height="550" id="prob1"></iframe>
+
+            <h3>What is output after executing the following code?</h3>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" id="p1-lang" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="p1-java-tab" data-bs-toggle="tab" data-bs-target="#p1-java" type="button" role="tab" aria-controls="p1-java" aria-selected="true">Java</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="p1-python-tab" data-bs-toggle="tab" data-bs-target="#p1-python" type="button" role="tab" aria-controls="p1-python" aria-selected="false">Python</button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- **JAVA** -->
+                <div class="tab-pane active" id="p1-java" role="tabpanel" aria-labelledby="p1-java-tab">
+                    <div class="row">
+                        <div class="col-8" id="p1-java-problem-col">
+                            <pre><code class="language-java">public class Example {
+    public static void main(String[] args) {
+        figure(8);
+    }
+
+    public static void figure(int max) {
+        for (int line = 1; line &lt;= max; line++) {
+            for (int dots = 1; dots &lt;= -1 * line + max; dots++) {
+                System.out.print(".");
+            }
+            System.out.println(line);
+        }
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p1-java-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p1-java-solution" role="button" aria-expanded="false" aria-controls="p1-java-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p1-java-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        .......1<br/>
+                                        ......2<br/>
+                                        .....3<br/>
+                                        ....4<br/>
+                                        ...5<br/>
+                                        ..6<br/>
+                                        .7<br/>
+                                        8
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- **PYTHON** -->
+                <div class="tab-pane" id="p1-python" role="tabpanel" aria-labelledby="p1-python-tab">
+                    <div class="row">
+                        <div class="col-8" id="p1-python-problem-col">
+                            <pre><code class="language-python">def figure(max):
+    for line in range(1, max + 1):
+        for dots in range(1, -1 * line + max + 1):
+            print(".", end="")
+        print(line)
+
+figure(8)</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p1-python-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p1-python-solution" role="button" aria-expanded="false" aria-controls="p1-python-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p1-python-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        .......1<br/>
+                                        ......2<br/>
+                                        .....3<br/>
+                                        ....4<br/>
+                                        ...5<br/>
+                                        ..6<br/>
+                                        .7<br/>
+                                        8
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="mb-3" id="121p1react" style="display:none">
                 <label class="form-label" for="121p1react">Which of the following best describes your experience with the preceding problem?</label>
@@ -273,12 +377,106 @@
                     <input class="form-check-input" type="radio" name="121p1react" id="121p1react5" value="5">
                     <label class="form-check-label" for="121p1react5">I was able to solve the problem easily.</label>
                 </div>
-            </div>             
+            </div>
         </div>
 
         <div class="mb-3 question" id="121p2" style="display:none">
             <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
-            <iframe src="p2.html" width="1000" height="550" id="prob1"></iframe>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" id="p2-lang" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="p2-java-tab" data-bs-toggle="tab" data-bs-target="#p2-java" type="button" role="tab" aria-controls="p2-java" aria-selected="true">Java</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="p2-python-tab" data-bs-toggle="tab" data-bs-target="#p2-python" type="button" role="tab" aria-controls="p2-python" aria-selected="false">Python</button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- **JAVA** -->
+                <div class="tab-pane active" id="p2-java" role="tabpanel" aria-labelledby="p2-java-tab">
+                    <div class="row">
+                        <div class="col-8" id="p2-java-problem-col">
+                            <pre><code class="language-java">public class Example {
+    public static void main(String[] args) {
+        String[] list = {"hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"};
+        boolean mystery1 = mystery(3, list);
+        System.out.println("Mystery 1: " + mystery1);
+        boolean mystery2 = mystery(5, list);
+        System.out.println("Mystery 2: " + mystery2);
+    }
+
+    public static boolean mystery(int x, String[] list) {
+        for (int i = 0; i &lt; list.length; i++) {
+            if (list[i].length() &lt; x) {
+                return true;
+            }
+        }
+        return false;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p2-java-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p2-java-solution" role="button" aria-expanded="false" aria-controls="p2-java-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p2-java-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Mystery 1: false<br/>
+                                        Mystery 2: true
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- **PYTHON** -->
+                <div class="tab-pane" id="p2-python" role="tabpanel" aria-labelledby="p2-python-tab">
+                    <div class="row">
+                        <div class="col-8" id="p2-python-problem-col">
+                            <pre><code class="language-python">def mystery(x, list):
+    for el in list:
+        if len(el) &gt; x:
+            return True
+    return False
+
+
+list = ["hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"]
+mystery1 = mystery(3, list)
+print(f'Mystery 1: {mystery1}')
+mystery2 = mystery(5, list)
+print(f'Mystery 2: {mystery2}')
+                            </code></pre>
+                        </div>
+
+                        <div class="col-3" id="p2-python-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p2-python-solution" role="button" aria-expanded="false" aria-controls="p2-python-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p2-python-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Mystery 1: False</br>
+                                        Mystery 2: True
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="mb-3" id="121p2react" style="display:none">
                 <label class="form-label" for="121p2react">Which of the following best describes your experience with the preceding problem?</label>
@@ -302,12 +500,107 @@
                     <input class="form-check-input" type="radio" name="121p2react" id="121p2react5" value="5">
                     <label class="form-check-label" for="121p2react5">I was able to solve the problem easily.</label>
                 </div>
-            </div>             
-        </div>        
+            </div>
+        </div>
 
         <div class="mb-3 question" id="121p3" style="display:none">
             <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
-            <iframe src="p3.html" width="1000" height="550" id="prob1"></iframe>
+
+            <h3>What is output after executing the following code?</h3>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" id="p3-lang" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="p3-java-tab" data-bs-toggle="tab" data-bs-target="#p3-java" type="button" role="tab" aria-controls="p3-java" aria-selected="true">Java</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="p3-python-tab" data-bs-toggle="tab" data-bs-target="#p3-python" type="button" role="tab" aria-controls="p3-python" aria-selected="false">Python</button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- **JAVA** -->
+                <div class="tab-pane active" id="p3-java" role="tabpanel" aria-labelledby="p3-java-tab">
+                    <div class="row">
+                        <div class="col-8" id="p3-java-problem-col">
+                            <pre><code class="language-java">import java.util.*;
+
+public class Example {
+    public static void main(String[] args) {
+        inputLoop();
+    }
+
+    public static void inputLoop() {
+        Scanner console = new Scanner(System.in);
+        int totalChars = 0;
+        String sentinel = "quit";
+        System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+        String word = console.next();
+        while (!word.equals(sentinel)) {
+            totalChars += word.length();
+            System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+            word = console.next();
+        }
+        System.out.println("The total number of characters is: " + totalChars);
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p3-java-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p3-java-solution" role="button" aria-expanded="false" aria-controls="p3-java-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p3-java-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Reads in input from the user one word at a time until the word "quit" is entered, then prints the total number of characters entered
+                                        (not including the word "quit").
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- **PYTHON** -->
+                <div class="tab-pane" id="p3-python" role="tabpanel" aria-labelledby="p3-python-tab">
+                    <div class="row">
+                        <div class="col-8" id="p3-python-problem-col">
+                            <pre><code class="language-python">def inputLoop():
+    total_chars = 0;
+    sentinel = "quit";
+    word = input(f'Type a word (or "{sentinel}" to quit): ')
+    while word != sentinel:
+        total_chars += len(word)
+        word = input(f'Type a word (or "{sentinel}" to quit): ')
+    print(f'The total number of characters is: {total_chars}')
+
+inputLoop()</code></pre>
+                        </div>
+
+                        <div class="col-3" id="p3-python-solution-col">
+                            <!-- **SOLUTION** -->
+                            <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p3-python-solution" role="button" aria-expanded="false" aria-controls="p3-python-solution">
+                                Toggle solution
+                            </a>
+                            </p>
+                            <div class="collapse" id="p3-python-solution">
+                                <div class="card card-body">
+                                    <samp>
+                                        Reads in input from the user one word at a time until the word "quit" is entered, then prints the total number of characters entered
+                                        (not including the word "quit").
+                                    </samp>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="mb-3" id="121p3react" style="display:none">
                 <label class="form-label" for="121p3react">Which of the following best describes your experience with the preceding problem?</label>
@@ -331,11 +624,11 @@
                     <input class="form-check-input" type="radio" name="121p3react" id="121p3react5" value="5">
                     <label class="form-check-label" for="121p3react5">I was able to solve the problem easily.</label>
                 </div>
-            </div>             
+            </div>
         </div>
 
         <div class="mb-3 question" id="122topics" style="display:none">
-            <label class="form-label" for="122topics">How familiar and comfortable are you with each of 
+            <label class="form-label" for="122topics">How familiar and comfortable are you with each of
                 the following programming topics/constructs?</label>
             <div class="row mb-3 input-group">
                 <label class="col-auto input-group-text" for="122io" id="ioLabel">Console and/or File Input/Output</label>
@@ -382,7 +675,7 @@
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-        </div>        
+        </div>
 
         <div id="results">
             <div class="mb-3 alert alert-success" role="alert" id="result-121-noexp" style="display:none">
@@ -400,7 +693,7 @@
                     to solve problems using data sets drawn from the sciences, engineering, business and the humanities.
                 </p>
                 <p>
-                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                     advising team</a>.
                 </p>
             </div>
@@ -413,10 +706,10 @@
                     CSE 121</a> to help you solidfy your understanding of that material before moving on to CSE 122.
                 </p>
                 <p>
-                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                     advising team</a>.
                 </p>
-            </div>            
+            </div>
 
             <div class="mb-3 alert alert-success" role="alert" id="result-122" style="display:none">
                 <h1><span class="badge bg-success">CSE 122</span></h1>
@@ -427,7 +720,7 @@
                     so you should feel confident enrolling even if you're experience is in another programming language.
                 </p>
                 <p>
-                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                     advising team</a>.
                 </p>
             </div>
@@ -445,17 +738,17 @@
                     previously taken CSE 142.
                 </p>
                 <p>
-                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                     advising team</a>.
                 </p>
-            </div>            
+            </div>
 
             <div class="mb-3 alert alert-success" role="alert" id="result-123" style="display:none">
                 <h1><span class="badge bg-success">CSE 123</span></h1>
                 <p>
-                    You have a lot of experience programming and have a strong understanding of some more advanced topics, so we recommend 
+                    You have a lot of experience programming and have a strong understanding of some more advanced topics, so we recommend
                     you take <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse123">
-                    CSE 123</a>. This course will teach you to use your existing programming skills to implement and manipulate complex 
+                    CSE 123</a>. This course will teach you to use your existing programming skills to implement and manipulate complex
                     data structures, and will also introduce some more advanced programming concepts.
                 </p>
                 <p>
@@ -464,18 +757,18 @@
                     CSE 163</a>. This course builds on previous programming experience similarly to CSE 123, but with a focus on writing programs
                     that manipulate and analyze different types of datasets. CSE 163 is taught in Python, but is designed to help students who have
                     previously programmed in Java adapt, so you should feel confident enrolling even if you've never used Python before.
-                </p>                
+                </p>
                 <p>
-                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+                    If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                     advising team</a>.
-                </p>                
+                </p>
             </div>
 
             <div class="mb-3 alert alert-warning" role="alert" id="result-adv" style="display:none">
                 <h1><span class="badge bg-warning text-dark">Talk to Advising</span></h1>
                 <p>
-                    Based on your responses, there are multiple courses that might be a good fit for you. 
-                    We recommend you speak with a member of <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate 
+                    Based on your responses, there are multiple courses that might be a good fit for you.
+                    We recommend you speak with a member of <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                     advising team</a> so they can learn more about your sitation and help you find the best fit.
                 </p>
             </div>
