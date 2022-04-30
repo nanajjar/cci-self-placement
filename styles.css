@@ -11,3 +11,6 @@ label.form-label {
     font-weight: bold;
 }
 
+select {
+    max-width: 40%;
+}
