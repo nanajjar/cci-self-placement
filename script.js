@@ -175,7 +175,7 @@ function showQuestion(prev, target) {
         target.children().show();
 
         //// Smoothly scroll to this element that was just revealed
-        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+        $("html, body").animate({ scrollTop: $(document).height()}, "fast", "linear");
     }
 }
 
