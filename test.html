@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS & JS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -24,6 +24,7 @@
     <title>CSE 12X Self-Placement</title>
   </head>
   <body>
+    <main class="py-5 px-5">
       <div id="welcome">
         <h1>Welcome to the CSE 12X Guided Self-Placement!</h1>
 
@@ -59,6 +60,7 @@
         <button type="button" class="btn btn-success" id="start-btn">Begin Self-Assessment</button>
       </div>
 
+
       <form style="display:none" id="main">
         <div class="mb-3 question" id="prevCourse">
             <label class="form-label" for="previousCourse">Have you taken a previous computer science course?</label>
@@ -87,7 +89,7 @@
         <div class="mb-3 question" id="lastCourse" style="display:none">
             <label class="form-label" for="lastCourse">What is the most recent computer science course you have completed?</label>
             <select class="form-select" name="lastCourse" aria-label="Most recent course">
-                <option selected></option>
+                <option value="" selected disabled>Select an option</option>
                 <option value="CSE142">CSE 142 (at UW, UW in the High School, or a community college)</option>
                 <option value="AP-A">Advanced Placement (AP) Computer Science A</option>
                 <option value="AP-P">Advanced Placement (AP) Computer Science Principles</option>
@@ -194,58 +196,59 @@
             </div>
         </div>
 
-        <div class="mb-3 question" id="121topics" style="display:none">
-            <label class="form-label" for="121topics">How familiar and comfortable are you with each of
+        <div class="mb-2 question" id="topics-121" style="display:none">
+            <label class="form-label" for="topics-121">How familiar and comfortable are you with each of
                 the following programming topics/constructs?</label>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="121vars" id="varLabel">Variables</label>
-                <select class="col-1 form-select" name="121vars">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="121vars" id="varLabel">Variables</label>
+                <select class="form-select" name="121vars">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="121types" id="typeLabel">Data types (e.g. int, double, String, char)</label>
-                <select class="col-1 form-select" name="121types">
-                    <option selected></option>
+
+            <div class="mb-3">
+                <label for="121types" id="typeLabel">Data types (e.g.,&nbsp;<code>int</code>,&nbsp;<code>double</code>,&nbsp;<code>String</code>,&nbsp;<code>char</code>)</label>
+                <select class="form-select" name="121types">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="121funcs" id="funcLabel">Functions/Methods</label>
-                <select class="col-1 form-select" name="121funcs">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="121funcs" id="funcLabel">Functions/Methods</label>
+                <select class="form-select" name="121funcs">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="121loops" id="loopLabel">Loops</label>
-                <select class="col-1 form-select" name="121loops">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="121loops" id="loopLabel">Loops</label>
+                <select class="form-select" name="121loops">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="121conds" id="condLabel">Conditionals (e.g. if, if-else)</label>
-                <select class="col-1 form-select" name="121conds">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="121conds" id="condLabel">Conditionals (e.g.,&nbsp;<code>if</code>,&nbsp;<code>else</code>)</label>
+                <select class="form-select" name="121conds">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="121arrs" id="arrLabel">Arrays and/or Lists</label>
-                <select class="col-1 form-select" name="121arrs">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="121arrs" id="arrLabel">Arrays and/or Lists</label>
+                <select class="form-select" name="121arrs">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
@@ -254,9 +257,7 @@
         </div>
 
         <div class="mb-3 question" id="121p1" style="display:none">
-            <label for="prob1">Read and work on this problem, then answer the next question:</label><br/>
-
-            <h3>What is output after executing the following code?</h3>
+            <label for="prob1">Read and work on this problem, then answer the next question: <b>What is output after executing the following code?</b></label><br/>
 
             <!-- Nav tabs -->
             <ul class="nav nav-pills" id="p1-lang" role="tablist">
@@ -290,7 +291,7 @@
 }</code></pre>
                         </div>
 
-                        <div class="col-3" id="p1-java-solution-col">
+                        <div class="col-3 toggle-solutions" id="p1-java-solution-col">
                             <!-- **SOLUTION** -->
                             <p>
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#p1-java-solution" role="button" aria-expanded="false" aria-controls="p1-java-solution">
@@ -328,7 +329,7 @@
 figure(8)</code></pre>
                         </div>
 
-                        <div class="col-3" id="p1-python-solution-col">
+                        <div class="col-3 toggle-solutions" id="p1-python-solution-col">
                             <!-- **SOLUTION** -->
                             <p>
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#p1-python-solution" role="button" aria-expanded="false" aria-controls="p1-python-solution">
@@ -381,7 +382,7 @@ figure(8)</code></pre>
         </div>
 
         <div class="mb-3 question" id="121p2" style="display:none">
-            <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
+            <label for="prob2">Read and work on this problem, then answer the next question: <b>What is output after executing the following code?</b></label><br/>
 
             <!-- Nav tabs -->
             <ul class="nav nav-pills" id="p2-lang" role="tablist">
@@ -419,7 +420,7 @@ figure(8)</code></pre>
 }</code></pre>
                         </div>
 
-                        <div class="col-3" id="p2-java-solution-col">
+                        <div class="col-3 toggle-solutions" id="p2-java-solution-col">
                             <!-- **SOLUTION** -->
                             <p>
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#p2-java-solution" role="button" aria-expanded="false" aria-controls="p2-java-solution">
@@ -457,7 +458,7 @@ print(f'Mystery 2: {mystery2}')
                             </code></pre>
                         </div>
 
-                        <div class="col-3" id="p2-python-solution-col">
+                        <div class="col-3 toggle-solutions" id="p2-python-solution-col">
                             <!-- **SOLUTION** -->
                             <p>
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#p2-python-solution" role="button" aria-expanded="false" aria-controls="p2-python-solution">
@@ -504,9 +505,7 @@ print(f'Mystery 2: {mystery2}')
         </div>
 
         <div class="mb-3 question" id="121p3" style="display:none">
-            <label for="prob2">Read and work on this problem, then answer the next question:</label><br/>
-
-            <h3>What is output after executing the following code?</h3>
+            <label for="prob2">Read and work on this problem, then answer the next question: <b>Describe what the following code is supposed to do.</b></label><br/>
 
             <!-- Nav tabs -->
             <ul class="nav nav-pills" id="p3-lang" role="tablist">
@@ -547,7 +546,7 @@ public class Example {
 }</code></pre>
                         </div>
 
-                        <div class="col-3" id="p3-java-solution-col">
+                        <div class="col-3 toggle-solutions" id="p3-java-solution-col">
                             <!-- **SOLUTION** -->
                             <p>
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#p3-java-solution" role="button" aria-expanded="false" aria-controls="p3-java-solution">
@@ -582,7 +581,7 @@ public class Example {
 inputLoop()</code></pre>
                         </div>
 
-                        <div class="col-3" id="p3-python-solution-col">
+                        <div class="col-3 toggle-solutions" id="p3-python-solution-col">
                             <!-- **SOLUTION** -->
                             <p>
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#p3-python-solution" role="button" aria-expanded="false" aria-controls="p3-python-solution">
@@ -627,49 +626,49 @@ inputLoop()</code></pre>
             </div>
         </div>
 
-        <div class="mb-3 question" id="122topics" style="display:none">
-            <label class="form-label" for="122topics">How familiar and comfortable are you with each of
+        <div class="mb-3 question" id="topics-122" style="display:none">
+            <label class="form-label" for="topics-122">How familiar and comfortable are you with each of
                 the following programming topics/constructs?</label>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="122io" id="ioLabel">Console and/or File Input/Output</label>
-                <select class="col-1 form-select" name="122io">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="122io" id="ioLabel">Console and/or File Input/Output</label>
+                <select class="form-select" name="122io">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="122maps" id="mapLabel">Maps and/or Dictionaries</label>
-                <select class="col-1 form-select" name="122maps">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="122maps" id="mapLabel">Maps and/or Dictionaries</label>
+                <select class="form-select" name="122maps">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="122classes" id="classLabel">Defining classes</label>
-                <select class="col-1 form-select" name="122classes">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="122classes" id="classLabel">Defining classes</label>
+                <select class="form-select" name="122classes">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="122construct" id="constructLabel">Defining constructors</label>
-                <select class="col-1 form-select" name="122construct">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="122construct" id="constructLabel">Defining constructors</label>
+                <select class="form-select" name="122construct">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
                 </select>
             </div>
-            <div class="row mb-3 input-group">
-                <label class="col-auto input-group-text" for="122inter" id="interLabel">Interfaces</label>
-                <select class="col-1 form-select" name="122inter">
-                    <option selected></option>
+            <div class="mb-3">
+                <label for="122inter" id="interLabel">Interfaces</label>
+                <select class="form-select" name="122inter">
+                    <option value="" selected disabled>Select an option</option>
                     <option value="0">I am not familiar with this.</option>
                     <option value="1">I am familiar with this but not comfortable using it in programming.</option>
                     <option value="2">I am comfortable using this in programming.</option>
@@ -773,6 +772,7 @@ inputLoop()</code></pre>
                 </p>
             </div>
         </div>
-    </form>
+      </form>
+    </main>
   </body>
 </html>

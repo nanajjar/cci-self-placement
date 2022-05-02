@@ -1,3 +1,29 @@
+.question {
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+}
+
 .question:not(:first-child) {
-    border-top: 1px solid black;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+label.form-label {
+    font-weight: bold;
+}
+
+select {
+    max-width: 40%;
+}
+
+/* Fix a weird alignment issue, not sure if this is a hack */
+#topics-121 .input-group, #topics-122 .input-group {
+    --bs-gutter-x: 0;
+}
+
+.question .nav {
+    margin-top: 1em;
+}
+
+.question .toggle-solutions {
+    margin-top: 0.5rem;
 }

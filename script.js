@@ -7,8 +7,8 @@ $(document).ready(function() {
     $('input[name="142Score"]').change(check142Grade);
     $('input[name="apScore"]').change(checkAPGrade);
     $('input[name="ibScore"]').change(checkIBGrade);
-    $('#121topics').find('select').change(check121Topics);
-    $('#122topics').find('select').change(check122Topics);
+    $('#topics-121').find('select').change(check121Topics);
+    $('#topics-122').find('select').change(check122Topics);
     $('input[name^="121p"]').change(check121Problem);
 });
 
@@ -28,7 +28,7 @@ function checkPrevExp(event) {
     if (resp == 'No') {
         showQuestion($(event.target), $('#result-121-noexp'));
     } else {
-        showQuestion($(event.target), $('#121topics'));
+        showQuestion($(event.target), $('#topics-121'));
     }
 }
 
@@ -39,8 +39,8 @@ function checkLastCouse(event) {
     let course = $('select[name="lastCourse"]').val();
     console.log(course);
     switch(course) {
-        case 'CSE142': 
-            showQuestion($(event.target), $('#142Score')); 
+        case 'CSE142':
+            showQuestion($(event.target), $('#142Score'));
             break;
         case 'AP-A':
             showQuestion($(event.target), $('#apScore'));
@@ -52,9 +52,9 @@ function checkLastCouse(event) {
         case 'ECS':
         case 'AP-P':
             showQuestion($(event.target), $('#result-adv'))
-            break;        
+            break;
         default:
-            showQuestion($(event.target), $('#121topics'));
+            showQuestion($(event.target), $('#topics-121'));
             break;
     }
 }
@@ -70,7 +70,7 @@ function check142Grade(event) {
         case '3':
         case 'S':
         case 'X':
-            showQuestion($(event.target), $('#121topics'));
+            showQuestion($(event.target), $('#topics-121'));
             break;
         default:
             showQuestion($(event.target), $('#result-adv'));
@@ -89,11 +89,11 @@ function checkAPGrade(event) {
         case '4':
         case '5':
         case 'X':
-            showQuestion($(event.target), $('#121topics'));
+            showQuestion($(event.target), $('#topics-121'));
             break;
         default:
             showQuestion($(event.target), $('#result-adv'));
-            break;        
+            break;
     }
 }
 
@@ -109,7 +109,7 @@ function checkIBGrade(event) {
         case '6':
         case '7':
         case 'X':
-            showQuestion($(event.target), $('#121topics'));
+            showQuestion($(event.target), $('#topics-121'));
             break;
         default:
             showQuestion($(event.target), $('#result-adv'));
@@ -118,7 +118,7 @@ function checkIBGrade(event) {
 }
 
 function check121Topics(event) {
-    let topics = $('#121topics').find('select');
+    let topics = $('#topics-121').find('select');
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
@@ -132,7 +132,7 @@ function check121Topics(event) {
 }
 
 function check122Topics(event) {
-    let topics = $('#122topics').find('select');
+    let topics = $('#topics-122').find('select');
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
@@ -173,6 +173,9 @@ function showQuestion(prev, target) {
     if (target) {
         target.show();
         target.children().show();
+
+        //// Smoothly scroll to this element that was just revealed
+        $("html, body").animate({ scrollTop: $(document).height()}, "fast", "linear");
     }
 }
 
