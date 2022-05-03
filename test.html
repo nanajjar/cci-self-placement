@@ -320,9 +320,9 @@
                 <div class="tab-pane" id="p1-python" role="tabpanel" aria-labelledby="p1-python-tab">
                     <div class="row">
                         <div class="col-8" id="p1-python-problem-col">
-                            <pre><code class="language-python">def figure(max):
-    for line in range(1, max + 1):
-        for dots in range(1, -1 * line + max + 1):
+                            <pre><code class="language-python">def figure(max_num):
+    for line in range(1, max_num + 1):
+        for dots in range(1, max_num - line + 1):
             print(".", end="")
         print(line)
 
@@ -569,7 +569,7 @@ public class Example {
                 <div class="tab-pane" id="p3-python" role="tabpanel" aria-labelledby="p3-python-tab">
                     <div class="row">
                         <div class="col-8" id="p3-python-problem-col">
-                            <pre><code class="language-python">def inputLoop():
+                            <pre><code class="language-python">def input_loop():
     total_chars = 0;
     sentinel = "quit";
     prompt = 'Type a word (or "' + sentinel +'" to quit): '
@@ -579,7 +579,7 @@ public class Example {
         word = input(prompt)
     print("The total number of characters is:", total_chars)
 
-inputLoop()</code></pre>
+input_loop()</code></pre>
                         </div>
 
                         <div class="col-3 toggle-solutions" id="p3-python-solution-col">
