@@ -443,17 +443,17 @@ figure(8)</code></pre>
                 <div class="tab-pane" id="p2-python" role="tabpanel" aria-labelledby="p2-python-tab">
                     <div class="row">
                         <div class="col-8" id="p2-python-problem-col">
-                            <pre><code class="language-python">def mystery(x, list):
-    for el in list:
+                            <pre><code class="language-python">def mystery(x, values):
+    for el in values:
         if len(el) &gt; x:
             return True
     return False
 
 
-list = ["hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"]
-mystery1 = mystery(3, list)
+values = ["hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"]
+mystery1 = mystery(3, values)
 print("Mystery 1:", mystery1)
-mystery2 = mystery(5, list)
+mystery2 = mystery(5, values)
 print("Mystery 2:", mystery2)
                             </code></pre>
                         </div>
