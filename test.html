@@ -452,9 +452,9 @@ figure(8)</code></pre>
 
 list = ["hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"]
 mystery1 = mystery(3, list)
-print(f'Mystery 1: {mystery1}')
+print("Mystery 1:", mystery1)
 mystery2 = mystery(5, list)
-print(f'Mystery 2: {mystery2}')
+print("Mystery 2:", mystery2)
                             </code></pre>
                         </div>
 
@@ -572,11 +572,12 @@ public class Example {
                             <pre><code class="language-python">def inputLoop():
     total_chars = 0;
     sentinel = "quit";
-    word = input(f'Type a word (or "{sentinel}" to quit): ')
+    prompt = 'Type a word (or "' + sentinel +'" to quit): '
+    word = input(prompt)
     while word != sentinel:
         total_chars += len(word)
-        word = input(f'Type a word (or "{sentinel}" to quit): ')
-    print(f'The total number of characters is: {total_chars}')
+        word = input(prompt)
+    print("The total number of characters is:", total_chars)
 
 inputLoop()</code></pre>
                         </div>
