@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+deploy_production:
+  stage: deploy
+  tags:
+    - courseweb
+  script: /www/utils/deploycourseweb.sh
+  variables:
+    quarter: prod
+    course: placement
+  only:
+      - tags
