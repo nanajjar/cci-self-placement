@@ -194,5 +194,5 @@ function saveData(e) {
 
     e.preventDefault();
     const data = new FormData($('#main').get()[0]);
-    fetch(action, {method: 'POST', body: data,}).then(() => alert("Posted!"))
+    fetch(action, {method: 'POST', body: data,})
 }
