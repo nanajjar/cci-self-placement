@@ -16,9 +16,9 @@ function checkPrevCourse(event) {
     let resp = $('input[name="previousCourse"]:checked').val();
     console.log(resp);
     if (resp == 'Yes') {
-        showQuestion($(event.target), $('#lastCourse'));
+        showQuestion(event, $(event.target), $('#lastCourse'));
     } else {
-        showNextQuestion($(event.target));
+        showNextQuestion(event, $(event.target));
     }
 }
 
@@ -26,9 +26,9 @@ function checkPrevExp(event) {
     let resp = $('input[name="previousExp"]:checked').val();
     console.log(resp);
     if (resp == 'No') {
-        showQuestion($(event.target), $('#result-121-noexp'));
+        showQuestion(event, $(event.target), $('#result-121-noexp'));
     } else {
-        showQuestion($(event.target), $('#topics-121'));
+        showQuestion(event, $(event.target), $('#topics-121'));
     }
 }
 
@@ -40,21 +40,21 @@ function checkLastCouse(event) {
     console.log(course);
     switch(course) {
         case 'CSE142':
-            showQuestion($(event.target), $('#142Score'));
+            showQuestion(event, $(event.target), $('#142Score'));
             break;
         case 'AP-A':
-            showQuestion($(event.target), $('#apScore'));
+            showQuestion(event, $(event.target), $('#apScore'));
             break;
         case 'IB-SL':
         case 'IB-HL':
-            showQuestion($(event.target), $('#ibScore'));
+            showQuestion(event, $(event.target), $('#ibScore'));
             break;
         case 'ECS':
         case 'AP-P':
-            showQuestion($(event.target), $('#result-adv'))
+            showQuestion(event, $(event.target), $('#result-adv'))
             break;
         default:
-            showQuestion($(event.target), $('#topics-121'));
+            showQuestion(event, $(event.target), $('#topics-121'));
             break;
     }
 }
@@ -70,10 +70,10 @@ function check142Grade(event) {
         case '3':
         case 'S':
         case 'X':
-            showQuestion($(event.target), $('#topics-121'));
+            showQuestion(event, $(event.target), $('#topics-121'));
             break;
         default:
-            showQuestion($(event.target), $('#result-adv'));
+            showQuestion(event, $(event.target), $('#result-adv'));
             break;
     }
 }
@@ -89,10 +89,10 @@ function checkAPGrade(event) {
         case '4':
         case '5':
         case 'X':
-            showQuestion($(event.target), $('#topics-121'));
+            showQuestion(event, $(event.target), $('#topics-121'));
             break;
         default:
-            showQuestion($(event.target), $('#result-adv'));
+            showQuestion(event, $(event.target), $('#result-adv'));
             break;
     }
 }
@@ -109,10 +109,10 @@ function checkIBGrade(event) {
         case '6':
         case '7':
         case 'X':
-            showQuestion($(event.target), $('#topics-121'));
+            showQuestion(event, $(event.target), $('#topics-121'));
             break;
         default:
-            showQuestion($(event.target), $('#result-adv'));
+            showQuestion(event, $(event.target), $('#result-adv'));
             break;
     }
 }
@@ -123,11 +123,11 @@ function check121Topics(event) {
 
     let responses = topics.get().map(x => $(x).val());
     if (responses.every(x => x == 2)) {
-        showNextQuestion($(event.target));
+        showNextQuestion(event, $(event.target));
     } else if (responses.every(x => x)) {
-        showQuestion($(event.target), $('#result-121-topics'));
+        showQuestion(event, $(event.target), $('#result-121-topics'));
     } else {
-        showQuestion($(event.target), null);
+        showQuestion(event, $(event.target), null);
     }
 }
 
@@ -138,15 +138,15 @@ function check122Topics(event) {
     let responses = topics.get().map(x => $(x).val());
     if (responses.every(x => x == 2)) {
         // showNextQuestion($(event.target));
-        showQuestion($(event.target), $("#result-123"))
+        showQuestion(event, $(event.target), $("#result-123"))
     } else if (responses.every(x => x)) {
         if ($('select[name="lastCourse"]').val() == 'CSE142') {
-            showQuestion($(event.target), $('#result-122-from-142'));
+            showQuestion(event, $(event.target), $('#result-122-from-142'));
         } else {
-            showQuestion($(event.target), $('#result-122'));
+            showQuestion(event, $(event.target), $('#result-122'));
         }
     } else {
-        showQuestion($(event.target), null);
+        showQuestion(event, $(event.target), null);
     }
 }
 
@@ -155,15 +155,15 @@ function check121Problem(event) {
     console.log(resp);
 
     if (resp <= 3) {
-        showQuestion($(event.target), $('#result-121-topics'));
+        showQuestion(event, $(event.target), $('#result-121-topics'));
     } else if (resp == 4) {
-        showQuestion($(event.target), $('#result-adv'));
+        showQuestion(event, $(event.target), $('#result-adv'));
     } else {
-        showNextQuestion($(event.target));
+        showNextQuestion(event, $(event.target));
     }
 }
 
-function showQuestion(prev, target) {
+function showQuestion(event, prev, target) {
     // hide all later questions
     prev.parents('.question').nextAll('.question').hide();
 
@@ -176,9 +176,23 @@ function showQuestion(prev, target) {
 
         //// Smoothly scroll to this element that was just revealed
         $("html, body").animate({ scrollTop: $(document).height()}, "fast", "linear");
+
+        if (target.hasClass('result')) {
+            $('#result-hidden').text(target.attr('id'));
+            saveData(event)
+        }
     }
 }
 
-function showNextQuestion(prev) {
-    showQuestion(prev, prev.parents('.question').next('.question'));
+function showNextQuestion(event, prev) {
+    showQuestion(event, prev, prev.parents('.question').next('.question'));
+}
+
+
+function saveData(e) {
+    const action = "https://script.google.com/macros/s/AKfycbxRVJ8KIzKBiNzI71b1L3cVv0idoR8lpec0Zpkk-mJJvTw18Nr_rlcB31Hc-2nk07Zyqg/exec"
+
+    e.preventDefault();
+    const data = new FormData($('#main').get()[0]);
+    fetch(action, {method: 'POST', body: data,}).then(() => alert("Posted!"))
 }
