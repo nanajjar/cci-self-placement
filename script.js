@@ -9,7 +9,8 @@ $(document).ready(function() {
     $('input[name="ibScore"]').change(checkIBGrade);
     $('#topics-121').find('select').change(check121Topics);
     $('#topics-122').find('select').change(check122Topics);
-    $('input[name^="121p"]').change(check121Problem);
+    $('input[name^="p_121p"]').change(check121Problem);
+    $('input[name^="p_122p"]').change(check122Problem);
 });
 
 function checkPrevCourse(event) {
@@ -137,8 +138,8 @@ function check122Topics(event) {
 
     let responses = topics.get().map(x => $(x).val());
     if (responses.every(x => x == 2)) {
-        // showNextQuestion($(event.target));
-        showQuestion(event, $(event.target), $("#result-123"))
+        showNextQuestion(event, $(event.target));
+        // showQuestion(event, $(event.target), $("#result-123"))
     } else if (responses.every(x => x)) {
         if ($('select[name="lastCourse"]').val() == 'CSE142') {
             showQuestion(event, $(event.target), $('#result-122-from-142'));
@@ -158,6 +159,25 @@ function check121Problem(event) {
         showQuestion(event, $(event.target), $('#result-121-topics'));
     } else if (resp == 4) {
         showQuestion(event, $(event.target), $('#result-adv'));
+    } else {
+        showNextQuestion(event, $(event.target));
+    }
+}
+
+function check122Problem(event) {
+    let resp = $(event.target).filter(':checked').val();
+    console.log(resp);
+
+    if (resp <= 3) {
+        if ($('select[name="lastCourse"]').val() == 'CSE142') {
+            showQuestion(event, $(event.target), $('#result-122-from-142'));
+        } else {
+            showQuestion(event, $(event.target), $('#result-122'));
+        }
+    } else if (resp == 4) {
+        showQuestion(event, $(event.target), $('#result-adv'));
+    } else if ($(event.target).attr('id').startsWith('p_122p3')) {
+        showQuestion(event, $(event.target), $('#result-123'));
     } else {
         showNextQuestion(event, $(event.target));
     }
