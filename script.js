@@ -168,7 +168,7 @@ function showQuestion(event, prev, target) {
     prev.parents('.question').nextAll('.question').hide();
 
     // hide results
-    $('#results').children().hide();
+    $('.result').hide();
 
     if (target) {
         target.show();
