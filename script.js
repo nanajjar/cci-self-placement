@@ -123,7 +123,7 @@ function check121Topics(event) {
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
-    if (responses.every(x => x == 2)) {
+    if (responses.every(x => x >= 3)) {
         showNextQuestion(event, $(event.target));
     } else if (responses.every(x => x)) {
         showQuestion(event, $(event.target), $('#result-121-topics'));
@@ -137,7 +137,7 @@ function check122Topics(event) {
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
-    if (responses.every(x => x == 2)) {
+    if (responses.every(x => x >= 3)) {
         showNextQuestion(event, $(event.target));
         // showQuestion(event, $(event.target), $("#result-123"))
     } else if (responses.every(x => x)) {
