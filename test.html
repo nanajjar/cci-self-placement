@@ -59,7 +59,7 @@
             appear. This is to help make sure we get the information that will most help us recommend the best course for you. As you go through
             the self-placement, you may also encounter terms or concepts you haven't heard of before. Don't be intimidated-- if you haven't seen
             a topic or concept, that just means you should probably be in the course that teaches it! We encourage you to answer all questions
-            based on your <em>current</em> experience and not go searching for answers or information elsewhere.
+            as truthfully as possible based on your <em>current</em> experience.
         </p>
 
         <p>When you're ready, click the button below to begin.</p>
@@ -206,12 +206,14 @@
             <label class="form-label" for="topics-121">How familiar and comfortable are you with each of
                 the following programming topics/constructs?</label>
             <div class="mb-3">
-                <label for="121vars" id="varLabel">Variables</label>
+                <label for="121vars" id="varLabel">Variables and assignment statements</label>
                 <select class="form-select" name="121vars">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
 
@@ -219,45 +221,55 @@
                 <label for="121types" id="typeLabel">Data types (e.g.,&nbsp;<code>int</code>,&nbsp;<code>double</code>,&nbsp;<code>String</code>,&nbsp;<code>char</code>)</label>
                 <select class="form-select" name="121types">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="121funcs" id="funcLabel">Functions/Methods</label>
+                <label for="121funcs" id="funcLabel">Functions and/or methods</label>
                 <select class="form-select" name="121funcs">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="121loops" id="loopLabel">Loops</label>
                 <select class="form-select" name="121loops">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="121conds" id="condLabel">Conditionals (e.g.,&nbsp;<code>if</code>,&nbsp;<code>else</code>)</label>
                 <select class="form-select" name="121conds">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="121arrs" id="arrLabel">Arrays and/or Lists</label>
+                <label for="121arrs" id="arrLabel">Arrays and/or lists</label>
                 <select class="form-select" name="121arrs">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
         </div>
@@ -366,23 +378,23 @@ figure(8)</code></pre>
                 <label class="form-label" for="p_121p1react">Which of the following best describes your experience with the preceding problem?</label>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p1react" id="p_121p1react1" value="1">
-                    <label class="form-check-label" for="p_121p1react1">I did not understand the problem.</label>
+                    <label class="form-check-label" for="p_121p1react1">I did not understand the problem or did not know how to begin solving it.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p1react" id="p_121p1react2" value="2">
-                    <label class="form-check-label" for="p_121p1react2">I understood the problem but did not know how to begin solving it.</label>
+                    <label class="form-check-label" for="p_121p1react2">I was able to begin solving the problem but got stuck.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p1react" id="p_121p1react3" value="3">
-                    <label class="form-check-label" for="p_121p1react3">I was able to begin solving the problem but was not able to complete it.</label>
+                    <label class="form-check-label" for="p_121p1react3">I was able to complete the problem but struggled greatly.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p1react" id="p_121p1react4" value="4">
-                    <label class="form-check-label" for="p_121p1react4">I was able to solve the problem but struggled to do so.</label>
+                    <label class="form-check-label" for="p_121p1react4">I was able to solve the problem with a little difficulty.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p1react" id="p_121p1react5" value="5">
-                    <label class="form-check-label" for="p_121p1react5">I was able to solve the problem easily.</label>
+                    <label class="form-check-label" for="p_121p1react5">I was able to solve the problem with no difficulty.</label>
                 </div>
             </div>
         </div>
@@ -489,23 +501,23 @@ print("Mystery 2:", mystery2)
                 <label class="form-label" for="p_121p2react">Which of the following best describes your experience with the preceding problem?</label>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p2react" id="p_121p2react1" value="1">
-                    <label class="form-check-label" for="p_121p2react1">I did not understand the problem.</label>
+                    <label class="form-check-label" for="p_121p2react1">I did not understand the problem or did not know how to begin solving it.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p2react" id="p_121p2react2" value="2">
-                    <label class="form-check-label" for="p_121p2react2">I understood the problem but did not know how to begin solving it.</label>
+                    <label class="form-check-label" for="p_121p2react2">I was able to begin solving the problem but got stuck.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p2react" id="p_121p2react3" value="3">
-                    <label class="form-check-label" for="p_121p2react3">I was able to begin solving the problem but was not able to complete it.</label>
+                    <label class="form-check-label" for="p_121p2react3">I was able to complete the problem but struggled greatly.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p2react" id="p_121p2react4" value="4">
-                    <label class="form-check-label" for="p_121p2react4">I was able to solve the problem but struggled to do so.</label>
+                    <label class="form-check-label" for="p_121p2react4">I was able to solve the problem with a little difficulty.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p2react" id="p_121p2react5" value="5">
-                    <label class="form-check-label" for="p_121p2react5">I was able to solve the problem easily.</label>
+                    <label class="form-check-label" for="p_121p2react5">I was able to solve the problem with no difficulty.</label>
                 </div>
             </div>
         </div>
@@ -612,23 +624,23 @@ input_loop()</code></pre>
                 <label class="form-label" for="p_121p3react">Which of the following best describes your experience with the preceding problem?</label>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p3react" id="p_121p3react1" value="1">
-                    <label class="form-check-label" for="p_121p3react1">I did not understand the problem.</label>
+                    <label class="form-check-label" for="p_121p3react1">I did not understand the problem or did not know how to begin solving it.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p3react" id="p_121p3react2" value="2">
-                    <label class="form-check-label" for="p_121p3react2">I understood the problem but did not know how to begin solving it.</label>
+                    <label class="form-check-label" for="p_121p3react2">I was able to begin solving the problem but got stuck.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p3react" id="p_121p3react3" value="3">
-                    <label class="form-check-label" for="p_121p3react3">I was able to begin solving the problem but was not able to complete it.</label>
+                    <label class="form-check-label" for="p_121p3react3">I was able to complete the problem but struggled greatly.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p3react" id="p_121p3react4" value="4">
-                    <label class="form-check-label" for="p_121p3react4">I was able to solve the problem but struggled to do so.</label>
+                    <label class="form-check-label" for="p_121p3react4">I was able to solve the problem with a little difficulty.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_121p3react" id="p_121p3react5" value="5">
-                    <label class="form-check-label" for="p_121p3react5">I was able to solve the problem easily.</label>
+                    <label class="form-check-label" for="p_121p3react5">I was able to solve the problem with no difficulty.</label>
                 </div>
             </div>
         </div>
@@ -637,48 +649,58 @@ input_loop()</code></pre>
             <label class="form-label" for="topics-122">How familiar and comfortable are you with each of
                 the following programming topics/constructs?</label>
             <div class="mb-3">
-                <label for="122io" id="ioLabel">Console and/or File Input/Output</label>
+                <label for="122io" id="ioLabel">Console and/or file input and output</label>
                 <select class="form-select" name="122io">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="122maps" id="mapLabel">Maps and/or Dictionaries</label>
+                <label for="122maps" id="mapLabel">Maps and/or dictionaries</label>
                 <select class="form-select" name="122maps">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="122classes" id="classLabel">Defining classes</label>
                 <select class="form-select" name="122classes">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="122construct" id="constructLabel">Defining constructors</label>
                 <select class="form-select" name="122construct">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="122inter" id="interLabel">Interfaces</label>
                 <select class="form-select" name="122inter">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I am not familiar with this.</option>
-                    <option value="1">I am familiar with this but not comfortable using it in programming.</option>
-                    <option value="2">I am comfortable using this in programming.</option>
+                    <option value="0">I have never heard of this.</option>
+                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
+                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                    <option value="3">I am somewhat comfortable using this in programming.</option>
+                    <option value="4">I am entirely comfortable using this in programming.</option>
                 </select>
             </div>
         </div>
@@ -773,23 +795,23 @@ input_loop()</code></pre>
                 <label class="form-label" for="p_122p1react">Which of the following best describes your experience with the preceding problem?</label>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p1react" id="p_122p1react1" value="1">
-                    <label class="form-check-label" for="p_122p1react1">I did not understand the problem.</label>
+                    <label class="form-check-label" for="p_122p1react1">I did not understand the problem or did not know how to begin solving it.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p1react" id="p_122p1react2" value="2">
-                    <label class="form-check-label" for="p_122p1react2">I understood the problem but did not know how to begin solving it.</label>
+                    <label class="form-check-label" for="p_122p1react2">I was able to begin solving the problem but got stuck.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p1react" id="p_122p1react3" value="3">
-                    <label class="form-check-label" for="p_122p1react3">I was able to begin solving the problem but was not able to complete it.</label>
+                    <label class="form-check-label" for="p_122p1react3">I was able to complete the problem but struggled greatly.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p1react" id="p_122p1react4" value="4">
-                    <label class="form-check-label" for="p_122p1react4">I was able to solve the problem but struggled to do so.</label>
+                    <label class="form-check-label" for="p_122p1react4">I was able to solve the problem with a little difficulty.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p1react" id="p_122p1react5" value="5">
-                    <label class="form-check-label" for="p_122p1react5">I was able to solve the problem easily.</label>
+                    <label class="form-check-label" for="p_122p1react5">I was able to solve the problem with no difficulty.</label>
                 </div>
             </div>
         </div>          
@@ -903,23 +925,23 @@ public class Example5 {
                 <label class="form-label" for="p_122p2react">Which of the following best describes your experience with the preceding problem?</label>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p2react" id="p_122p2react1" value="1">
-                    <label class="form-check-label" for="p_122p2react1">I did not understand the problem.</label>
+                    <label class="form-check-label" for="p_122p2react1">I did not understand the problem or did not know how to begin solving it.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p2react" id="p_122p2react2" value="2">
-                    <label class="form-check-label" for="p_122p2react2">I understood the problem but did not know how to begin solving it.</label>
+                    <label class="form-check-label" for="p_122p2react2">I was able to begin solving the problem but got stuck.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p2react" id="p_122p2react3" value="3">
-                    <label class="form-check-label" for="p_122p2react3">I was able to begin solving the problem but was not able to complete it.</label>
+                    <label class="form-check-label" for="p_122p2react3">I was able to complete the problem but struggled greatly.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p2react" id="p_122p2react4" value="4">
-                    <label class="form-check-label" for="p_122p2react4">I was able to solve the problem but struggled to do so.</label>
+                    <label class="form-check-label" for="p_122p2react4">I was able to solve the problem with a little difficulty.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p2react" id="p_122p2react5" value="5">
-                    <label class="form-check-label" for="p_122p2react5">I was able to solve the problem easily.</label>
+                    <label class="form-check-label" for="p_122p2react5">I was able to solve the problem with no difficulty.</label>
                 </div>
             </div>
         </div>      
@@ -1086,23 +1108,23 @@ public class Example6 {
                 <label class="form-label" for="p_122p3react">Which of the following best describes your experience with the preceding problem?</label>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p3react" id="p_122p3react1" value="1">
-                    <label class="form-check-label" for="p_122p3react1">I did not understand the problem.</label>
+                    <label class="form-check-label" for="p_122p3react1">I did not understand the problem or did not know how to begin solving it.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p3react" id="p_122p3react2" value="2">
-                    <label class="form-check-label" for="p_122p3react2">I understood the problem but did not know how to begin solving it.</label>
+                    <label class="form-check-label" for="p_122p3react2">I was able to begin solving the problem but got stuck.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p3react" id="p_122p3react3" value="3">
-                    <label class="form-check-label" for="p_122p3react3">I was able to begin solving the problem but was not able to complete it.</label>
+                    <label class="form-check-label" for="p_122p3react3">I was able to complete the problem but struggled greatly.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p3react" id="p_122p3react4" value="4">
-                    <label class="form-check-label" for="p_122p3react4">I was able to solve the problem but struggled to do so.</label>
+                    <label class="form-check-label" for="p_122p3react4">I was able to solve the problem with a little difficulty.</label>
                 </div>
                 <div class="form-check">
                     <input autocomplete="off" class="form-check-input" type="radio" name="p_122p3react" id="p_122p3react5" value="5">
-                    <label class="form-check-label" for="p_122p3react5">I was able to solve the problem easily.</label>
+                    <label class="form-check-label" for="p_122p3react5">I was able to solve the problem with no difficulty.</label>
                 </div>
             </div>
         </div>
@@ -1126,7 +1148,8 @@ public class Example6 {
                 to solve problems using data sets drawn from the sciences, engineering, business and the humanities.
             </p>
             <p>
-                If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
+                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                 advising team</a>.
             </p>
         </div>
@@ -1139,7 +1162,8 @@ public class Example6 {
                 CSE 121</a> to help you solidfy your understanding of that material before moving on to CSE 122.
             </p>
             <p>
-                If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
+                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                 advising team</a>.
             </p>
         </div>
@@ -1153,7 +1177,8 @@ public class Example6 {
                 so you should feel confident enrolling even if your experience is in another programming language.
             </p>
             <p>
-                If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
+                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                 advising team</a>.
             </p>
         </div>
@@ -1171,7 +1196,8 @@ public class Example6 {
                 previously taken CSE 142.
             </p>
             <p>
-                If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
+                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                 advising team</a>.
             </p>
         </div>
@@ -1192,7 +1218,8 @@ public class Example6 {
                 previously programmed in Java adapt, so you should feel confident enrolling even if you've never used Python before.
             </p>
             <p>
-                If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
+                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/advising">undergraduate
                 advising team</a>.
             </p>
         </div>

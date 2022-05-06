@@ -123,7 +123,7 @@ function check121Topics(event) {
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
-    if (responses.every(x => x == 2)) {
+    if (responses.every(x => x >= 3)) {
         showNextQuestion(event, $(event.target));
     } else if (responses.every(x => x)) {
         showQuestion(event, $(event.target), $('#result-121-topics'));
@@ -137,7 +137,7 @@ function check122Topics(event) {
     console.log(topics);
 
     let responses = topics.get().map(x => $(x).val());
-    if (responses.every(x => x == 2)) {
+    if (responses.every(x => x >= 3)) {
         showNextQuestion(event, $(event.target));
         // showQuestion(event, $(event.target), $("#result-123"))
     } else if (responses.every(x => x)) {
@@ -155,9 +155,9 @@ function check121Problem(event) {
     let resp = $(event.target).filter(':checked').val();
     console.log(resp);
 
-    if (resp <= 3) {
+    if (resp <= 2) {
         showQuestion(event, $(event.target), $('#result-121-topics'));
-    } else if (resp == 4) {
+    } else if (resp == 3) {
         showQuestion(event, $(event.target), $('#result-adv'));
     } else {
         showNextQuestion(event, $(event.target));
@@ -168,13 +168,13 @@ function check122Problem(event) {
     let resp = $(event.target).filter(':checked').val();
     console.log(resp);
 
-    if (resp <= 3) {
+    if (resp <= 2) {
         if ($('select[name="lastCourse"]').val() == 'CSE142') {
             showQuestion(event, $(event.target), $('#result-122-from-142'));
         } else {
             showQuestion(event, $(event.target), $('#result-122'));
         }
-    } else if (resp == 4) {
+    } else if (resp == 3) {
         showQuestion(event, $(event.target), $('#result-adv'));
     } else if ($(event.target).attr('id').startsWith('p_122p3')) {
         showQuestion(event, $(event.target), $('#result-123'));
