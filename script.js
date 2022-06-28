@@ -50,10 +50,10 @@ function checkLastCouse(event) {
         case 'IB-HL':
             showQuestion(event, $(event.target), $('#ibScore'));
             break;
-        case 'ECS':
-        case 'AP-P':
-            showQuestion(event, $(event.target), $('#result-adv'))
-            break;
+        // case 'ECS':
+        // case 'AP-P':
+        //     showQuestion(event, $(event.target), $('#result-adv'))
+        //     break;
         default:
             showQuestion(event, $(event.target), $('#topics-121'));
             break;
