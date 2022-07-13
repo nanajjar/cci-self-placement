@@ -177,7 +177,11 @@ function check122Problem(event) {
     } else if (resp == 3) {
         showQuestion(event, $(event.target), $('#result-adv'));
     } else if ($(event.target).attr('id').startsWith('p_122p3')) {
-        showQuestion(event, $(event.target), $('#result-123'));
+        if ($('select[name="lastCourse"]').val() == 'CSE142') {
+            showQuestion(event, $(event.target), $('#result-123-from-142'));
+        } else {
+            showQuestion(event, $(event.target), $('#result-123'));
+        }
     } else {
         showNextQuestion(event, $(event.target));
     }
