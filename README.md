@@ -6,7 +6,7 @@ This tool provides the workflow for the University of Washington's self-placemen
 
 ## Setup
 
-This repo does not require a complicated development setup, and simply relies on basic web developmen skills (HTML/CSS/Javascript). The dependencies for the project are linked from the top of the `index.html` file.
+This repo does not require a complicated development setup, and simply relies on basic web development skills (HTML/CSS/Javascript). The dependencies for the project are linked from the top of the `index.html` file.
 
 ## Development
 
