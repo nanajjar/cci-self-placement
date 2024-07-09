@@ -51,5 +51,5 @@ function checkPrevCourse(event) {
     }
 }
 ```
-#  Aknowledgement
+#  Acknowledgment
 This is an adaptation of tool developed for the University of Washington by Brett Wortzman, Hunter Schafer, and Zorah Fung.
