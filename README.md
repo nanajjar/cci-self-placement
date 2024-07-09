@@ -1,8 +1,6 @@
-# CSE 12X Self-Placement
+# ITSC 121X Self-Placement
 
-This tool provides the workflow for the University of Washington's self-placement tool for the introductory programming courses CSE 12x (CSE 121, 122, 123).
-
-*Contributors:* Brett Wortzman, Hunter Schafer, Zorah Fung
+This tool provides the workflow for the University of North Carolina at Charlotte self-placement tool for the introductory programming courses ITSC 121x (ITSC 1212, 1213).
 
 ## Setup
 
@@ -53,3 +51,5 @@ function checkPrevCourse(event) {
     }
 }
 ```
+#  Aknowledgement
+This is an adaptation of tool developed for the University of Washington by Brett Wortzman, Hunter Schafer, and Zorah Fung.
