@@ -1,16 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS & JS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <!-- Prism syntax highlighting -->
     <script src="
@@ -29,11 +34,12 @@
 
 
     <title>CSE 12X Self-Placement</title>
-  </head>
-  <body>
-    <main class="py-5 px-5">
+</head>
 
-      <!--
+<body>
+    <main class="m-5">
+
+        <!--
       <div id="beta-alert" class="alert alert-warning sticky-top" role="alert">
         <h4 class="alert-heading">Attention!</h4>
         <p>This tool is still <strong>under development</strong>. All content, including course recommendations,
@@ -41,275 +47,325 @@
       </div>
       -->
 
-      <!-- 
+        <!-- 
         Text 1: Welcome
       -->
-      <div id="welcome">
-        <h1>Welcome to the ITSC 121x Guided Self-Placement!</h1>
+        <div id="welcome">
+            <h1 class="text-center m-3">Welcome to the ITSC 121X Guided Self-Placement!</h1>
 
-        <p>
-            We're excited that you are interested in taking an introductory computer science course! Our
-            <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">ITSC 1212, 1213 and 2214
-            programming courses</a> are designed for all students, regardless of how much prior experience you do or do not have and
-            regardless of your goals or reasons for taking the course. In that spirit, we want everyone to take the right first course
-            for them, especially since prior experience can come in many different forms. This self-placement will help you find that
-            course.
-        </p>
-        <p>
-            If you have never programmed before, or if your programming experience is limited, you will probably begin with ITSC 1212,
-            which is designed for students with no previous experience whatsoever. If you took a high-school programming course intended
-            to be similar to a first college course, like AP Computer Science A or IB Computer Science, you will probably start with ITSC 1213. 
-            If you have substantial previous experience you might even want to enroll in ITSC 2214. This guided self-placement will
-            help you make this decision by asking you questions about your background. These will include questions about the specific
-            courses and experience you have, how familiar you are with various topics and concepts, and how comfortable you are solving
-            practice problems. We hope this will help most people pick the right course for them, but if you still have questions at the
-            end, you can always contact our helpful <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-            advising team</a> for more support.
-        </p>
-        <p>
-            This self-placement is <em>adaptive</em>, meaning which questions you see and in which order will depend on your responses. So
-            each student will have a slightly different experience, and if you go back and change your answers, you may see different questions
-            appear. This is to help make sure we get the information that will most help us recommend the best course for you. As you go through
-            the self-placement, you may also encounter terms or concepts you haven't heard of before. Don't be intimidated-- if you haven't seen
-            a topic or concept, that just means you should probably be in the course that teaches it! We encourage you to answer all questions
-            as truthfully as possible based on your <em>current</em> experience.
-        </p>
+            <p>
+                We're excited that you are interested in taking an introductory computer science course! Our
+                <a target="new"
+                    href="https://cci.charlotte.edu/academics/computer-science/undergraduate-programs/courses/">
+                    Computer Science Programs
+                </a>
+                include introductory courses that are designed for all students. Our Introduction to Computer Science
+                courses are <mark>ITSC 1212</mark>, which is mostly language agnostic and focuses primarily on the
+                concepts of
+                object-oriented programming (OOP) and <mark>ITSC 1213</mark>, which begins to dive deeper into logic
+                and syntax. In
+                that spirit, we want everyone to take the
+                right first course for them, especially since prior experience can come in many different forms. This
+                self-placement may help you find that course.
+            </p>
+            <p>
+                If you have never programmed before, or if your programming experience is limited, you will probably
+                begin with ITSC 1212
+                which is designed for students with no previous experience whatsoever. If you took a high-school
+                programming course intended
+                to be similar to a first college course, such as AP Computer Science A or IB Computer Science, you may wish
+                to attempt our Credit by Exam (CBE) to test out of ITSC 1212 and begin with ITSC 1213.
+                If you have substantial previous experience you might even want to enroll in ITSC 2214 after attempting
+                and passing the CBE for ITSC 1213. This guided
+                self-placement will
+                help you make this decision by asking you questions about your background. These will include questions
+                about the specific
+                courses and experience you have, how familiar you are with various topics and concepts, and how
+                comfortable you are solving
+                practice problems. We hope this will help most people pick the right course for them, but if you still
+                have questions at the
+                end, you can always contact our helpful <a
+                    href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                    placement
+                    advising team</a> for more support.
+            </p>
+            <p>
+                This self-placement is <em>adaptive</em>, meaning which questions you see and in which order will depend
+                on your responses. So
+                each student will have a slightly different experience, and if you go back and change your answers, you
+                may see different questions
+                appear. This is to help make sure we get the information that will most help us recommend the best
+                course for you. As you go through
+                the self-placement, you may also encounter terms or concepts you haven't heard of before. Don't be
+                intimidated-- if you haven't seen
+                a topic or concept, that just means you should probably be in the course that teaches it! We encourage
+                you to answer all questions
+                as truthfully as possible based on your <em>current</em> experience.
+            </p>
 
-        <p>When you're ready, click the button below to begin.</p>
-        <button type="button" class="btn btn-success" id="start-btn">Begin Self-Assessment</button>
-      </div>
-
-
-      <form style="display:none" id="main">
-        <div class="mb-3 question" id="prevCourse">
-            <label class="form-label" for="previousCourse">Have you taken a previous computer science course?</label>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="previousCourse" id="previousCourseYes" value="Yes">
-                <label class="form-check-label" for="previousCourseYes">Yes</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="previousCourse" id="previousCourseNo" value="No">
-                <label class="form-check-label" for="previousCourseNo">No</label>
-            </div>
+            <p>When you're ready, click the button below to begin.</p>
+            <button type="button" class="btn btn-success" id="start-btn">Begin Self-Assessment</button>
         </div>
 
-        <div class="mb-3 question" id ="prevExp" style="display:none">
-            <label class="form-label" for="previousExp">Do you have previous programming experience outside of a course?</label>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="previousExp" id="previousExpYes" value="Yes">
-                <label class="form-check-label" for="previousExpYes">Yes</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="previousExp" id="previousExpNo" value="No">
-                <label class="form-check-label" for="previousExpNo">No</label>
-            </div>
-        </div>
 
-        <div class="mb-3 question" id="lastCourse" style="display:none">
-            <label class="form-label" for="lastCourse">What is the most recent computer science course you have completed?</label>
-            <select class="form-select" name="lastCourse" aria-label="Most recent course">
-                <option value="" selected disabled>Select an option</option>
-                <!-- <option value="CSE142">CSE 142 (at UW, UW in the High School, or a community college)</option> -->
-                <option value="ITSC1110">ITSC 1110</option>
-                <option value="AP-A">Advanced Placement (AP) Computer Science A</option>
-                <option value="AP-P">Advanced Placement (AP) Computer Science Principles</option>
-                <option value="IB-SL">International Baccalaureate (IB) Computer Science - Standard Level (SL)</option>
-                <option value="IB-HL">International Baccalaureate (IB) Computer Science - High Level (SL)</option>
-                <option value="ECS">Exploring Computer Science</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
+        <form style="display:none" id="main">
+            <div class="mb-3 question" id="prevCourse">
+                <label class="form-label" for="previousCourse">Have you taken a previous computer science
+                    course?</label>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="previousCourse"
+                        id="previousCourseYes" value="Yes">
+                    <label class="form-check-label" for="previousCourseYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="previousCourse"
+                        id="previousCourseNo" value="No">
+                    <label class="form-check-label" for="previousCourseNo">No</label>
+                </div>
+            </div>
 
-        <!-- <div class="mb-3 question gradeCheck" id="142Score" style="display:none"> -->
-        <div class="mb-3 question gradeCheck" id="1110Score" style="display:none">
-            <label class="form-label" for="1110Score">What was your grade in ITSC 1110?</label>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-0" value="0">
-                <label class="form-check-label" for="1110-0">0.0-0.9</label>
+            <div class="mb-3 question" id="prevExp" style="display:none">
+                <label class="form-label" for="previousExp">Do you have previous programming experience outside of a
+                    course?</label>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="previousExp"
+                        id="previousExpYes" value="Yes">
+                    <label class="form-check-label" for="previousExpYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="previousExp"
+                        id="previousExpNo" value="No">
+                    <label class="form-check-label" for="previousExpNo">No</label>
+                </div>
             </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-1" value="1">
-                <label class="form-check-label" for="1110-1">1.0-1.9</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-2" value="2">
-                <label class="form-check-label" for="1110-2">2.0-2.9</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-3" value="3">
-                <label class="form-check-label" for="1110-3">3.0-4.0</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-S" value="S">
-                <label class="form-check-label" for="1110-S">S</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-NS" value="NS">
-                <label class="form-check-label" for="1110-NS">NS</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-X" value="X">
-                <label class="form-check-label" for="1110-X">I do not have a grade in ITSC 1110</label>
-            </div>
-        </div>
 
-        <div class="mb-3 question gradeCheck" id="apScore" style="display:none">
-            <label class="form-label" for="apScore">What was your score on the AP Computer Science A exam?</label>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap1" value="1">
-                <label class="form-check-label" for="ap1">1</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap2" value="2">
-                <label class="form-check-label" for="ap2">2</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap3" value="3">
-                <label class="form-check-label" for="ap3">3</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap4" value="4">
-                <label class="form-check-label" for="ap4">4</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap5" value="5">
-                <label class="form-check-label" for="ap5">5</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap0" value="X">
-                <label class="form-check-label" for="ap0">I did not take the exam or do not have a score</label>
-            </div>
-        </div>
-
-        <div class="mb-3 question gradeCheck" id="ibScore" style="display:none">
-            <label class="form-label" for="ibScore">What was your score on the IB Computer Science exam?</label>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib1" value="1">
-                <label class="form-check-label" for="ib1">1</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib2" value="2">
-                <label class="form-check-label" for="ib2">2</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib3" value="3">
-                <label class="form-check-label" for="ib3">3</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib4" value="4">
-                <label class="form-check-label" for="ib4">4</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib5" value="5">
-                <label class="form-check-label" for="ib5">5</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib6" value="6">
-                <label class="form-check-label" for="ib6">6</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib7" value="7">
-                <label class="form-check-label" for="ib7">7</label>
-            </div>
-            <div class="form-check">
-                <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib0" value="X">
-                <label class="form-check-label" for="ib0">I did not take the exam or do not have a score</label>
-            </div>
-        </div>
-
-        <!-- <div class="mb-2 question" id="topics-121" style="display:none"> -->
-        <div class="mb-2 question" id="topics-1212" style="display:none">
-            <label class="form-label" for="topics-1212">How familiar and comfortable are you with each of
-                the following programming topics/constructs?</label>
-            <div class="mb-3">
-                <label for="1212vars" id="varLabel">Variables and assignment statements</label>
-                <select class="form-select" name="1212vars">
+            <div class="mb-3 question" id="lastCourse" style="display:none">
+                <label class="form-label" for="lastCourse">What is the most recent computer science course you have
+                    completed?</label>
+                <select class="form-select" name="lastCourse" aria-label="Most recent course">
                     <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
+                    <!-- <option value="CSE142">CSE 142 (at UW, UW in the High School, or a community college)</option> -->
+                    <option value="ITSC1110">ITSC 1110</option>
+                    <option value="AP-A">Advanced Placement (AP) Computer Science A</option>
+                    <option value="AP-P">Advanced Placement (AP) Computer Science Principles</option>
+                    <option value="IB-SL">International Baccalaureate (IB) Computer Science - Standard Level (SL)
+                    </option>
+                    <option value="IB-HL">International Baccalaureate (IB) Computer Science - High Level (SL)</option>
+                    <option value="ECS">Exploring Computer Science</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
-            <div class="mb-3">
-                <label for="1212types" id="typeLabel">Data types (e.g.,&nbsp;<code>int</code>,&nbsp;<code>double</code>,&nbsp;<code>String</code>,&nbsp;<code>char</code>)</label>
-                <select class="form-select" name="1212types">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
+            <!-- <div class="mb-3 question gradeCheck" id="142Score" style="display:none"> -->
+            <div class="mb-3 question gradeCheck" id="1110Score" style="display:none">
+                <label class="form-label" for="1110Score">What was your grade in ITSC 1110?</label>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-0"
+                        value="0">
+                    <label class="form-check-label" for="1110-0">0.0-0.9</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-1"
+                        value="1">
+                    <label class="form-check-label" for="1110-1">1.0-1.9</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-2"
+                        value="2">
+                    <label class="form-check-label" for="1110-2">2.0-2.9</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-3"
+                        value="3">
+                    <label class="form-check-label" for="1110-3">3.0-4.0</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-S"
+                        value="S">
+                    <label class="form-check-label" for="1110-S">S</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-NS"
+                        value="NS">
+                    <label class="form-check-label" for="1110-NS">NS</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="1110Score" id="1110-X"
+                        value="X">
+                    <label class="form-check-label" for="1110-X">I do not have a grade in ITSC 1110</label>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="1212funcs" id="funcLabel">Functions and/or methods</label>
-                <select class="form-select" name="1212funcs">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="1212loops" id="loopLabel">Loops</label>
-                <select class="form-select" name="1212loops">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="1212conds" id="condLabel">Conditionals (e.g.,&nbsp;<code>if</code>,&nbsp;<code>else</code>)</label>
-                <select class="form-select" name="1212conds">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="1212arrs" id="arrLabel">Arrays and/or lists</label>
-                <select class="form-select" name="1212arrs">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="mb-3 question" id="p_1212p1" style="display:none">
-            <label for="p_1212p1">Read and work on this problem, then answer the next question: <b>What is the output after executing the following code?</b></label><br/>
+            <div class="mb-3 question gradeCheck" id="apScore" style="display:none">
+                <label class="form-label" for="apScore">What was your score on the AP Computer Science A exam?</label>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap1" value="1">
+                    <label class="form-check-label" for="ap1">1</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap2" value="2">
+                    <label class="form-check-label" for="ap2">2</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap3" value="3">
+                    <label class="form-check-label" for="ap3">3</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap4" value="4">
+                    <label class="form-check-label" for="ap4">4</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap5" value="5">
+                    <label class="form-check-label" for="ap5">5</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="apScore" id="ap0" value="X">
+                    <label class="form-check-label" for="ap0">I did not take the exam or do not have a score</label>
+                </div>
+            </div>
 
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills" id="p_1212p1-lang" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="p_1212p1-java-tab" data-bs-toggle="tab" data-bs-target="#p_1212p1-java" type="button" role="tab" aria-controls="p_1212p1-java" aria-selected="true">Java</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="p_1212p1-python-tab" data-bs-toggle="tab" data-bs-target="#p_1212p1-python" type="button" role="tab" aria-controls="p_1212p1-python" aria-selected="false">Python</button>
-                </li>
-            </ul>
+            <div class="mb-3 question gradeCheck" id="ibScore" style="display:none">
+                <label class="form-label" for="ibScore">What was your score on the IB Computer Science exam?</label>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib1" value="1">
+                    <label class="form-check-label" for="ib1">1</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib2" value="2">
+                    <label class="form-check-label" for="ib2">2</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib3" value="3">
+                    <label class="form-check-label" for="ib3">3</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib4" value="4">
+                    <label class="form-check-label" for="ib4">4</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib5" value="5">
+                    <label class="form-check-label" for="ib5">5</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib6" value="6">
+                    <label class="form-check-label" for="ib6">6</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib7" value="7">
+                    <label class="form-check-label" for="ib7">7</label>
+                </div>
+                <div class="form-check">
+                    <input autocomplete="off" class="form-check-input" type="radio" name="ibScore" id="ib0" value="X">
+                    <label class="form-check-label" for="ib0">I did not take the exam or do not have a score</label>
+                </div>
+            </div>
 
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- **JAVA** -->
-                <div class="tab-pane active" id="p_1212p1-java" role="tabpanel" aria-labelledby="p_1212p1-java-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1212p1-java-problem-col">
-                            <pre><code class="language-java">public class Example {
+            <!-- <div class="mb-2 question" id="topics-121" style="display:none"> -->
+            <div class="mb-2 question" id="topics-1212" style="display:none">
+                <label class="form-label" for="topics-1212">How familiar and comfortable are you with each of
+                    the following programming topics/constructs?</label>
+                <div class="mb-3">
+                    <label for="1212vars" id="varLabel">Variables and assignment statements</label>
+                    <select class="form-select" name="1212vars">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="1212types" id="typeLabel">Data types
+                        (e.g.,&nbsp;<code>int</code>,&nbsp;<code>double</code>,&nbsp;<code>String</code>,&nbsp;<code>char</code>)</label>
+                    <select class="form-select" name="1212types">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="1212funcs" id="funcLabel">Functions and/or methods</label>
+                    <select class="form-select" name="1212funcs">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="1212loops" id="loopLabel">Loops</label>
+                    <select class="form-select" name="1212loops">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="1212conds" id="condLabel">Conditionals
+                        (e.g.,&nbsp;<code>if</code>,&nbsp;<code>else</code>)</label>
+                    <select class="form-select" name="1212conds">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="1212arrs" id="arrLabel">Arrays and/or lists</label>
+                    <select class="form-select" name="1212arrs">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3 question" id="p_1212p1" style="display:none">
+                <label for="p_1212p1">Read and work on this problem, then answer the next question: <b>What is the
+                        output after executing the following code?</b></label><br />
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1212p1-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_1212p1-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p1-java" type="button" role="tab" aria-controls="p_1212p1-java"
+                            aria-selected="true">Java</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="p_1212p1-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p1-python" type="button" role="tab" aria-controls="p_1212p1-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1212p1-java" role="tabpanel" aria-labelledby="p_1212p1-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p1-java-problem-col">
+                                <pre><code class="language-java">public class Example {
     public static void main(String[] args) {
         figure(8);
     }
@@ -323,118 +379,138 @@
         }
     }
 }</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1212p1-java-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#p_1212p1-java-solution" role="button" aria-expanded="false" aria-controls="p_1212p1-java-solution">
-                                Toggle solution
-                            </button>
-                            </p>
-                            <div class="collapse" id="p_1212p1-java-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        .......1<br/>
-                                        ......2<br/>
-                                        .....3<br/>
-                                        ....4<br/>
-                                        ...5<br/>
-                                        ..6<br/>
-                                        .7<br/>
-                                        8
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1212p1-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#p_1212p1-java-solution" role="button" aria-expanded="false"
+                                        aria-controls="p_1212p1-java-solution">
+                                        Toggle solution
+                                    </button>
+                                </p>
+                                <div class="collapse" id="p_1212p1-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            .......1<br />
+                                            ......2<br />
+                                            .....3<br />
+                                            ....4<br />
+                                            ...5<br />
+                                            ..6<br />
+                                            .7<br />
+                                            8
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- **PYTHON** -->
-                <div class="tab-pane" id="p_1212p1-python" role="tabpanel" aria-labelledby="p_1212p1-python-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1212p1-python-problem-col">
-                            <pre><code class="language-python">def figure(max_num):
+                    <!-- **PYTHON** -->
+                    <div class="tab-pane" id="p_1212p1-python" role="tabpanel" aria-labelledby="p_1212p1-python-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p1-python-problem-col">
+                                <pre><code class="language-python">def figure(max_num):
     for line in range(1, max_num + 1):
         for dots in range(1, max_num - line + 1):
             print(".", end="")
         print(line)
 
 figure(8)</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1212p1-python-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p1-python-solution" role="button" aria-expanded="false" aria-controls="p_1212p1-python-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1212p1-python-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        .......1<br/>
-                                        ......2<br/>
-                                        .....3<br/>
-                                        ....4<br/>
-                                        ...5<br/>
-                                        ..6<br/>
-                                        .7<br/>
-                                        8
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1212p1-python-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse"
+                                        href="#p_1212p1-python-solution" role="button" aria-expanded="false"
+                                        aria-controls="p_1212p1-python-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1212p1-python-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            .......1<br />
+                                            ......2<br />
+                                            .....3<br />
+                                            ....4<br />
+                                            ...5<br />
+                                            ..6<br />
+                                            .7<br />
+                                            8
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <div class="mb-3" id="p_1212p1react" style="display:none">
+                    <label class="form-label" for="p_1212p1react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react"
+                            id="p_1212p1react1" value="1">
+                        <label class="form-check-label" for="p_1212p1react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react"
+                            id="p_1212p1react2" value="2">
+                        <label class="form-check-label" for="p_1212p1react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react"
+                            id="p_1212p1react3" value="3">
+                        <label class="form-check-label" for="p_1212p1react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react"
+                            id="p_1212p1react4" value="4">
+                        <label class="form-check-label" for="p_1212p1react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react"
+                            id="p_1212p1react5" value="5">
+                        <label class="form-check-label" for="p_1212p1react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
             </div>
 
+            <div class="mb-3 question" id="p_1212p2" style="display:none">
+                <label for="p_1212p2">Read and work on this problem, then answer the next question: <b>What is the
+                        output after executing the following code?</b></label><br />
 
-            <div class="mb-3" id="p_1212p1react" style="display:none">
-                <label class="form-label" for="p_1212p1react">Which of the following best describes your experience with the preceding problem?</label>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react" id="p_1212p1react1" value="1">
-                    <label class="form-check-label" for="p_1212p1react1">I did not understand the problem or did not know how to begin solving it.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react" id="p_1212p1react2" value="2">
-                    <label class="form-check-label" for="p_1212p1react2">I was able to begin solving the problem but got stuck.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react" id="p_1212p1react3" value="3">
-                    <label class="form-check-label" for="p_1212p1react3">I was able to complete the problem but struggled greatly.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react" id="p_1212p1react4" value="4">
-                    <label class="form-check-label" for="p_1212p1react4">I was able to solve the problem with a little difficulty.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p1react" id="p_1212p1react5" value="5">
-                    <label class="form-check-label" for="p_1212p1react5">I was able to solve the problem with no difficulty.</label>
-                </div>
-            </div>
-        </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1212p2-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_1212p2-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p2-java" type="button" role="tab" aria-controls="p_1212p2-java"
+                            aria-selected="true">Java</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="p_1212p2-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p2-python" type="button" role="tab" aria-controls="p_1212p2-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
 
-        <div class="mb-3 question" id="p_1212p2" style="display:none">
-            <label for="p_1212p2">Read and work on this problem, then answer the next question: <b>What is the output after executing the following code?</b></label><br/>
-
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills" id="p_1212p2-lang" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="p_1212p2-java-tab" data-bs-toggle="tab" data-bs-target="#p_1212p2-java" type="button" role="tab" aria-controls="p_1212p2-java" aria-selected="true">Java</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="p_1212p2-python-tab" data-bs-toggle="tab" data-bs-target="#p_1212p2-python" type="button" role="tab" aria-controls="p_1212p2-python" aria-selected="false">Python</button>
-                </li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- **JAVA** -->
-                <div class="tab-pane active" id="p_1212p2-java" role="tabpanel" aria-labelledby="p_1212p2-java-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1212p2-java-problem-col">
-                            <pre><code class="language-java">public class Example {
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1212p2-java" role="tabpanel" aria-labelledby="p_1212p2-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p2-java-problem-col">
+                                <pre><code class="language-java">public class Example {
     public static void main(String[] args) {
         String[] list = {"hello", "banana", "lime", "lemon", "apple", "strawberry", "grape"};
         boolean mystery1 = mystery(3, list);
@@ -452,32 +528,33 @@ figure(8)</code></pre>
         return false;
     }
 }</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1212p2-java-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p2-java-solution" role="button" aria-expanded="false" aria-controls="p_1212p2-java-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1212p2-java-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Mystery 1: false<br/>
-                                        Mystery 2: true
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1212p2-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p2-java-solution"
+                                        role="button" aria-expanded="false" aria-controls="p_1212p2-java-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1212p2-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Mystery 1: false<br />
+                                            Mystery 2: true
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- **PYTHON** -->
-                <div class="tab-pane" id="p_1212p2-python" role="tabpanel" aria-labelledby="p_1212p2-python-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1212p2-python-problem-col">
-                            <pre><code class="language-python">def mystery(x, values):
+                    <!-- **PYTHON** -->
+                    <div class="tab-pane" id="p_1212p2-python" role="tabpanel" aria-labelledby="p_1212p2-python-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p2-python-problem-col">
+                                <pre><code class="language-python">def mystery(x, values):
     for el in values:
         if len(el) &lt; x:
             return True
@@ -490,74 +567,92 @@ print("Mystery 1:", mystery1)
 mystery2 = mystery(5, values)
 print("Mystery 2:", mystery2)
                             </code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1212p2-python-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p2-python-solution" role="button" aria-expanded="false" aria-controls="p_1212p2-python-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1212p2-python-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Mystery 1: False</br>
-                                        Mystery 2: True
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1212p2-python-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse"
+                                        href="#p_1212p2-python-solution" role="button" aria-expanded="false"
+                                        aria-controls="p_1212p2-python-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1212p2-python-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Mystery 1: False</br>
+                                            Mystery 2: True
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <div class="mb-3" id="p_1212p2react" style="display:none">
+                    <label class="form-label" for="p_1212p2react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react"
+                            id="p_1212p2react1" value="1">
+                        <label class="form-check-label" for="p_1212p2react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react"
+                            id="p_1212p2react2" value="2">
+                        <label class="form-check-label" for="p_1212p2react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react"
+                            id="p_1212p2react3" value="3">
+                        <label class="form-check-label" for="p_1212p2react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react"
+                            id="p_1212p2react4" value="4">
+                        <label class="form-check-label" for="p_1212p2react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react"
+                            id="p_1212p2react5" value="5">
+                        <label class="form-check-label" for="p_1212p2react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
             </div>
 
+            <div class="mb-3 question" id="p_1212p3" style="display:none">
+                <label for="p_1212p3">Read and work on this problem, then answer the next question: <b>In one or two
+                        short sentences, describe what the following code does.</b></label><br />
 
-            <div class="mb-3" id="p_1212p2react" style="display:none">
-                <label class="form-label" for="p_1212p2react">Which of the following best describes your experience with the preceding problem?</label>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react" id="p_1212p2react1" value="1">
-                    <label class="form-check-label" for="p_1212p2react1">I did not understand the problem or did not know how to begin solving it.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react" id="p_1212p2react2" value="2">
-                    <label class="form-check-label" for="p_1212p2react2">I was able to begin solving the problem but got stuck.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react" id="p_1212p2react3" value="3">
-                    <label class="form-check-label" for="p_1212p2react3">I was able to complete the problem but struggled greatly.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react" id="p_1212p2react4" value="4">
-                    <label class="form-check-label" for="p_1212p2react4">I was able to solve the problem with a little difficulty.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p2react" id="p_1212p2react5" value="5">
-                    <label class="form-check-label" for="p_1212p2react5">I was able to solve the problem with no difficulty.</label>
-                </div>
-            </div>
-        </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1212p3-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_1212p3-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p3-java" type="button" role="tab" aria-controls="p_1212p3-java"
+                            aria-selected="true">Java</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="p_1212p3-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p3-python" type="button" role="tab" aria-controls="p_1212p3-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
 
-        <div class="mb-3 question" id="p_1212p3" style="display:none">
-            <label for="p_1212p3">Read and work on this problem, then answer the next question: <b>In one or two short sentences, describe what the following code does.</b></label><br/>
-
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills" id="p_1212p3-lang" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="p_1212p3-java-tab" data-bs-toggle="tab" data-bs-target="#p_1212p3-java" type="button" role="tab" aria-controls="p_1212p3-java" aria-selected="true">Java</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="p_1212p3-python-tab" data-bs-toggle="tab" data-bs-target="#p_1212p3-python" type="button" role="tab" aria-controls="p_1212p3-python" aria-selected="false">Python</button>
-                </li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- **JAVA** -->
-                <div class="tab-pane active" id="p_1212p3-java" role="tabpanel" aria-labelledby="p_1212p3-java-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1212p3-java-problem-col">
-                            <pre><code class="language-java">import java.util.*;
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1212p3-java" role="tabpanel" aria-labelledby="p_1212p3-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p3-java-problem-col">
+                                <pre><code class="language-java">import java.util.*;
 
 public class Example {
     public static void main(String[] args) {
@@ -578,32 +673,34 @@ public class Example {
         System.out.println("The total number of characters is: " + totalChars);
     }
 }</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1212p3-java-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p3-java-solution" role="button" aria-expanded="false" aria-controls="p_1212p3-java-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1212p3-java-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Reads in input from the user one word at a time until the word "quit" is entered, then prints the total number of characters entered
-                                        (not including the word "quit").
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1212p3-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p3-java-solution"
+                                        role="button" aria-expanded="false" aria-controls="p_1212p3-java-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1212p3-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Reads in input from the user one word at a time until the word "quit" is
+                                            entered, then prints the total number of characters entered
+                                            (not including the word "quit").
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- **PYTHON** -->
-                <div class="tab-pane" id="p_1212p3-python" role="tabpanel" aria-labelledby="p_1212p3-python-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1212p3-python-problem-col">
-                            <pre><code class="language-python">def input_loop():
+                    <!-- **PYTHON** -->
+                    <div class="tab-pane" id="p_1212p3-python" role="tabpanel" aria-labelledby="p_1212p3-python-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p3-python-problem-col">
+                                <pre><code class="language-python">def input_loop():
     total_chars = 0;
     sentinel = "quit";
     prompt = 'Type a word (or "' + sentinel +'" to quit): '
@@ -614,135 +711,159 @@ public class Example {
     print("The total number of characters is:", total_chars)
 
 input_loop()</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1212p3-python-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p3-python-solution" role="button" aria-expanded="false" aria-controls="p_1212p3-python-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1212p3-python-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Reads in input from the user one word at a time until the word "quit" is entered, then prints the total number of characters entered
-                                        (not including the word "quit").
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1212p3-python-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse"
+                                        href="#p_1212p3-python-solution" role="button" aria-expanded="false"
+                                        aria-controls="p_1212p3-python-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1212p3-python-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Reads in input from the user one word at a time until the word "quit" is
+                                            entered, then prints the total number of characters entered
+                                            (not including the word "quit").
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mb-3" id="p_1212p3react" style="display:none">
-                <label class="form-label" for="p_1212p3react">Which of the following best describes your experience with the preceding problem?</label>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react" id="p_1212p3react1" value="1">
-                    <label class="form-check-label" for="p_1212p3react1">I did not understand the problem or did not know how to begin solving it.</label>
+                <div class="mb-3" id="p_1212p3react" style="display:none">
+                    <label class="form-label" for="p_1212p3react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react"
+                            id="p_1212p3react1" value="1">
+                        <label class="form-check-label" for="p_1212p3react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react"
+                            id="p_1212p3react2" value="2">
+                        <label class="form-check-label" for="p_1212p3react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react"
+                            id="p_1212p3react3" value="3">
+                        <label class="form-check-label" for="p_1212p3react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react"
+                            id="p_1212p3react4" value="4">
+                        <label class="form-check-label" for="p_1212p3react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react"
+                            id="p_1212p3react5" value="5">
+                        <label class="form-check-label" for="p_1212p3react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react" id="p_1212p3react2" value="2">
-                    <label class="form-check-label" for="p_1212p3react2">I was able to begin solving the problem but got stuck.</label>
+            </div>
+
+            <!-- <div class="mb-3 question" id="topics-122" style="display:none"> -->
+            <div class="mb-3 question" id="topics-1213" style="display:none">
+                <label class="form-label" for="topics-1213">How familiar and comfortable are you with each of
+                    the following programming topics/constructs?</label>
+                <div class="mb-3">
+                    <label for="1213io" id="ioLabel">Console and/or file input and output</label>
+                    <select class="form-select" name="1213io">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
                 </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react" id="p_1212p3react3" value="3">
-                    <label class="form-check-label" for="p_1212p3react3">I was able to complete the problem but struggled greatly.</label>
+                <div class="mb-3">
+                    <label for="1213maps" id="mapLabel">Maps and/or dictionaries</label>
+                    <select class="form-select" name="1213maps">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
                 </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react" id="p_1212p3react4" value="4">
-                    <label class="form-check-label" for="p_1212p3react4">I was able to solve the problem with a little difficulty.</label>
+                <div class="mb-3">
+                    <label for="1213classes" id="classLabel">Defining classes</label>
+                    <select class="form-select" name="1213classes">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
                 </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p3react" id="p_1212p3react5" value="5">
-                    <label class="form-check-label" for="p_1212p3react5">I was able to solve the problem with no difficulty.</label>
+                <div class="mb-3">
+                    <label for="1213construct" id="constructLabel">Defining constructors</label>
+                    <select class="form-select" name="1213construct">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="1213inter" id="interLabel">Interfaces</label>
+                    <select class="form-select" name="1213inter">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="0">I have never heard of this.</option>
+                        <option value="1">I have heard of this but don't know what it is or don't understand it.
+                        </option>
+                        <option value="2">I know what this is but I am not comfortable using it in programming.</option>
+                        <option value="3">I am somewhat comfortable using this in programming.</option>
+                        <option value="4">I am entirely comfortable using this in programming.</option>
+                    </select>
                 </div>
             </div>
-        </div>
-
-        <!-- <div class="mb-3 question" id="topics-122" style="display:none"> -->
-        <div class="mb-3 question" id="topics-1213" style="display:none">
-            <label class="form-label" for="topics-1213">How familiar and comfortable are you with each of
-                the following programming topics/constructs?</label>
-            <div class="mb-3">
-                <label for="1213io" id="ioLabel">Console and/or file input and output</label>
-                <select class="form-select" name="1213io">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="1213maps" id="mapLabel">Maps and/or dictionaries</label>
-                <select class="form-select" name="1213maps">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="1213classes" id="classLabel">Defining classes</label>
-                <select class="form-select" name="1213classes">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="1213construct" id="constructLabel">Defining constructors</label>
-                <select class="form-select" name="1213construct">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="1213inter" id="interLabel">Interfaces</label>
-                <select class="form-select" name="1213inter">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="0">I have never heard of this.</option>
-                    <option value="1">I have heard of this but don't know what it is or don't understand it.</option>
-                    <option value="2">I know what this is but I am not comfortable using it in programming.</option>
-                    <option value="3">I am somewhat comfortable using this in programming.</option>
-                    <option value="4">I am entirely comfortable using this in programming.</option>
-                </select>
-            </div>
-        </div>
 
 
-        <div class="mb-3 question" id="p_1213p1" style="display:none">
-            <label for="p_1213p1">Read and work on this problem, then answer the next question: <b>In one or two short sentences, describe what the following code does.</b></label><br/>
+            <div class="mb-3 question" id="p_1213p1" style="display:none">
+                <label for="p_1213p1">Read and work on this problem, then answer the next question: <b>In one or two
+                        short sentences, describe what the following code does.</b></label><br />
 
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills" id="p_1213p1-lang" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="p_1213p1-java-tab" data-bs-toggle="tab" data-bs-target="#p_1213p1-java" type="button" role="tab" aria-controls="p_1213p1-java" aria-selected="true">Java</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="p_1213p1-python-tab" data-bs-toggle="tab" data-bs-target="#p_1213p1-python" type="button" role="tab" aria-controls="p_1213p1-python" aria-selected="false">Python</button>
-                </li>
-            </ul>
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1213p1-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_1213p1-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1213p1-java" type="button" role="tab" aria-controls="p_1213p1-java"
+                            aria-selected="true">Java</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="p_1213p1-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1213p1-python" type="button" role="tab" aria-controls="p_1213p1-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
 
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- **JAVA** -->
-                <div class="tab-pane active" id="p_1213p1-java" role="tabpanel" aria-labelledby="p_1213p1-java-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1213p1-java-problem-col">
-                            <pre><code class="language-java">public static Map&lt;String, Set&lt;Integer&gt;&gt; mystery(Map&lt;String, Set&lt;Integer&gt;&gt; map1) {
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1213p1-java" role="tabpanel" aria-labelledby="p_1213p1-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1213p1-java-problem-col">
+                                <pre><code class="language-java">public static Map&lt;String, Set&lt;Integer&gt;&gt; mystery(Map&lt;String, Set&lt;Integer&gt;&gt; map1) {
     Map&lt;String, Set&lt;Integer&gt;&gt; map2 = new HashMap&lt;&gt;();
     for (String key : map1.keySet()) {
         Set&lt;Integer&gt; set1 = map1.get(key);
@@ -754,31 +875,33 @@ input_loop()</code></pre>
     }
     return map2;
 }</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1213p1-java-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p1-java-solution" role="button" aria-expanded="false" aria-controls="p_1213p1-java-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1213p1-java-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Creates a new map that contains the same keys and copies of the values of the parameter map. (Creates a deep copy of the parameter map.)
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1213p1-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p1-java-solution"
+                                        role="button" aria-expanded="false" aria-controls="p_1213p1-java-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1213p1-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Creates a new map that contains the same keys and copies of the values of
+                                            the parameter map. (Creates a deep copy of the parameter map.)
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- **PYTHON** -->
-                <div class="tab-pane" id="p_1213p1-python" role="tabpanel" aria-labelledby="p_1213p1-python-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1213p1-python-problem-col">
-                            <pre><code class="language-python">def mystery(dict1):
+                    <!-- **PYTHON** -->
+                    <div class="tab-pane" id="p_1213p1-python" role="tabpanel" aria-labelledby="p_1213p1-python-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1213p1-python-problem-col">
+                                <pre><code class="language-python">def mystery(dict1):
     dict2 = {}
     for key in dict1:
         set2 = set()
@@ -787,57 +910,73 @@ input_loop()</code></pre>
             set2.add(n)
         dict2[key] = set2
     return dict2</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1213p1-python-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p1-python-solution" role="button" aria-expanded="false" aria-controls="p_1213p1-python-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1213p1-python-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Creates a new dictionary that contains the same keys and copies of the values of the parameter dictionary. (Creates a deep copy of the parameter dictionary.)
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1213p1-python-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse"
+                                        href="#p_1213p1-python-solution" role="button" aria-expanded="false"
+                                        aria-controls="p_1213p1-python-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1213p1-python-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Creates a new dictionary that contains the same keys and copies of the
+                                            values of the parameter dictionary. (Creates a deep copy of the parameter
+                                            dictionary.)
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="mb-3" id="p_1213p1react" style="display:none">
+                    <label class="form-label" for="p_1213p1react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react"
+                            id="p_1213p1react1" value="1">
+                        <label class="form-check-label" for="p_1213p1react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react"
+                            id="p_1213p1react2" value="2">
+                        <label class="form-check-label" for="p_1213p1react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react"
+                            id="p_1213p1react3" value="3">
+                        <label class="form-check-label" for="p_1213p1react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react"
+                            id="p_1213p1react4" value="4">
+                        <label class="form-check-label" for="p_1213p1react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react"
+                            id="p_1213p1react5" value="5">
+                        <label class="form-check-label" for="p_1213p1react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-3" id="p_1213p1react" style="display:none">
-                <label class="form-label" for="p_1213p1react">Which of the following best describes your experience with the preceding problem?</label>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react" id="p_1213p1react1" value="1">
-                    <label class="form-check-label" for="p_1213p1react1">I did not understand the problem or did not know how to begin solving it.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react" id="p_1213p1react2" value="2">
-                    <label class="form-check-label" for="p_1213p1react2">I was able to begin solving the problem but got stuck.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react" id="p_1213p1react3" value="3">
-                    <label class="form-check-label" for="p_1213p1react3">I was able to complete the problem but struggled greatly.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react" id="p_1213p1react4" value="4">
-                    <label class="form-check-label" for="p_1213p1react4">I was able to solve the problem with a little difficulty.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p1react" id="p_1213p1react5" value="5">
-                    <label class="form-check-label" for="p_1213p1react5">I was able to solve the problem with no difficulty.</label>
-                </div>
-            </div>
-        </div>          
+            <div class="mb-3 question" id="p_1213p2" style="display:none">
+                <label for="p_1213p2">Read and work on this problem, then answer the next question: <b>What is the
+                        output of the following code?</b></label><br />
 
-        <div class="mb-3 question" id="p_1213p2" style="display:none">
-            <label for="p_1213p2">Read and work on this problem, then answer the next question: <b>What is the output of the following code?</b></label><br/>
-
-            <!-- Nav tabs -->
-            <!-- <ul class="nav nav-pills" id="p_122p2-lang" role="tablist">
+                <!-- Nav tabs -->
+                <!-- <ul class="nav nav-pills" id="p_122p2-lang" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="p_122p2-java-tab" data-bs-toggle="tab" data-bs-target="#p_122p2-java" type="button" role="tab" aria-controls="p_122p2-java" aria-selected="true">Java</button>
                 </li>
@@ -846,13 +985,13 @@ input_loop()</code></pre>
                 </li>
             </ul> -->
 
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- **JAVA** -->
-                <div class="tab-pane active" id="p_1213p2-java" role="tabpanel" aria-labelledby="p_1213p2-java-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1213p2-java-problem-col">
-                            <pre><code class="language-java">class CreditCard {
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1213p2-java" role="tabpanel" aria-labelledby="p_1213p2-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1213p2-java-problem-col">
+                                <pre><code class="language-java">class CreditCard {
     private String cardNumber;
     private String name;
     private double creditLimit;
@@ -914,60 +1053,73 @@ public class Example5 {
         System.out.println("Payment Method 2 charges: " + card2.totalPayments());
     }
 }</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1213p2-java-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p2-java-solution" role="button" aria-expanded="false" aria-controls="p_1213p2-java-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1213p2-java-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Payment Method 1: CC 1234567801019275 (525.0) <br/>
-                                        Payment Method 2: CC 9876543210108473 (300.0) <br/>
-                                        Payment Method 1 charges: 2 <br/>
-                                        Payment Method 2 charges: 3
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1213p2-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p2-java-solution"
+                                        role="button" aria-expanded="false" aria-controls="p_1213p2-java-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1213p2-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Payment Method 1: CC 1234567801019275 (525.0) <br />
+                                            Payment Method 2: CC 9876543210108473 (300.0) <br />
+                                            Payment Method 1 charges: 2 <br />
+                                            Payment Method 2 charges: 3
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="mb-3" id="p_1213p2react" style="display:none">
+                    <label class="form-label" for="p_1213p2react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react"
+                            id="p_1213p2react1" value="1">
+                        <label class="form-check-label" for="p_1213p2react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react"
+                            id="p_1213p2react2" value="2">
+                        <label class="form-check-label" for="p_1213p2react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react"
+                            id="p_1213p2react3" value="3">
+                        <label class="form-check-label" for="p_1213p2react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react"
+                            id="p_1213p2react4" value="4">
+                        <label class="form-check-label" for="p_1213p2react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react"
+                            id="p_1213p2react5" value="5">
+                        <label class="form-check-label" for="p_1213p2react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-3" id="p_1213p2react" style="display:none">
-                <label class="form-label" for="p_1213p2react">Which of the following best describes your experience with the preceding problem?</label>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react" id="p_1213p2react1" value="1">
-                    <label class="form-check-label" for="p_1213p2react1">I did not understand the problem or did not know how to begin solving it.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react" id="p_1213p2react2" value="2">
-                    <label class="form-check-label" for="p_1213p2react2">I was able to begin solving the problem but got stuck.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react" id="p_1213p2react3" value="3">
-                    <label class="form-check-label" for="p_1213p2react3">I was able to complete the problem but struggled greatly.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react" id="p_1213p2react4" value="4">
-                    <label class="form-check-label" for="p_1213p2react4">I was able to solve the problem with a little difficulty.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p2react" id="p_1213p2react5" value="5">
-                    <label class="form-check-label" for="p_1213p2react5">I was able to solve the problem with no difficulty.</label>
-                </div>
-            </div>
-        </div>      
+            <div class="mb-3 question" id="p_1213p3" style="display:none">
+                <label for="p_1213p3">Read and work on this problem, then answer the next question: <b>In one or two
+                        short sentences, describe what the following code does.</b></label><br />
 
-        <div class="mb-3 question" id="p_1213p3" style="display:none">
-            <label for="p_1213p3">Read and work on this problem, then answer the next question: <b>In one or two short sentences, describe what the following code does.</b></label><br/>
-
-            <!-- Nav tabs -->
-            <!-- <ul class="nav nav-pills" id="p_122p3-lang" role="tablist">
+                <!-- Nav tabs -->
+                <!-- <ul class="nav nav-pills" id="p_122p3-lang" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="p_122p3-java-tab" data-bs-toggle="tab" data-bs-target="#p_122p3-java" type="button" role="tab" aria-controls="p_122p3-java" aria-selected="true">Java</button>
                 </li>
@@ -976,13 +1128,13 @@ public class Example5 {
                 </li>
             </ul> -->
 
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- **JAVA** -->
-                <div class="tab-pane active" id="p_1213p3-java" role="tabpanel" aria-labelledby="p_1213p3-java-tab">
-                    <div class="row">
-                        <div class="col-7" id="p_1213p3-java-problem-col">
-                            <pre><code class="language-java">class CreditCard implements PaymentMethod {
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1213p3-java" role="tabpanel" aria-labelledby="p_1213p3-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1213p3-java-problem-col">
+                                <pre><code class="language-java">class CreditCard implements PaymentMethod {
     private String cardNumber;
     private String name;
     private double creditLimit;
@@ -1095,162 +1247,207 @@ public class Example6 {
         System.out.println("Payment Method 3 charges: " + method3.totalPayments());
     }
 }</code></pre>
-                        </div>
+                            </div>
 
-                        <div class="col-4 toggle-solutions" id="p_1213p3-java-solution-col">
-                            <!-- **SOLUTION** -->
-                            <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p3-java-solution" role="button" aria-expanded="false" aria-controls="p_1213p3-java-solution">
-                                Toggle solution
-                            </a>
-                            </p>
-                            <div class="collapse" id="p_1213p3-java-solution">
-                                <div class="card card-body">
-                                    <samp>
-                                        Payment Method 1: CC 1234567801019275 (525.0) <br/>
-                                        Payment Method 2: CC 9876543210108473 (350.0) <br/>
-                                        Payment Method 3: BankAccount 1000000123467 (450.0) <br/>
-                                        Payment Method 1 charges: 2 <br/>
-                                        Payment Method 2 charges: 3 <br/>
-                                        Payment Method 3 charges: 1
-                                    </samp>
+                            <div class="col-4 toggle-solutions" id="p_1213p3-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p3-java-solution"
+                                        role="button" aria-expanded="false" aria-controls="p_1213p3-java-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1213p3-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Payment Method 1: CC 1234567801019275 (525.0) <br />
+                                            Payment Method 2: CC 9876543210108473 (350.0) <br />
+                                            Payment Method 3: BankAccount 1000000123467 (450.0) <br />
+                                            Payment Method 1 charges: 2 <br />
+                                            Payment Method 2 charges: 3 <br />
+                                            Payment Method 3 charges: 1
+                                        </samp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="mb-3" id="p_1213p3react" style="display:none">
+                    <label class="form-label" for="p_1213p3react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react"
+                            id="p_1213p3react1" value="1">
+                        <label class="form-check-label" for="p_1213p3react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react"
+                            id="p_1213p3react2" value="2">
+                        <label class="form-check-label" for="p_1213p3react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react"
+                            id="p_1213p3react3" value="3">
+                        <label class="form-check-label" for="p_1213p3react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react"
+                            id="p_1213p3react4" value="4">
+                        <label class="form-check-label" for="p_1213p3react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react"
+                            id="p_1213p3react5" value="5">
+                        <label class="form-check-label" for="p_1213p3react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-3" id="p_1213p3react" style="display:none">
-                <label class="form-label" for="p_1213p3react">Which of the following best describes your experience with the preceding problem?</label>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react" id="p_1213p3react1" value="1">
-                    <label class="form-check-label" for="p_1213p3react1">I did not understand the problem or did not know how to begin solving it.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react" id="p_1213p3react2" value="2">
-                    <label class="form-check-label" for="p_1213p3react2">I was able to begin solving the problem but got stuck.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react" id="p_1213p3react3" value="3">
-                    <label class="form-check-label" for="p_1213p3react3">I was able to complete the problem but struggled greatly.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react" id="p_1213p3react4" value="4">
-                    <label class="form-check-label" for="p_1213p3react4">I was able to solve the problem with a little difficulty.</label>
-                </div>
-                <div class="form-check">
-                    <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p3react" id="p_1213p3react5" value="5">
-                    <label class="form-check-label" for="p_1213p3react5">I was able to solve the problem with no difficulty.</label>
-                </div>
-            </div>
-        </div>
+            <textarea id="result-hidden" name="result" style="display:none"></textarea>
+        </form>
 
-        <textarea id="result-hidden" name="result" style="display:none"></textarea>
-      </form>
-    
-      <!-- 
+        <!-- 
         Text 2: No previous programming experience
       -->
-      <div id="results">
-        <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-121-noexp" style="display:none"> -->
-        <div class="mb-3 alert alert-success result" role="alert" id="result-1212-noexp" style="display:none">
-            <h1><span class="badge bg-success">ITSC-1212</span></h1>
-            <p>
-                <!-- 
+        <div id="results">
+            <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-121-noexp" style="display:none"> -->
+            <div class="mb-3 alert alert-success result" role="alert" id="result-1212-noexp" style="display:none">
+                <h1><span class="badge bg-success">ITSC-1212</span></h1>
+                <p>
+                    <!-- 
                     We need to edit the links here to the correct location.
                 -->
-                Since you don't have any previous programming experience, we recommend you take
-                <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse121">
-                ITSC-1212</a>. This course will start from the very beginning and will help you learn basic programming skills
-                along with other students with limited experience.
-            </p>
-            <p>
-                If you're more interested in using programming as a tool for data analysis and visualization,
-                you might also want to consider <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse160">
-                ITSC-1212</a>. This course also does not require any previous experience and focuses on using programming in Python
-                to solve problems using data sets drawn from the sciences, engineering, business and the humanities.
-            </p>
-            <p>
-                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
-                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-                advising team</a>.
-            </p>
-        </div>
+                    Since you don't have any previous programming experience, we recommend you take
+                    <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse121">
+                        ITSC-1212</a>. This course will start from the very beginning and will help you learn basic
+                    programming skills
+                    along with other students with limited experience.
+                </p>
+                <p>
+                    If you're more interested in using programming as a tool for data analysis and visualization,
+                    you might also want to consider <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse160">
+                        ITSC-1212</a>. This course also does not require any previous experience and focuses on using
+                    programming in Python
+                    to solve problems using data sets drawn from the sciences, engineering, business and the humanities.
+                </p>
+                <p>
+                    You can learn more about all of our <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                        introductory course options</a> on the Allen School website. If you have any more questions,
+                    feel free to reach out to our <a
+                        href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                        placement
+                        advising team</a>.
+                </p>
+            </div>
 
-        <!-- 
+            <!-- 
             Text 3: Some Previous programming experience
         -->
-        <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-121-topics" style="display:none"> -->
-        <div class="mb-3 alert alert-success result" role="alert" id="result-1212-topics" style="display:none">
-            <h1><span class="badge bg-success">ITSC-1212</span></h1>
-            <p>
-                Although you have some previous programming experience, it sounds like you're still not entirely confident with some
-                topics. We recommend you take <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse121">
-                ITSC-1212</a> to help you solidfy your understanding of that material before moving on to ITSC 1213.
-            </p>
-            <p>
-                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
-                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-                advising team</a>.
-            </p>
-        </div>
+            <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-121-topics" style="display:none"> -->
+            <div class="mb-3 alert alert-success result" role="alert" id="result-1212-topics" style="display:none">
+                <h1><span class="badge bg-success">ITSC-1212</span></h1>
+                <p>
+                    Although you have some previous programming experience, it sounds like you're still not entirely
+                    confident with some
+                    topics. We recommend you take <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse121">
+                        ITSC-1212</a> to help you solidfy your understanding of that material before moving on to ITSC
+                    1213.
+                </p>
+                <p>
+                    You can learn more about all of our <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                        introductory course options</a> on the Allen School website. If you have any more questions,
+                    feel free to reach out to our <a
+                        href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                        placement
+                        advising team</a>.
+                </p>
+            </div>
 
-        <!-- 
+            <!-- 
             Text 4: Solid grasp of programming concepts
         -->
-        <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-122" style="display:none"> -->
-        <div class="mb-3 alert alert-success result" role="alert" id="result-1213" style="display:none">
-            <h1><span class="badge bg-success">ITSC-1213</span></h1>
-            <p>
-                You seem to have a solid grasp of the basics, so we recommend you take <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse122">
-                ITSC 1213</a>. This course will help you take the next step with your programming skills and learn to apply the concepts
-                you already know in new and exciting ways. ITSC 1213 is taught in Java, but is designed for students with a wide range of previous experiences,
-                so you should feel confident enrolling even if your experience is in another programming language.
-            </p>
-            <p>
-                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
-                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-                advising team</a>.
-            </p>
-        </div>
+            <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-122" style="display:none"> -->
+            <div class="mb-3 alert alert-success result" role="alert" id="result-1213" style="display:none">
+                <h1><span class="badge bg-success">ITSC-1213</span></h1>
+                <p>
+                    You seem to have a solid grasp of the basics, so we recommend you take <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse122">
+                        ITSC 1213</a>. This course will help you take the next step with your programming skills and
+                    learn to apply the concepts
+                    you already know in new and exciting ways. ITSC 1213 is taught in Java, but is designed for students
+                    with a wide range of previous experiences,
+                    so you should feel confident enrolling even if your experience is in another programming language.
+                </p>
+                <p>
+                    You can learn more about all of our <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                        introductory course options</a> on the Allen School website. If you have any more questions,
+                    feel free to reach out to our <a
+                        href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                        placement
+                        advising team</a>.
+                </p>
+            </div>
 
-        <!-- 
+            <!-- 
             Text 5: Those who completed ITSC-1110 first
         -->
-        <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-122-from-142" style="display:none"> -->
-        <div class="mb-3 alert alert-success result" role="alert" id="result-1213-from-1110" style="display:none">
-            <h1><span class="badge bg-success">ITSC-1213</span></h1>
-            <p>
-                You seem to have a solid grasp of the basics, so we recommend you take <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse122">
-                ITSC 1213</a>. This course will help you take the next step with your programming skills and learn to apply the concepts
-                you already know in new and exciting ways.
-            </p>
-            <p>
-                Since you previously took CSE 142, you may also want to consider enrolling in <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse143">
-                CSE 143</a>, which is being offered a few more times. This course is the direct follow-up to CSE 142 and will more closely align with your experience having
-                previously taken CSE 142.
-            </p>
-            <p>
-                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
-                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-                advising team</a>.
-            </p>
-        </div>
+            <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-122-from-142" style="display:none"> -->
+            <div class="mb-3 alert alert-success result" role="alert" id="result-1213-from-1110" style="display:none">
+                <h1><span class="badge bg-success">ITSC-1213</span></h1>
+                <p>
+                    You seem to have a solid grasp of the basics, so we recommend you take <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse122">
+                        ITSC 1213</a>. This course will help you take the next step with your programming skills and
+                    learn to apply the concepts
+                    you already know in new and exciting ways.
+                </p>
+                <p>
+                    Since you previously took CSE 142, you may also want to consider enrolling in <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse143">
+                        CSE 143</a>, which is being offered a few more times. This course is the direct follow-up to CSE
+                    142 and will more closely align with your experience having
+                    previously taken CSE 142.
+                </p>
+                <p>
+                    You can learn more about all of our <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                        introductory course options</a> on the Allen School website. If you have any more questions,
+                    feel free to reach out to our <a
+                        href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                        placement
+                        advising team</a>.
+                </p>
+            </div>
 
-        <!-- 
+            <!-- 
             Text 6: Alot of programming experience
         -->
-        <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-123" style="display:none"> -->
-        <div class="mb-3 alert alert-success result" role="alert" id="result-2214" style="display:none">
-            <h1><span class="badge bg-success">ITSC-2214</span></h1>
-            <p>
-                You have a lot of experience programming and have a strong understanding of some more advanced topics, so we recommend
-                you take <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse123">
-                ITSC 2214</a>. This course will teach you to use your existing programming skills to implement and manipulate complex
-                data structures, and will also introduce some more advanced programming concepts.
-            </p>
-	    <!--
+            <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-123" style="display:none"> -->
+            <div class="mb-3 alert alert-success result" role="alert" id="result-2214" style="display:none">
+                <h1><span class="badge bg-success">ITSC-2214</span></h1>
+                <p>
+                    You have a lot of experience programming and have a strong understanding of some more advanced
+                    topics, so we recommend
+                    you take <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse123">
+                        ITSC 2214</a>. This course will teach you to use your existing programming skills to implement
+                    and manipulate complex
+                    data structures, and will also introduce some more advanced programming concepts.
+                </p>
+                <!--
             <p class="alert alert-warning" role="alert">
                 <em>Note:</em> CSE 123 will be offered for the first time in Winter 2023. If you would like to take a CSE course in Autumn 2022,
                 we recommend you consider <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse154">CSE 154: 
@@ -1259,36 +1456,49 @@ public class Example6 {
 
             </p>
 	    -->
-            <p>
-                If you're more interested in using programming as a tool for data analysis and visualization,
-                you might also want to consider <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse163">
-                CSE 163</a>. This course builds on previous programming experience similarly to ITSC 2214, but with a focus on writing programs
-                that manipulate and analyze different types of datasets. CSE 163 is taught in Python, but is designed to help students who have
-                previously programmed in Java adapt, so you should feel confident enrolling even if you've never used Python before.
-            </p>
-            <p>
-                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
-                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-                advising team</a>.
-            </p>
-        </div>
+                <p>
+                    If you're more interested in using programming as a tool for data analysis and visualization,
+                    you might also want to consider <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse163">
+                        CSE 163</a>. This course builds on previous programming experience similarly to ITSC 2214, but
+                    with a focus on writing programs
+                    that manipulate and analyze different types of datasets. CSE 163 is taught in Python, but is
+                    designed to help students who have
+                    previously programmed in Java adapt, so you should feel confident enrolling even if you've never
+                    used Python before.
+                </p>
+                <p>
+                    You can learn more about all of our <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                        introductory course options</a> on the Allen School website. If you have any more questions,
+                    feel free to reach out to our <a
+                        href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                        placement
+                        advising team</a>.
+                </p>
+            </div>
 
-        <!-- Text 7: Alot of Experience from ITSC-1110 -->
-        <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-123-from-142" style="display:none"> -->
-        <div class="mb-3 alert alert-success result" role="alert" id="result-2214-from-1110" style="display:none">
-            <h1><span class="badge bg-success">ITSC-2214</span></h1>
-            <p>
-                You have a lot of experience programming and have a strong understanding of some more advanced topics, so we recommend
-                you take <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse123">
-                ITSC 2214</a>. This course will teach you to use your existing programming skills to implement and manipulate complex
-                data structures, and will also introduce some more advanced programming concepts.
-            </p>
-            <p>
-                Since you previously took CSE 142, you may also want to consider enrolling in <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse143">
-                CSE 143</a>, which is being offered a few more times. This course is the direct follow-up to CSE 142 and will more closely align with your experience having
-                previously taken CSE 142.
-            </p>
-	    <!--
+            <!-- Text 7: Alot of Experience from ITSC-1110 -->
+            <!-- <div class="mb-3 alert alert-success result" role="alert" id="result-123-from-142" style="display:none"> -->
+            <div class="mb-3 alert alert-success result" role="alert" id="result-2214-from-1110" style="display:none">
+                <h1><span class="badge bg-success">ITSC-2214</span></h1>
+                <p>
+                    You have a lot of experience programming and have a strong understanding of some more advanced
+                    topics, so we recommend
+                    you take <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse123">
+                        ITSC 2214</a>. This course will teach you to use your existing programming skills to implement
+                    and manipulate complex
+                    data structures, and will also introduce some more advanced programming concepts.
+                </p>
+                <p>
+                    Since you previously took CSE 142, you may also want to consider enrolling in <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse143">
+                        CSE 143</a>, which is being offered a few more times. This course is the direct follow-up to CSE
+                    142 and will more closely align with your experience having
+                    previously taken CSE 142.
+                </p>
+                <!--
             <p class="alert alert-warning" role="alert">
                 <em>Note:</em> CSE 123 will be offered for the first time in Winter 2023. If you would like to take a CSE course in Autumn 2022,
                 we recommend you consider <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse154">CSE 154: 
@@ -1297,36 +1507,47 @@ public class Example6 {
                 previously taken CSE 142.
             </p>            
 	    -->
-            <p>
-                If you're more interested in using programming as a tool for data analysis and visualization,
-                you might also want to consider <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse163">
-                CSE 163</a>. This course builds on previous programming experience similarly to ITSC 2214, but with a focus on writing programs
-                that manipulate and analyze different types of datasets. CSE 163 is taught in Python, but is designed to help students who have
-                previously programmed in Java adapt, so you should feel confident enrolling even if you've never used Python before.
-            </p>
-            <p>
-                You can learn more about all of our <a target="new" href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
-                introductory course options</a> on the Allen School website. If you have any more questions, feel free to reach out to our <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-                advising team</a>.
-            </p>
-        </div>        
+                <p>
+                    If you're more interested in using programming as a tool for data analysis and visualization,
+                    you might also want to consider <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses#cse163">
+                        CSE 163</a>. This course builds on previous programming experience similarly to ITSC 2214, but
+                    with a focus on writing programs
+                    that manipulate and analyze different types of datasets. CSE 163 is taught in Python, but is
+                    designed to help students who have
+                    previously programmed in Java adapt, so you should feel confident enrolling even if you've never
+                    used Python before.
+                </p>
+                <p>
+                    You can learn more about all of our <a target="new"
+                        href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/intro-courses">
+                        introductory course options</a> on the Allen School website. If you have any more questions,
+                    feel free to reach out to our <a
+                        href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                        placement
+                        advising team</a>.
+                </p>
+            </div>
 
-        <!-- 
+            <!-- 
             Text 8: Talk to academic advising
         -->
-        <div class="mb-3 alert alert-warning result" role="alert" id="result-adv" style="display:none">
-            <h1><span class="badge bg-warning text-dark">Talk to Advising</span></h1>
-            <p>
-                Based on your responses, there are multiple courses that might be a good fit for you.
-                We recommend you speak with a member of <a href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course placement 
-                advising team</a> so they can learn more about your situation and help you find the best fit.
-            </p>
+            <div class="mb-3 alert alert-warning result" role="alert" id="result-adv" style="display:none">
+                <h1><span class="badge bg-warning text-dark">Talk to Advising</span></h1>
+                <p>
+                    Based on your responses, there are multiple courses that might be a good fit for you.
+                    We recommend you speak with a member of <a
+                        href="mailto:course-placement@cs.washington.edu?subject=CSE 12X Self-Placement Question">course
+                        placement
+                        advising team</a> so they can learn more about your situation and help you find the best fit.
+                </p>
+            </div>
         </div>
-    </div>
-    <footer>
-        <hr />
-        <em><small>Last updated: July 26, 2023</small></em>
-    </footer>
+        <footer>
+            <hr />
+            <em><small>Last updated: July 26, 2023</small></em>
+        </footer>
     </main>
-  </body>
+</body>
+
 </html>
