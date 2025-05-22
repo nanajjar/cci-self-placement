@@ -1,20 +1,15 @@
-$(document).ready(function() {
-    $('button#start-btn').click(() => $('#main').show() );
+$(document).ready(function () {
+    $('button#start-btn').click(() => $('#main').show());
 
     $('input[name="previousCourse"]').change(checkPrevCourse);
     $('input[name="previousExp"]').change(checkPrevExp);
     $('select[name="lastCourse"]').change(checkLastCouse);
-    // $('input[name="1110Score"]').change(check142Grade);
     $('input[name="1110Score"]').change(check1110Grade);
     $('input[name="apScore"]').change(checkAPGrade);
     $('input[name="ibScore"]').change(checkIBGrade);
-    // $('#topics-1212').find('select').change(check121Topics);
     $('#topics-1212').find('select').change(check1212Topics);
-    // $('#topics-1213').find('select').change(check122Topics);
     $('#topics-1213').find('select').change(check1213Topics);
-    // $('input[name^="p_121p"]').change(check121Problem);
     $('input[name^="p_1212p"]').change(check1212Problem);
-    // $('input[name^="p_122p"]').change(check122Problem);
     $('input[name^="p_1213p"]').change(check1213Problem);
 });
 
@@ -44,7 +39,7 @@ function checkLastCouse(event) {
 
     let course = $('select[name="lastCourse"]').val();
     console.log(course);
-    switch(course) {
+    switch (course) {
         case 'ITSC1110':
             showQuestion(event, $(event.target), $('#1110Score'));
             break;
@@ -208,7 +203,7 @@ function showQuestion(event, prev, target) {
         target.children().show();
 
         //// Smoothly scroll to this element that was just revealed
-        $("html, body").animate({ scrollTop: $(document).height()}, "fast", "linear");
+        $("html, body").animate({ scrollTop: $(document).height() }, "fast", "linear");
 
         if (target.hasClass('result')) {
             $('#result-hidden').text(target.attr('id'));
@@ -227,5 +222,5 @@ function saveData(e) {
 
     e.preventDefault();
     const data = new FormData($('#main').get()[0]);
-    fetch(action, {method: 'POST', body: data,})
+    fetch(action, { method: 'POST', body: data, })
 }
