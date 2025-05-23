@@ -16,7 +16,8 @@ select {
 }
 
 /* Fix a weird alignment issue, not sure if this is a hack */
-#topics-121 .input-group, #topics-122 .input-group {
+#topics-1212 .input-group,
+#topics-1213 .input-group {
     --bs-gutter-x: 0;
 }
 
@@ -26,4 +27,10 @@ select {
 
 .question .toggle-solutions {
     margin-top: 0.5rem;
+}
+
+/* Generic HTML element styling */
+
+p {
+    text-indent: 2rem;
 }

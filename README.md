@@ -1,6 +1,6 @@
 # ITSC 121X Self-Placement
 
-This tool provides the workflow for the University of North Carolina at Charlotte self-placement tool for the introductory programming courses ITSC 121x (ITSC 1212, 1213).
+This tool provides the workflow for the University of North Carolina at Charlotte (UNC Charlotte) self-placement tool for the introductory programming courses ITSC 121X (ITSC 1212 & 1213).
 
 ## Setup
 
