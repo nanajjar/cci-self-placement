@@ -16,7 +16,7 @@ const questionData = [
             c: "Given the cost of an order, the tip percentage, and the tax percentage, calculate the total amount to be paid.",
         },
         answer: {
-            a: "Given INTEGER, ADD INTEGER +1, ADD INTEGER - 1",
+            a: "Given INTEGER, ADD INTEGER +1, ADD INTEGER -1",
             b: "Given WIDTH and HEIGHT, MULTIPLY 0.5 * WIDTH * HEIGHT",
             c: "Given COST and TIP_PERCENT and TAX_PERCENT, ADD COST + (COST * TIP_PERCENT) + (COST * TAX_PERCENT)",
         }
@@ -32,7 +32,7 @@ const questionData = [
         answer: {
             a: "PREVIOUS = NUM - 1; NEXT = NUM + 1",
             b: "AREA = 0.5 * WIDTH * HEIGHT",
-            c: "TOTAL = COST + (COST * TIP_PERCENT / 100) + (COST + TAX_PERCENT / 100)",
+            c: "TOTAL = COST + (COST * TIP_PERCENT) + (COST + TAX_PERCENT)",
         },
     }
 ];
