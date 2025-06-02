@@ -92,5 +92,21 @@ const questionData = [
             "b": "\"Keep cooking\"",
             "c": "\"Ready to eat\""
         }
+    },
+    {
+        "title": "Advanced Conditionals",
+        "text": "Building on simple if statements, we can use elif (else if) and else to handle multiple conditions. This allows us to check for multiple different conditions and execute different blocks of code depending on which (none, one, or multiple) sets of conditions are met. One use case for this would be to match a student's grade as a percentile to the corresponding letter grade. Consider this code: <code>def grade_letter(score):\n    if score >= 90:\n        return \"A\"\n    elif score >= 80:\n        return \"B\"\n    elif score >= 70:\n        return \"C\"\n    elif score >= 60:\n        return \"D\"\n    else:\n        return \"F\"</code>",
+        "question": {
+            "a": "grade_letter(85)",
+            "b": "grade_letter(92)",
+            "c": "grade_letter(58)",
+            "d": "grade_letter(70)"
+        },
+        "answer": {
+            "a": "\"B\"",
+            "b": "\"A\"",
+            "c": "\"F\"",
+            "d": "\"C\""
+        }
     }
 ];
