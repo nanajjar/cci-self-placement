@@ -36,21 +36,21 @@ const questionData = [
             "b": "Integer: a whole number",
             "c": "Floating-point Number: a number that contains a decimal value",
             "d": "Boolean: an on/off type of value that is either true or false",
-            "e": "None Type: represent the absence of a value (often Null in other progamming languages)",
+            "e": "None Type: represents the absence of a value (often Null in other programming languages)",
         },
     },
     {
         "title": "Moving from Pseudo-code/Flowcharts to Python",
         "text": "If you felt comfortable planning a solution to the previous scenarios using pseudo-code or flowcharts, the next step is to translate those plans into a usable code. In this case, we'll ask you to use the Python programming language (or feel free to use another if you're already familiar with a different programming language).",
         "question": {
-            "a": "Given an integer NUM, determine and the previous and next integers.",
+            "a": "Given an integer NUM, determine the previous and next integers.",
             "b": "Given the values WIDTH and HEIGHT of a right triangle, calculate the area of the shape. (Area of a right triangle = 0.5 * width * height)",
             "c": "Given the cost of an order , the tip percentage , and the tax percentage , calculate the total amount to be paid.",
         },
         "answer": {
             "a": "PREVIOUS = NUM - 1; NEXT = NUM + 1",
             "b": "AREA = 0.5 * WIDTH * HEIGHT",
-            "c": "TOTAL = COST + (COST * TIP_PERCENT) + (COST + TAX_PERCENT)",
+            "c": "TOTAL = COST + (COST * TIP_PERCENT) + (COST * TAX_PERCENT)",
         },
     },
     {
