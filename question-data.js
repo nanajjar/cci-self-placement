@@ -108,5 +108,21 @@ const questionData = [
             "c": "\"F\"",
             "d": "\"C\""
         }
+    },
+    {
+        "title": "Arrays & Lists",
+        "text": "Arrays and lists are collections that allow us to store multiple values in a single variable. We can access individual items in these arrays using their position (index). (Hint: remember that computers typically count from 0 not 1). Arrays are used when organizing and processing groups of related data. Consider this code: <code>def get_student_info(students, grades):\n    first_student = students[0]\n    last_grade = grades[2]\n    total_students = len(students)\n    return f\"{first_student} and there are {total_students} students\"</code>",
+        "question": {
+            "a": "get_student_info(['Alice', 'Bob', 'Charlie'], [85, 90, 78])",
+            "b": "get_student_info(['Emma', 'David'], [92, 88, 95])",
+            "c": "What would grades[1] return from the first example?",
+            "d": "What would len(['x', 'y', 'z', 'w']) return?"
+        },
+        "answer": {
+            "a": "\"Alice and there are 3 students\"",
+            "b": "\"Emma and there are 2 students\"",
+            "c": "90",
+            "d": "4"
+        }
     }
 ];
