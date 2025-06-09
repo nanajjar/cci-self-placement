@@ -338,27 +338,28 @@
             </div>
 
             <div class="mb-3 question" id="p_1212p1" style="display:none">
-                <label for="p_1212p1">Read and work on this problem, then answer the next question: <b>What is the
-                        output after executing the following code?</b></label><br />
+                <label for="p_1212p1">Programming is, at it's core, all about solving problems. Read the following cases
+                    and try to determine how you would approach each one. You may want to think in terms of pseudo-code
+                    or flow charts.</b></label><br />
 
                 <!-- Nav tabs -->
-                <ul class="nav nav-pills" id="p_1212p1-lang" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="p_1212p1-java-tab" data-bs-toggle="tab"
+                <ul class="nav nav-pills mb-2" id="p_1212p1-lang" role="tablist">
+                    <li class="nav-item" style="display: none" role="presentation">
+                        <button class="nav-link" id="p_1212p1-java-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1212p1-java" type="button" role="tab" aria-controls="p_1212p1-java"
-                            aria-selected="true">Java</button>
+                            aria-selected="false">Java</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="p_1212p1-python-tab" data-bs-toggle="tab"
+                        <button class="nav-link active" id="p_1212p1-python-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1212p1-python" type="button" role="tab" aria-controls="p_1212p1-python"
-                            aria-selected="false">Python</button>
+                            aria-selected="true">Problem-Solving & Algorithms</button>
                     </li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <!-- **JAVA** -->
-                    <div class="tab-pane active" id="p_1212p1-java" role="tabpanel" aria-labelledby="p_1212p1-java-tab">
+                    <div class="tab-pane" id="p_1212p1-java" role="tabpanel" aria-labelledby="p_1212p1-java-tab">
                         <div class="row">
                             <div class="col-7" id="p_1212p1-java-problem-col">
                                 <pre><code class="language-java">public class Example {
@@ -405,38 +406,30 @@
                     </div>
 
                     <!-- **PYTHON** -->
-                    <div class="tab-pane" id="p_1212p1-python" role="tabpanel" aria-labelledby="p_1212p1-python-tab">
+                    <div class="tab-pane active" id="p_1212p1-python" role="tabpanel"
+                        aria-labelledby="p_1212p1-python-tab">
                         <div class="row">
-                            <div class="col-7" id="p_1212p1-python-problem-col">
-                                <pre><code class="language-python">def figure(max_num):
-    for line in range(1, max_num + 1):
-        for dots in range(1, max_num - line + 1):
-            print(".", end="")
-        print(line)
-
-figure(8)</code></pre>
+                            <div class="col-12" id="p_1212p1-python-problem-col">
+                                <pre><code class="language-python">A: "Given a whole number (an integer), determine the previous and next whole numbers.",
+B: "Given the width and height of a right triangle, determine the area of the shape. (Area of a right triangle = 0.5 * width * height)",
+C: "Given the cost of an order, the tip percentage, and the tax percentage, calculate the total amount to be paid.",</code></pre>
                             </div>
 
-                            <div class="col-4 toggle-solutions" id="p_1212p1-python-solution-col">
+                            <div class="col-12 toggle-solutions" id="p_1212p1-python-solution-col">
                                 <!-- **SOLUTION** -->
-                                <p>
-                                    <a class="btn btn-primary" data-bs-toggle="collapse"
-                                        href="#p_1212p1-python-solution" role="button" aria-expanded="false"
-                                        aria-controls="p_1212p1-python-solution">
-                                        Toggle solution
-                                    </a>
-                                </p>
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse"
+                                    href="#p_1212p1-python-solution" role="button" aria-expanded="false"
+                                    aria-controls="p_1212p1-python-solution">
+                                    Toggle solution
+                                </a>
                                 <div class="collapse" id="p_1212p1-python-solution">
                                     <div class="card card-body">
                                         <samp>
-                                            .......1<br />
-                                            ......2<br />
-                                            .....3<br />
-                                            ....4<br />
-                                            ...5<br />
-                                            ..6<br />
-                                            .7<br />
-                                            8
+                                            <pre><code class="language-python">
+A: "Given INTEGER, ADD INTEGER + 1, SUBTRACT INTEGER - 1",
+B: "Given WIDTH and HEIGHT, MULTIPLY 0.5 * WIDTH * HEIGHT",
+C: "Given COST and TIP_PERCENT and TAX_PERCENT, ADD COST + (COST * TIP_PERCENT) + (COST * TAX_PERCENT)",
+                                            </code></pre>
                                         </samp>
                                     </div>
                                 </div>
