@@ -33,7 +33,7 @@
     <script src="script.js"></script>
 
 
-    <title>CSE 12X Self-Placement</title>
+    <title>CSE 121X Self-Placement</title>
 </head>
 
 <body>
@@ -47,9 +47,7 @@
       </div>
       -->
 
-        <!-- 
-        Text 1: Welcome
-      -->
+        <!-- Header Paragraph -->
         <div id="welcome">
             <h1 class="text-center mb-3">Welcome to the ITSC 121X Guided Self-Placement!</h1>
 
@@ -107,8 +105,10 @@
             <button type="button" class="btn btn-success" id="start-btn">Begin Self-Assessment</button>
         </div>
 
-
+        <!-- Big element, holds the body of the survey -->
         <form style="display:none" id="main">
+
+            <!-- User background questionnaire -->
             <div class="mb-3 question" id="prevCourse">
                 <label class="form-label" for="previousCourse">Have you taken a previous computer science
                     course?</label>
@@ -257,6 +257,7 @@
                 </div>
             </div>
 
+            <!-- Python/1212 Topics (Data Types) -->
             <div class="mb-2 question" id="topics-1212" style="display:none">
                 <label class="form-label" for="topics-1212">How familiar and comfortable are you with each of
                     the following programming topics/constructs?</label>
@@ -337,6 +338,7 @@
                 </div>
             </div>
 
+            <!-- Python/1212 Q1: Problem-solving -->
             <div class="mb-3 question" id="p_1212p1" style="display:none">
                 <label for="p_1212p1">Programming is, at it's core, all about solving problems. Read the following cases
                     and try to determine how you would approach each one. You may want to think in terms of pseudo-code
@@ -475,6 +477,7 @@ C: "Given COST and TIP_PERCENT and TAX_PERCENT, ADD COST + (COST * TIP_PERCENT) 
                 </div>
             </div>
 
+            <!-- Python/1212 Q2: Basic Functions -->
             <div class="mb-3 question" id="p_1212p2" style="display:none">
                 <label for="p_1212p2">If you felt comfortable planning a solution to the previous scenarios using
                     pseudo-code or flowcharts, the next step is to translate those plans into a usable code. In this
@@ -491,7 +494,7 @@ C: "Given COST and TIP_PERCENT and TAX_PERCENT, ADD COST + (COST * TIP_PERCENT) 
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="p_1212p2-python-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1212p2-python" type="button" role="tab" aria-controls="p_1212p2-python"
-                            aria-selected="true">Python</button>
+                            aria-selected="true">Python: Basic Functions</button>
                     </li>
                 </ul>
 
@@ -553,13 +556,10 @@ C: "Given the cost of an order , the tip percentage , and the tax percentage , c
 
                             <div class="col-12 toggle-solutions" id="p_1212p2-python-solution-col">
                                 <!-- **SOLUTION** -->
-                                <p>
-                                    <a class="btn btn-primary" data-bs-toggle="collapse"
-                                        href="#p_1212p2-python-solution" role="button" aria-expanded="false"
-                                        aria-controls="p_1212p2-python-solution">
-                                        Toggle solution
-                                    </a>
-                                </p>
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p2-python-solution"
+                                    role="button" aria-expanded="false" aria-controls="p_1212p2-python-solution">
+                                    Toggle solution
+                                </a>
                                 <div class="collapse" id="p_1212p2-python-solution">
                                     <div class="card card-body">
                                         <samp>
@@ -611,28 +611,36 @@ C: "TOTAL = COST + (COST * TIP_PERCENT) + (COST * TAX_PERCENT)",</code></pre>
                 </div>
             </div>
 
+            <!-- Python/1212 Q3: Functions & Methods -->
             <div class="mb-3 question" id="p_1212p3" style="display:none">
-                <label for="p_1212p3">Read and work on this problem, then answer the next question: <b>In one or two
-                        short sentences, describe what the following code does.</b></label><br />
+                <label for="p_1212p3">If you are familiar with data types in programming languages, the next thing to
+                    cover is actually doing something with data after knowing how it is stored. Functions and methods
+                    are the way we do this. For this exercise, assume you're given two variables: NAME and AGE. These
+                    variables are to be used in the following code:
+                    <pre><code class="language-python">def greetPerson(name, age):
+    return f\"{name} is {age} years old.\"</code></pre>. See if you can
+                    determine what the output of this function will be depending on what the variables are set
+                    to.</b>
+                </label><br />
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-pills" id="p_1212p3-lang" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="p_1212p3-java-tab" data-bs-toggle="tab"
+                    <li class="nav-item" style="display: none" role="presentation">
+                        <button class="nav-link" id="p_1212p3-java-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1212p3-java" type="button" role="tab" aria-controls="p_1212p3-java"
-                            aria-selected="true">Java</button>
+                            aria-selected="false">Java</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="p_1212p3-python-tab" data-bs-toggle="tab"
+                        <button class="nav-link active" id="p_1212p3-python-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1212p3-python" type="button" role="tab" aria-controls="p_1212p3-python"
-                            aria-selected="false">Python</button>
+                            aria-selected="true">Python: Functions and Methods</button>
                     </li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <!-- **JAVA** -->
-                    <div class="tab-pane active" id="p_1212p3-java" role="tabpanel" aria-labelledby="p_1212p3-java-tab">
+                    <div class="tab-pane" id="p_1212p3-java" role="tabpanel" aria-labelledby="p_1212p3-java-tab">
                         <div class="row">
                             <div class="col-7" id="p_1212p3-java-problem-col">
                                 <pre><code class="language-java">import java.util.*;
@@ -680,37 +688,28 @@ public class Example {
                     </div>
 
                     <!-- **PYTHON** -->
-                    <div class="tab-pane" id="p_1212p3-python" role="tabpanel" aria-labelledby="p_1212p3-python-tab">
+                    <div class="tab-pane active" id="p_1212p3-python" role="tabpanel"
+                        aria-labelledby="p_1212p3-python-tab">
                         <div class="row">
-                            <div class="col-7" id="p_1212p3-python-problem-col">
-                                <pre><code class="language-python">def input_loop():
-    total_chars = 0;
-    sentinel = "quit";
-    prompt = 'Type a word (or "' + sentinel +'" to quit): '
-    word = input(prompt)
-    while word != sentinel:
-        total_chars += len(word)
-        word = input(prompt)
-    print("The total number of characters is:", total_chars)
-
-input_loop()</code></pre>
+                            <div class="col-12" id="p_1212p3-python-problem-col">
+                                <pre><code class="language-python">A: "name = 'John Doe', age = 37",
+B: "name = 'Jane Doe', age = 35"
+</code></pre>
                             </div>
 
-                            <div class="col-4 toggle-solutions" id="p_1212p3-python-solution-col">
+                            <div class="col-12 toggle-solutions" id="p_1212p3-python-solution-col">
                                 <!-- **SOLUTION** -->
-                                <p>
-                                    <a class="btn btn-primary" data-bs-toggle="collapse"
-                                        href="#p_1212p3-python-solution" role="button" aria-expanded="false"
-                                        aria-controls="p_1212p3-python-solution">
-                                        Toggle solution
-                                    </a>
-                                </p>
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p3-python-solution"
+                                    role="button" aria-expanded="true" aria-controls="p_1212p3-python-solution">
+                                    Toggle solution
+                                </a>
                                 <div class="collapse" id="p_1212p3-python-solution">
                                     <div class="card card-body">
                                         <samp>
-                                            Reads in input from the user one word at a time until the word "quit" is
-                                            entered, then prints the total number of characters entered
-                                            (not including the word "quit").
+                                            <pre><code class="language-python">
+A: "John Doe is 37 years old.",
+b: "Jane Doe is 35 years old."
+</code></pre>
                                         </samp>
                                     </div>
                                 </div>
@@ -755,6 +754,309 @@ input_loop()</code></pre>
                 </div>
             </div>
 
+            <!-- Python/1212 Q4: Loops -->
+            <div class="mb-3 question" id="p_1212p4" style="display:none">
+                <label for="p_121243">
+                    Loops allow us to repeat code multiple times, just as the name suggests. This is useful for many
+                    cases, such as going through a list of items or doing some mathematical operation each time the code
+                    block loops. Consider the following code:
+                    <pre><code class="language-python">def add_by_twos():
+    total = 0
+    for i in range(5):
+        total = total + 2
+    return total</code></pre>
+                    .
+                    Trace through this loop step by step.
+                </label><br />
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1212p4-lang" role="tablist">
+                    <li class="nav-item" style="display: none" role="presentation">
+                        <button class="nav-link" id="p_1212p4-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p4-java" type="button" role="tab" aria-controls="p_1212p4-java"
+                            aria-selected="false">Java</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_1212p4-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p4-python" type="button" role="tab" aria-controls="p_121243-python"
+                            aria-selected="true">Python: Loops</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane" id="p_1212p4-java" role="tabpanel" aria-labelledby="p_1212p4-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p4-java-problem-col">
+                                <pre><code class="language-java">import java.util.*;
+
+public class Example {
+    public static void main(String[] args) {
+        inputLoop();
+    }
+
+    public static void inputLoop() {
+        Scanner console = new Scanner(System.in);
+        int totalChars = 0;
+        String sentinel = "quit";
+        System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+        String word = console.next();
+        while (!word.equals(sentinel)) {
+            totalChars += word.length();
+            System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+            word = console.next();
+        }
+        System.out.println("The total number of characters is: " + totalChars);
+    }
+}</code></pre>
+                            </div>
+
+                            <div class="col-4 toggle-solutions" id="p_1212p4-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p4-java-solution"
+                                        role="button" aria-expanded="false" aria-controls="p_1212p4-java-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1212p4-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Reads in input from the user one word at a time until the word "quit" is
+                                            entered, then prints the total number of characters entered
+                                            (not including the word "quit").
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- **PYTHON** -->
+                    <div class="tab-pane active" id="p_1212p4-python" role="tabpanel"
+                        aria-labelledby="p_1212p4-python-tab">
+                        <div class="row">
+                            <div class="col-12" id="p_1212p4-python-problem-col">
+                                <pre><code class="language-python">A: "What does add_by_twos() return?",
+B: "If we changed range(5) to range(3), what would the function return?",
+C: "If we changed 'total + 2' to 'total + 3', what would the original function return?"
+</code></pre>
+                            </div>
+
+                            <div class="col-12 toggle-solutions" id="p_1212p4-python-solution-col">
+                                <!-- **SOLUTION** -->
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p4-python-solution"
+                                    role="button" aria-expanded="true" aria-controls="p_1212p4-python-solution">
+                                    Toggle solution
+                                </a>
+                                <div class="collapse" id="p_1212p4-python-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            <pre><code class="language-python">A: "10",
+B: "6",
+C: "15"
+</code></pre>
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3" id="p_1212p4react" style="display:none">
+                    <label class="form-label" for="p_1212p4react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p4react"
+                            id="p_1212p4react1" value="1">
+                        <label class="form-check-label" for="p_1212p4react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p4react"
+                            id="p_1212p4react2" value="2">
+                        <label class="form-check-label" for="p_1212p4react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p4react"
+                            id="p_1212p4react3" value="3">
+                        <label class="form-check-label" for="p_1212p4react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p4react"
+                            id="p_1212p4react4" value="4">
+                        <label class="form-check-label" for="p_1212p4react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p4react"
+                            id="p_1212p4react5" value="5">
+                        <label class="form-check-label" for="p_1212p4react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Q5 Basic Conditionals -->
+            <div class="mb-3 question" id="p_1212p5" style="display:none">
+                <label for="p_1212p5">Conditionals allow us to check to see if a set of specified conditions are met,
+                    much like the name of the topic sounds. Such uses could be to check if a piece of food is cooked
+                    thoroughly (checking to see if the internal temperature of the food meets the minimum required
+                    temperature to be considered fully cooked) or to decide how to dress for the day (Is it raining? Is
+                    the temperature below 70 degrees?). Consider this code:
+                    <code>def check_steak(temp):
+    if temp >= 145:
+        return \"Ready to eat\"
+    else:
+        return \"Keep cooking\"</code>
+                </label><br />
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1212p5-lang" role="tablist">
+                    <li class="nav-item" style="display: none" role="presentation">
+                        <button class="nav-link" id="p_1212p5-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p3-java" type="button" role="tab" aria-controls="p_1212p3-java"
+                            aria-selected="false">Java</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_121253-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p5-python" type="button" role="tab" aria-controls="p_1212p5-python"
+                            aria-selected="true">Python: Basic Conditionals</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane" id="p_1212p5-java" role="tabpanel" aria-labelledby="p_1212p5-java-tab">
+                        <div class="row">
+                            <div class="col-7" id="p_1212p3-java-problem-col">
+                                <pre><code class="language-java">import java.util.*;
+
+public class Example {
+    public static void main(String[] args) {
+        inputLoop();
+    }
+
+    public static void inputLoop() {
+        Scanner console = new Scanner(System.in);
+        int totalChars = 0;
+        String sentinel = "quit";
+        System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+        String word = console.next();
+        while (!word.equals(sentinel)) {
+            totalChars += word.length();
+            System.out.print("Type a word (or \"" + sentinel + "\" to quit): ");
+            word = console.next();
+        }
+        System.out.println("The total number of characters is: " + totalChars);
+    }
+}</code></pre>
+                            </div>
+
+                            <div class="col-4 toggle-solutions" id="p_1212p3-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <p>
+                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p3-java-solution"
+                                        role="button" aria-expanded="false" aria-controls="p_1212p3-java-solution">
+                                        Toggle solution
+                                    </a>
+                                </p>
+                                <div class="collapse" id="p_1212p3-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            Reads in input from the user one word at a time until the word "quit" is
+                                            entered, then prints the total number of characters entered
+                                            (not including the word "quit").
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- **PYTHON** -->
+                    <div class="tab-pane active" id="p_1212p5-python" role="tabpanel"
+                        aria-labelledby="p_1212p5-python-tab">
+                        <div class="row">
+                            <div class="col-12" id="p_1212p5-python-problem-col">
+                                <pre><code class="language-python">A: "check_steak(150)",
+B: "check_steak(140)",
+C: "check_steak(145)"
+</code></pre>
+                            </div>
+
+                            <div class="col-12 toggle-solutions" id="p_1212p5-python-solution-col">
+                                <!-- **SOLUTION** -->
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1212p5-python-solution"
+                                    role="button" aria-expanded="true" aria-controls="p_1212p5-python-solution">
+                                    Toggle solution
+                                </a>
+                                <div class="collapse" id="p_1212p5-python-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            <pre><code class="language-python">
+A: "\"Ready to eat\"",
+B: "\"Keep cooking\"",
+C: "\"Ready to eat\""
+</code></pre>
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3" id="p_1212p5react" style="display:none">
+                    <label class="form-label" for="p_1212p5react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p5react"
+                            id="p_1212p5react1" value="1">
+                        <label class="form-check-label" for="p_1212p5react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p5react"
+                            id="p_1212p5react2" value="2">
+                        <label class="form-check-label" for="p_1212p5react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p5react"
+                            id="p_1212p5react3" value="3">
+                        <label class="form-check-label" for="p_1212p5react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p5react"
+                            id="p_1212p5react4" value="4">
+                        <label class="form-check-label" for="p_1212p5react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p5react"
+                            id="p_1212p5react5" value="5">
+                        <label class="form-check-label" for="p_1212p5react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Q -->
+
+
+            <!-- Break between 1212 and 1213 questions -->
+
+
+
+
+            <!-- Java/1213 Topics (Data Types)-->
             <div class="mb-3 question" id="topics-1213" style="display:none">
                 <label class="form-label" for="topics-1213">How familiar and comfortable are you with each of
                     the following programming topics/constructs?</label>
@@ -820,7 +1122,7 @@ input_loop()</code></pre>
                 </div>
             </div>
 
-
+            <!-- Java/1213 Q1-->
             <div class="mb-3 question" id="p_1213p1" style="display:none">
                 <label for="p_1213p1">Read and work on this problem, then answer the next question: <b>In one or two
                         short sentences, describe what the following code does.</b></label><br />
@@ -953,6 +1255,7 @@ input_loop()</code></pre>
                 </div>
             </div>
 
+            <!-- Java/1213 Q2 -->
             <div class="mb-3 question" id="p_1213p2" style="display:none">
                 <label for="p_1213p2">Read and work on this problem, then answer the next question: <b>What is the
                         output of the following code?</b></label><br />
@@ -1086,6 +1389,7 @@ public class Example5 {
                 </div>
             </div>
 
+            <!-- Java/1213 Q3 -->
             <div class="mb-3 question" id="p_1213p3" style="display:none">
                 <label for="p_1213p3">Read and work on this problem, then answer the next question: <b>In one or two
                         short sentences, describe what the following code does.</b></label><br />
@@ -1282,11 +1586,12 @@ public class Example6 {
                 </div>
             </div>
 
+            <!-- Placeholder element? -->
             <textarea id="result-hidden" name="result" style="display:none"></textarea>
         </form>
 
-        <!-- Text 2: No previous programming experience -->
         <div>
+            <!-- Conclusion 1: No previous programming experience -->
             <div class="mb-3 alert alert-success result" role="alert" id="result-1212-noexp" style="display:none">
                 <h1 class="text-center"><span class="badge bg-success">ITSC 1212</span></h1>
                 <p>
@@ -1306,7 +1611,7 @@ public class Example6 {
                 </p>
             </div>
 
-            <!-- Text 3: Some Previous programming experience -->
+            <!-- Conclusion 2: Some Previous programming experience -->
             <div class="mb-3 alert alert-success result" role="alert" id="result-1212-topics" style="display:none">
                 <h1 class="text-center"><span class="badge bg-success">ITSC 1212</span></h1>
                 <p>
@@ -1327,7 +1632,7 @@ public class Example6 {
                 </p>
             </div>
 
-            <!-- Text 4: Solid grasp of programming concepts -->
+            <!-- Conclusion 3: Solid grasp of programming concepts -->
             <div class="mb-3 alert alert-success result" role="alert" id="result-1213" style="display:none">
                 <h1 class="text-center"><span class="badge bg-success">ITSC 1213</span></h1>
                 <p>
@@ -1349,7 +1654,7 @@ public class Example6 {
                 </p>
             </div>
 
-            <!-- Text 5: Those who completed ITSC 1110 first -->
+            <!-- Conclusion 4: Those who completed ITSC 1110 first -->
             <div class="mb-3 alert alert-success result" role="alert" id="result-1213-from-1110" style="display:none">
                 <h1 class="text-center"><span class="badge bg-success">ITSC 1213</span></h1>
                 <p>
@@ -1376,7 +1681,7 @@ public class Example6 {
                 </p>
             </div>
 
-            <!-- Text 6: Alot of programming experience -->
+            <!-- Conclusion 5: Alot of programming experience -->
             <div class="mb-3 alert alert-success result" role="alert" id="result-2214" style="display:none">
                 <h1 class="text-center"><span class="badge bg-success">ITSC 2214</span></h1>
                 <p>
@@ -1398,7 +1703,7 @@ public class Example6 {
                 </p>
             </div>
 
-            <!-- Text 7: Alot of Experience from ITSC 1110 -->
+            <!-- Conclusion 6: Alot of Experience from ITSC 1110 -->
             <div class="mb-3 alert alert-success result" role="alert" id="result-2214-from-1110" style="display:none">
                 <h1 class="text-center"><span class="badge bg-success">ITSC 2214</span></h1>
                 <p>
@@ -1445,7 +1750,7 @@ public class Example6 {
                 </p>
             </div>
 
-            <!-- Text 8: Talk to academic advising -->
+            <!-- Conclusoin 7: Talk to academic advising -->
             <div class="mb-3 alert alert-warning result" role="alert" id="result-adv" style="display:none">
                 <h1 class="text-center"><span class="badge bg-warning text-dark">Talk to Advising</span></h1>
                 <p>
@@ -1457,10 +1762,14 @@ public class Example6 {
                 </p>
             </div>
         </div>
-        <footer>
+
+        <!-- Footer -->
+        <footer class="text-center">
             <hr />
-            <em><small>Last updated: July 26, 2023</small></em>
+            <em><small>If you have any further questions,  any issues while taking the survey, please contact us at <a
+                        href="mailto:cci-icc@charlotte.edu">cci-icc@charlotte.edu</a> </small></em>
         </footer>
+
     </main>
 </body>
 
