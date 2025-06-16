@@ -1876,6 +1876,127 @@ D: "Yes, because Circle implements Drawable interface (polymorphic assignment)"
             </div>
 
             <!-- Java/1213 Q5 Abstract Classes -->
+            <div class="mb-3 question" id="p_1213p5" style="display: none;">
+                <label for="p_1213p5">Abstract classes are classes that cannot be instantiated and may contain both
+                    abstract methods (without implementation) and concrete methods (with implementation). They provide a
+                    middle ground between interfaces and regular classes. Consider this example:</b></label><br />
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_122p5-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_122p5-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_12243-java" type="button" role="tab" aria-controls="p_122p5-java"
+                            aria-selected="true">Java: Abstract Classes</button>
+                    </li>
+                    <li class="nav-item" role="presentation" style="display: none;">
+                        <button class="nav-link" id="p_122p5-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_122p5-python" type="button" role="tab" aria-controls="p_122p5-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1213p5-java" role="tabpanel" aria-labelledby="p_1213p5-java-tab">
+                        <div class="row">
+                            <div class="col-12" id="p_1213p5-java-problem-col">
+                                <pre><code class="language-java">public abstract class Shape {
+    protected String name;
+    
+    public Shape(String name) {  
+        this.name = name;    
+    }
+        
+    // Abstract method - must be implemented by subclasses
+    public abstract double getArea();
+    
+    // Concrete method - inherited by all subclasses
+    public void printInfo() {
+        System.out.println(\"Shape: \" + name + \", Area: \" + getArea());    
+    }
+}
+    
+public class Rectangle extends Shape {
+    private double width, height;
+        
+    public Rectangle(double width, double height) {
+        super(\"Rectangle\");
+            this.width = width;
+            this.height = height;
+        }
+        
+    @Override
+    public double getArea() {
+        return width * height;
+    }
+}
+
+A: "Can you create an object like: Shape s = new Shape(\"test\"); ?",
+B: "What must the Rectangle class provide since it extends Shape?",
+C: "Does Rectangle inherit the printInfo() method?",
+D: "What's the main difference between an abstract class and an interface?"</code></pre>
+                            </div>
+
+                            <div class="col-12 toggle-solutions" id="p_1213p5-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#p_1213p5-java-solution"
+                                    role="button" aria-expanded="false" aria-controls="p_1213p5-java-solution">
+                                    Toggle solution
+                                </a>
+                                <div class="collapse" id="p_1213p5-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            <pre>
+                                                <code class="language-java">A: "No, compilation error - cannot instantiate abstract classes",
+B: "An implementation of the abstract getArea() method",
+C: "Yes, concrete methods in abstract classes are inherited normally",
+D: "Abstract classes can have constructors, instance variables, and concrete methods; interfaces (before Java 8) could only have abstract methods"
+                                                </code>
+                                            </pre>
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3" id="p_1213p5react" style="display:none">
+                    <label class="form-label" for="p_1213p5react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p5react"
+                            id="p_1213p5react1" value="1">
+                        <label class="form-check-label" for="p_1213p5react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p5react"
+                            id="p_1213p5react2" value="2">
+                        <label class="form-check-label" for="p_1213p5react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p5react"
+                            id="p_1213p5react3" value="3">
+                        <label class="form-check-label" for="p_1213p5react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p5react"
+                            id="p_1213p5react4" value="4">
+                        <label class="form-check-label" for="p_1213p5react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p5react"
+                            id="p_1213p5react5" value="5">
+                        <label class="form-check-label" for="p_1213p5react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
+            </div>
 
             <!-- Java/1213 Q6 Aggregation -->
 
