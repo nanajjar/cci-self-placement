@@ -863,6 +863,10 @@ C: "15"
                     </li>
                 </ul>
 
+
+                <!-- Not sure if local error, but the code content that actually has the function is not currently displaying  -->
+
+
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <!-- **JAVA** -->
@@ -1124,6 +1128,151 @@ D: "\"C\""</code></pre>
                     </div>
                 </div>
             </div>
+
+            <!-- Python/1212 Q7 Arrays/Lists -->
+            <div class="mb-3 question" id="p_1212p7" style="display:none">
+                <label for="p_121243">
+                    Arrays and lists are collections that allow us to store multiple values in a single variable. We can
+                    access individual items in these arrays using their position (index). (Hint: remember that computers
+                    typically count from 0 not 1). Arrays are used when organizing and processing groups of related
+                    data. Consider this code:
+                </label><br />
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1212p7-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="p_1212p7-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p7-java" type="button" role="tab" aria-controls="p_1212p7-java"
+                            aria-selected="false">Java: Arrays/Lists</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_1212p7-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1212p7-python" type="button" role="tab" aria-controls="p_1212p7-python"
+                            aria-selected="true">Python: Arrays/Lists</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane" id="p_1212p7-java" role="tabpanel" aria-labelledby="p_1212p7-java-tab">
+                        <div class="row">
+                            <div class="col-12" id="p_1212p7-java-problem-col">
+                                <pre><code class="language-java">public static String getStudentInfo(String[] students, int[] grades) {
+    String firstStudent = students[0];
+    int lastGrade = grades[2];
+    int totalStudents = students.length;
+    return firstStudent + \" and there are \" + totalStudents + \" students\";
+}
+
+A: "getStudentInfo([\"Alice\", \"Bob\", \"Charlie\"], [85, 90, 78])",
+B: "getStudentInfo([\"Emma\", \"David\"], [92, 88, 95])",
+C: "What would grades[1] return from the first example?",
+D: "What would new String[]{\"x\", \"y\", \"z\", \"w\"}.length return?"</code></pre>
+                            </div>
+
+                            <div class="col-12 toggle-solutions" id="p_1212p7-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#p_1212p7-java-solution"
+                                    role="button" aria-expanded="false" aria-controls="p_1212p7-java-solution">
+                                    Toggle solution
+                                </a>
+                                <div class="collapse" id="p_1212p7-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            <pre><code class="language-java">def get_student_info(students, grades):
+    first_student = students[0]
+    last_grade = grades[2]
+    total_students = len(students)
+    return f\"{first_student} and there are {total_students} students\"
+
+A: "get_student_info(['Alice', 'Bob', 'Charlie'], [85, 90, 78])",
+B: "get_student_info(['Emma', 'David'], [92, 88, 95])",
+C: "What would grades[1] return from the first example?",
+D: "What would len(['x', 'y', 'z', 'w']) return?"</code></pre>
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- **PYTHON** -->
+                    <div class="tab-pane active" id="p_1212p7-python" role="tabpanel"
+                        aria-labelledby="p_1212p7-python-tab">
+                        <div class="row">
+                            <div class="col-12" id="p_1212p7-python-problem-col">
+                                <pre><code class="language-python">def get_student_info(students, grades):
+    first_student = students[0]
+    last_grade = grades[2]
+    total_students = len(students)
+    return f\"{first_student} and there are {total_students} students\"
+
+A: "get_student_info(['Alice', 'Bob', 'Charlie'], [85, 90, 78])",
+B: "get_student_info(['Emma', 'David'], [92, 88, 95])",
+C: "What would grades[1] return from the first example?",
+D: "What would len(['x', 'y', 'z', 'w']) return?"</code></pre>
+                            </div>
+
+                            <div class="col-12 toggle-solutions" id="p_1212p7-python-solution-col">
+                                <!-- **SOLUTION** -->
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse"
+                                    href="#p_1212p7-python-solution" role="button" aria-expanded="true"
+                                    aria-controls="p_1212p7-python-solution">
+                                    Toggle solution
+                                </a>
+                                <div class="collapse" id="p_1212p7-python-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            <pre><code class="language-python">A: "\"Alice and there are 3 students\"",
+B: "\"Emma and there are 2 students\"",
+C: "90",
+D: "4"</code></pre>
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3" id="p_1212p7react" style="display:none">
+                    <label class="form-label" for="p_1212p7react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p7react"
+                            id="p_1212p7react1" value="1">
+                        <label class="form-check-label" for="p_1212p7react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p7react"
+                            id="p_1212p7react2" value="2">
+                        <label class="form-check-label" for="p_121264react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p7react"
+                            id="p_1212p7react3" value="3">
+                        <label class="form-check-label" for="p_1212p7react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p7react"
+                            id="p_1212p7react4" value="4">
+                        <label class="form-check-label" for="p_1212p7react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1212p7react"
+                            id="p_1212p7react5" value="5">
+                        <label class="form-check-label" for="p_1212p7react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
+            </div>
+
+
 
             <!-- Break between 1212 and 1213 questions -->
 
