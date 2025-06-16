@@ -180,7 +180,7 @@ function check1213Problem(event) {
         }
     } else if (resp == 3) {
         showQuestion(event, $(event.target), $('#result-adv'));
-    } else if ($(event.target).attr('id').startsWith('p_1213p3')) {
+    } else if ($(event.target).attr('id').startsWith('p_1213p5')) {
         if ($('select[name="lastCourse"]').val() == 'ITSC1110') {
             showQuestion(event, $(event.target), $('#result-2214-from-1110'));
         } else {
