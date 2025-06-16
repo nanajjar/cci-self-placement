@@ -1345,19 +1345,20 @@ D: "4"</code></pre>
                 </div>
             </div>
 
-            <!-- Java/1213 Q1-->
+            <!-- Java/1213 Q1 Encapsulation-->
             <div class="mb-3 question" id="p_1213p1" style="display:none">
-                <label for="p_1213p1">Read and work on this problem, then answer the next question: <b>In one or two
-                        short sentences, describe what the following code does.</b></label><br />
+                <label for="p_1213p1">Encapsulation is the principle of bundling data and methods that work on that data
+                    within a single unit (class) and restricting access to some components. This is achieved through
+                    access modifiers and getter/setter methods. Consider this class:</b></label><br />
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-pills" id="p_1213p1-lang" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="p_1213p1-java-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1213p1-java" type="button" role="tab" aria-controls="p_1213p1-java"
-                            aria-selected="true">Java</button>
+                            aria-selected="true">Java: Encapsulation</button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li class="nav-item" role="presentation" style="display: none;">
                         <button class="nav-link" id="p_1213p1-python-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1213p1-python" type="button" role="tab" aria-controls="p_1213p1-python"
                             aria-selected="false">Python</button>
@@ -1369,34 +1370,55 @@ D: "4"</code></pre>
                     <!-- **JAVA** -->
                     <div class="tab-pane active" id="p_1213p1-java" role="tabpanel" aria-labelledby="p_1213p1-java-tab">
                         <div class="row">
-                            <div class="col-7" id="p_1213p1-java-problem-col">
-                                <pre><code class="language-java">public static Map&lt;String, Set&lt;Integer&gt;&gt; mystery(Map&lt;String, Set&lt;Integer&gt;&gt; map1) {
-    Map&lt;String, Set&lt;Integer&gt;&gt; map2 = new HashMap&lt;&gt;();
-    for (String key : map1.keySet()) {
-        Set&lt;Integer&gt; set1 = map1.get(key);
-        Set&lt;Integer&gt; set2 = new HashSet&lt;Integer&gt;();
-        for (int n : set1) {
-            set2.add(n);
-        }
-        map2.put(key, set2);
+                            <div class="col-12" id="p_1213p1-java-problem-col">
+                                <pre><code class="language-java">public class BankAccount {
+    private double balance;
+    private String accountNumber;
+    
+    public BankAccount(String accountNumber, double initialBalance) {
+        this.accountNumber = accountNumber;
+        this.balance = initialBalance;
     }
-    return map2;
-}</code></pre>
+    
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public boolean withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+    }
+    
+    public double getBalance() {
+        return balance;
+    }
+}
+
+A: "Why doesn't this class have a setBalance() method?",
+B: "What happens if you try to deposit a negative amount?",
+C: "What does the withdraw method return if you try to withdraw more money than the balance?",
+D: "How does this class demonstrate the principle of encapsulation?"</code></pre>
                             </div>
 
-                            <div class="col-4 toggle-solutions" id="p_1213p1-java-solution-col">
+                            <div class="col-12 toggle-solutions" id="p_1213p1-java-solution-col">
                                 <!-- **SOLUTION** -->
-                                <p>
-                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p1-java-solution"
-                                        role="button" aria-expanded="false" aria-controls="p_1213p1-java-solution">
-                                        Toggle solution
-                                    </a>
-                                </p>
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#p_1213p1-java-solution"
+                                    role="button" aria-expanded="false" aria-controls="p_1213p1-java-solution">
+                                    Toggle solution
+                                </a>
                                 <div class="collapse" id="p_1213p1-java-solution">
                                     <div class="card card-body">
                                         <samp>
-                                            Creates a new map that contains the same keys and copies of the values of
-                                            the parameter map. (Creates a deep copy of the parameter map.)
+                                            <pre><code class="language-java">A: "To prevent unauthorized direct modification of the balance - balance should only change through controlled deposit/withdraw operations",
+B: "Nothing happens - the deposit method checks if amount > 0 before adding to balance",
+C: "false (the withdrawal is rejected)",
+D: "It hides the internal balance field and controls access through specific methods that enforce business rules"
+                                            </code></pre>
                                         </samp>
                                     </div>
                                 </div>
@@ -1478,96 +1500,84 @@ D: "4"</code></pre>
                 </div>
             </div>
 
-            <!-- Java/1213 Q2 -->
+            <!-- Java/1213 Q2 Inheritance-->
             <div class="mb-3 question" id="p_1213p2" style="display:none">
-                <label for="p_1213p2">Read and work on this problem, then answer the next question: <b>What is the
-                        output of the following code?</b></label><br />
+                <label for="p_1213p2">Inheritance allows a class to inherit properties and behaviors from another class,
+                    promoting code reuse and creating hierarchical relationships. The subclass extends the superclass
+                    using the 'extends' keyword. Consider these classes:</b></label><br />
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_1213p2-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_1213p2-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1213p2-java" type="button" role="tab" aria-controls="p_1213p2-java"
+                            aria-selected="true">Java: Inheritance</button>
+                    </li>
+                    <li class="nav-item" role="presentation" style="display: none;">
+                        <button class="nav-link" id="p_1213p2-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_1213p2-python" type="button" role="tab" aria-controls="p_1213p2-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <!-- **JAVA** -->
                     <div class="tab-pane active" id="p_1213p2-java" role="tabpanel" aria-labelledby="p_1213p2-java-tab">
                         <div class="row">
-                            <div class="col-7" id="p_1213p2-java-problem-col">
-                                <pre><code class="language-java">class CreditCard {
-    private String cardNumber;
-    private String name;
-    private double creditLimit;
-    private double balance;
-    private int totalCharges;
-
-    public CreditCard(String name, String cardNumber, double creditLimit) {
-        this.cardNumber = cardNumber;
-        this.name = name;
-        this.creditLimit = creditLimit;
-        this.balance = 0;
-        this.totalCharges = 0;
-    }
-
-    public void charge(double amount) {
-        if (balance + amount > creditLimit) {
-            throw new IllegalArgumentException("Beyond Credit Limit");
+                            <div class="col-12" id="p_1213p2-java-problem-col">
+                                <pre><code class="language-java">public class Vehicle {
+    protected String brand;
+    protected int year;
+        
+    public Vehicle(String brand, int year) {
+            this.brand = brand;
+            this.year = year;
         }
 
-        balance += amount;
-        totalCharges++;
+    public void start() {
+        System.out.println(\"Vehicle starting...\");
     }
-
-    public void payBill(double amount) {
-        balance -= amount;
+    
+    public class Car extends Vehicle {
+        private int doors;
     }
-
-    public String getPaymentType() {
-        return "CC";
+                        
+    public Car(String brand, int year, int doors) {
+        super(brand, year);
+        this.doors = doors;
     }
-
-    public int totalPayments() {
-        return totalCharges;
+    
+    @Override
+    public void start() {
+        System.out.println(\"Car engine starting...\");
     }
-
-    public String toString() {
-        return getPaymentType() + " " + cardNumber + " (" + balance + ")";
+    
+    public void honk() {
+        System.out.println(\"Beep beep!\");
     }
 }
 
-public class Example5 {
-    public static void main(String[] args) {
-        CreditCard card1 = new CreditCard("Brett Wortzman", "1234567801019275", 1000);
-        CreditCard card2 = new CreditCard("Zorah Fung", "9876543210108473", 500);
-
-        card1.charge(325);
-        card1.charge(400);
-        card1.payBill(200);
-
-        card2.charge(175);
-        card2.payBill(50);
-        card2.charge(75);
-        card2.charge(100);
-
-        System.out.println("Payment Method 1: " + card1);
-        System.out.println("Payment Method 2: " + card2);
-
-        System.out.println("Payment Method 1 charges: " + card1.totalPayments());
-        System.out.println("Payment Method 2 charges: " + card2.totalPayments());
-    }
-}</code></pre>
+A: "What does 'super(brand, year)' do in the Car constructor?",
+B: "If you create: Car myCar = new Car(\"Toyota\", 2020, 4); and call myCar.start(), what will be printed?",
+C: "Can a Car object access the 'brand' field directly? Why or why not?",
+D: "What's the difference between the start() method in Vehicle and Car?"</code></pre>
                             </div>
 
-                            <div class="col-4 toggle-solutions" id="p_1213p2-java-solution-col">
+                            <div class="col-12 toggle-solutions" id="p_1213p2-java-solution-col">
                                 <!-- **SOLUTION** -->
-                                <p>
-                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p2-java-solution"
-                                        role="button" aria-expanded="false" aria-controls="p_1213p2-java-solution">
-                                        Toggle solution
-                                    </a>
-                                </p>
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#p_1213p2-java-solution"
+                                    role="button" aria-expanded="false" aria-controls="p_1213p2-java-solution">
+                                    Toggle solution
+                                </a>
                                 <div class="collapse" id="p_1213p2-java-solution">
                                     <div class="card card-body">
                                         <samp>
-                                            Payment Method 1: CC 1234567801019275 (525.0) <br />
-                                            Payment Method 2: CC 9876543210108473 (300.0) <br />
-                                            Payment Method 1 charges: 2 <br />
-                                            Payment Method 2 charges: 3
+                                            <pre><code class="language-java">A: "It calls the parent class (Vehicle) constructor to initialize the brand and year fields",
+B: "\"Car engine starting...\"",
+C: "Yes, because 'brand' is declared as protected in the Vehicle class, making it accessible to subclasses",
+D: "Car overrides the start() method to provide its own implementation instead of using the parent's version"
+            </code></pre>
                                         </samp>
                                     </div>
                                 </div>
@@ -1612,159 +1622,83 @@ public class Example5 {
                 </div>
             </div>
 
-            <!-- Java/1213 Q3 -->
-            <div class="mb-3 question" id="p_1213p3" style="display:none">
-                <label for="p_1213p3">Read and work on this problem, then answer the next question: <b>In one or two
-                        short sentences, describe what the following code does.</b></label><br />
+            <!-- Java/1213 Q3 Polymorphism -->
+            <div class="mb-3 question" id="p_1213p3" style="display: none;">
+                <label for="p_1213p3">Polymorphism allows objects of different types to be treated as objects of a
+                    common base type, with the actual method implementation determined at runtime. This enables flexible
+                    and extensible code. Consider this example:</b></label><br />
 
                 <!-- Nav tabs -->
-                <!-- <ul class="nav nav-pills" id="p_122p3-lang" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="p_122p3-java-tab" data-bs-toggle="tab" data-bs-target="#p_122p3-java" type="button" role="tab" aria-controls="p_122p3-java" aria-selected="true">Java</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="p_122p3-python-tab" data-bs-toggle="tab" data-bs-target="#p_122p3-python" type="button" role="tab" aria-controls="p_122p3-python" aria-selected="false">Python</button>
-                </li>
-            </ul> -->
+                <ul class="nav nav-pills" id="p_122p3-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_122p3-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_122p3-java" type="button" role="tab" aria-controls="p_122p3-java"
+                            aria-selected="true">Java: Polymorphism</button>
+                    </li>
+                    <li class="nav-item" role="presentation" style="display: none;">
+                        <button class="nav-link" id="p_122p3-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_122p3-python" type="button" role="tab" aria-controls="p_122p3-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <!-- **JAVA** -->
                     <div class="tab-pane active" id="p_1213p3-java" role="tabpanel" aria-labelledby="p_1213p3-java-tab">
                         <div class="row">
-                            <div class="col-7" id="p_1213p3-java-problem-col">
-                                <pre><code class="language-java">class CreditCard implements PaymentMethod {
-    private String cardNumber;
-    private String name;
-    private double creditLimit;
-    private double balance;
-    private int totalCharges;
+                            <div class="col-12" id="p_1213p3-java-problem-col">
+                                <pre><code class="language-java">public class Animal {
 
-    public CreditCard(String name, String cardNumber, double creditLimit) {
-        this.cardNumber = cardNumber;
-        this.name = name;
-        this.creditLimit = creditLimit;
-        this.balance = 0;
-        this.totalCharges = 0;
-    }
-
-    public void charge(double amount) {
-        if (balance + amount > creditLimit) {
-            throw new IllegalArgumentException("Beyond Credit Limit");
-        }
-
-        balance += amount;
-        totalCharges++;
-    }
-
-    public void payBill(double amount) {
-        balance -= amount;
-    }
-
-    public String getPaymentType() {
-        return "CC";
-    }
-
-    public int totalPayments() {
-        return totalCharges;
-    }
-
-    public String toString() {
-        return getPaymentType() + " " + cardNumber + " (" + balance + ")";
+    public void makeSound() {
+        System.out.println(\"Some generic animal sound\");
     }
 }
 
-class BankAccount implements PaymentMethod {
-    private String number;
-    private String name;
-    private double balance;
-    private int withdrawals;
-
-    public BankAccount(String name, String number, int initialDeposit) {
-        this.name = name;
-        this.number = number;
-        this.balance = initialDeposit;
-        this.withdrawals = 0;
+public class Dog extends Animal {
+    
+    @Override
+    public void makeSound() {
+        System.out.println(\"Woof!\");
     }
+}
+    
+public class Cat extends Animal {
 
-    public void charge(double amount) {
-        if (amount > balance) {
-            throw new IllegalArgumentException("Insufficient Funds");
-        }
-
-        balance -= amount;
-        withdrawals++;
-    }
-
-    public void deposit(double amount) {
-        balance += amount;
-    }
-
-    public String getPaymentType() {
-        return "BankAccount";
-    }
-
-    public int totalPayments() {
-        return withdrawals;
-    }
-
-    public String toString() {
-        return getPaymentType() + " " + number + " (" + balance + ")";
+    @Override
+    public void makeSound() {
+        System.out.println(\"Meow!\");
     }
 }
 
-interface PaymentMethod {
-    public void charge(double amount);
+Animal[] animals = {new Dog(), new Cat(), new Animal()};
 
-    public String getPaymentType();
-
-    public int totalPayments();
+for (Animal animal : animals) {
+    animal.makeSound();
 }
 
-public class Example6 {
-    public static void main(String[] args) {
-        CreditCard card1 = new CreditCard("Brett Wortzman", "1234567801019275", 1000);
-        PaymentMethod method2 = new CreditCard("Zorah Fung", "9876543210108473", 500);
-        PaymentMethod method3 = new BankAccount("Dubs", "1000000123467", 600);
-
-        card1.charge(325);
-        card1.charge(400);
-        card1.payBill(200);
-
-        method2.charge(175);
-        method2.charge(75);
-        method2.charge(100);
-
-        method3.charge(150);
-
-        System.out.println("Payment Method 1: " + card1);
-        System.out.println("Payment Method 2: " + method2);
-        System.out.println("Payment Method 3: " + method3);
-
-        System.out.println("Payment Method 1 charges: " + card1.totalPayments());
-        System.out.println("Payment Method 2 charges: " + method2.totalPayments());
-        System.out.println("Payment Method 3 charges: " + method3.totalPayments());
-    }
-}</code></pre>
+A: "What will be printed when the loop executes?",
+B: "How does Java determine which makeSound() method to call for each animal?",
+C: "What is this type of polymorphism called?",
+D: "Could you assign: Animal myPet = new Dog(); ? Why or why not?"</code></pre>
                             </div>
 
-                            <div class="col-4 toggle-solutions" id="p_1213p3-java-solution-col">
+                            <div class="col-12 toggle-solutions" id="p_1213p3-java-solution-col">
                                 <!-- **SOLUTION** -->
-                                <p>
-                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#p_1213p3-java-solution"
-                                        role="button" aria-expanded="false" aria-controls="p_1213p3-java-solution">
-                                        Toggle solution
-                                    </a>
-                                </p>
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#p_1213p3-java-solution"
+                                    role="button" aria-expanded="false" aria-controls="p_1213p3-java-solution">
+                                    Toggle solution
+                                </a>
                                 <div class="collapse" id="p_1213p3-java-solution">
                                     <div class="card card-body">
                                         <samp>
-                                            Payment Method 1: CC 1234567801019275 (525.0) <br />
-                                            Payment Method 2: CC 9876543210108473 (350.0) <br />
-                                            Payment Method 3: BankAccount 1000000123467 (450.0) <br />
-                                            Payment Method 1 charges: 2 <br />
-                                            Payment Method 2 charges: 3 <br />
-                                            Payment Method 3 charges: 1
+                                            <pre>
+                                                <code class="language-java">A: "\"Woof!\" then \"Meow!\" then \"Some generic animal sound\"",
+B: "Java determines the actual object type at runtime and calls the appropriate overridden method",
+C: "Runtime polymorphism (or method overriding)",
+D: "Yes, because Dog IS-A Animal (inheritance relationship allows this assignment)"
+                                                </code>
+                                            </pre>
                                         </samp>
                                     </div>
                                 </div>
@@ -1808,6 +1742,145 @@ public class Example6 {
                     </div>
                 </div>
             </div>
+
+            <!-- Java/1213 Q4 Interfaces-->
+            <div class="mb-3 question" id="p_1213p4" style="display: none;">
+                <label for="p_1213p4">Interfaces define contracts that implementing classes must follow. They contain
+                    method signatures that must be implemented by any class that implements the interface. Unlike
+                    inheritance, a class can implement multiple interfaces. Consider this example:</b></label><br />
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills" id="p_122p4-lang" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="p_122p4-java-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_12243-java" type="button" role="tab" aria-controls="p_122p4-java"
+                            aria-selected="true">Java: Interfaces</button>
+                    </li>
+                    <li class="nav-item" role="presentation" style="display: none;">
+                        <button class="nav-link" id="p_122p4-python-tab" data-bs-toggle="tab"
+                            data-bs-target="#p_122p4-python" type="button" role="tab" aria-controls="p_122p4-python"
+                            aria-selected="false">Python</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- **JAVA** -->
+                    <div class="tab-pane active" id="p_1213p4-java" role="tabpanel" aria-labelledby="p_1213p4-java-tab">
+                        <div class="row">
+                            <div class="col-12" id="p_1213p4-java-problem-col">
+                                <pre><code class="language-java">public interface Drawable {
+    void draw();
+    double getArea();
+}
+    
+    public interface Colorable {
+    void setColor(String color);
+    String getColor();
+}
+
+public class Circle implements Drawable, Colorable {
+    private double radius;
+    private String color;
+}
+
+public Circle(double radius) {
+        this.radius = radius;
+        this.color = \"black\";
+        
+    @Override
+    public void draw() {
+        System.out.println(\"Drawing a circle with radius \" + radius);
+    }
+    
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+    
+    @Override
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public String getColor() {
+        return color;
+    }
+}
+
+A: "What must any class that implements Drawable provide?",
+B: "Why can Circle implement both Drawable and Colorable interfaces?",
+C: "What would happen if Circle didn't implement the getArea() method?",
+D: "Can you create: Drawable shape = new Circle(5.0); ?"</code></pre>
+                            </div>
+
+                            <div class="col-12 toggle-solutions" id="p_1213p4-java-solution-col">
+                                <!-- **SOLUTION** -->
+                                <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#p_1213p4-java-solution"
+                                    role="button" aria-expanded="false" aria-controls="p_1213p4-java-solution">
+                                    Toggle solution
+                                </a>
+                                <div class="collapse" id="p_1213p4-java-solution">
+                                    <div class="card card-body">
+                                        <samp>
+                                            <pre>
+                                                <code class="language-java">A: "Implementations for both draw() and getArea() methods",
+B: "Java allows multiple interface implementation, unlike single inheritance with classes",
+C: "Compilation error - Circle must implement all methods from interfaces it implements",
+D: "Yes, because Circle implements Drawable interface (polymorphic assignment)"
+                                                </code>
+                                            </pre>
+                                        </samp>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3" id="p_1213p4react" style="display:none">
+                    <label class="form-label" for="p_1213p4react">Which of the following best describes your experience
+                        with the preceding problem?</label>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p4react"
+                            id="p_1213p4react1" value="1">
+                        <label class="form-check-label" for="p_1213p4react1">I did not understand the problem or did not
+                            know how to begin solving it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p4react"
+                            id="p_1213p4react2" value="2">
+                        <label class="form-check-label" for="p_1213p4react2">I was able to begin solving the problem but
+                            got stuck.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p4react"
+                            id="p_1213p4react3" value="3">
+                        <label class="form-check-label" for="p_1213p4react3">I was able to complete the problem but
+                            struggled greatly.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p4react"
+                            id="p_1213p4react4" value="4">
+                        <label class="form-check-label" for="p_1213p4react4">I was able to solve the problem with a
+                            little difficulty.</label>
+                    </div>
+                    <div class="form-check">
+                        <input autocomplete="off" class="form-check-input" type="radio" name="p_1213p4react"
+                            id="p_1213p4react5" value="5">
+                        <label class="form-check-label" for="p_1213p4react5">I was able to solve the problem with no
+                            difficulty.</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Java/1213 Q5 Abstract Classes -->
+
+            <!-- Java/1213 Q6 Aggregation -->
+
+            <!-- Java/1213 Q7 Association -->
+
 
             <!-- Placeholder element? -->
             <textarea id="result-hidden" name="result" style="display:none"></textarea>
