@@ -247,3 +247,118 @@ const questionDataJava = [
         }
     }
 ];
+
+const oopQuestionData = [
+    {
+        "title": "Encapsulation",
+        "text": "Encapsulation is the principle of bundling data and methods that work on that data within a single unit (class) and restricting access to some components. This is achieved through access modifiers and getter/setter methods. Consider this enhanced class: <code>public class BankAccount {\n    private double balance;\n    private String accountNumber;\n    \n    public BankAccount(String accountNumber, double initialBalance) {\n        this.accountNumber = accountNumber;\n        this.balance = initialBalance;\n    }\n    \n    public void deposit(double amount) {\n        if (amount > 0) {\n            balance += amount;\n        }\n    }\n    \n    public boolean withdraw(double amount) {\n        if (amount > 0 && amount <= balance) {\n            balance -= amount;\n            return true;\n        }\n        return false;\n    }\n    \n    public double getBalance() {\n        return balance;\n    }\n}</code>",
+        "question": {
+            "a": "Why doesn't this class have a setBalance() method?",
+            "b": "What happens if you try to deposit a negative amount?",
+            "c": "What does the withdraw method return if you try to withdraw more money than the balance?",
+            "d": "How does this class demonstrate the principle of encapsulation?"
+        },
+        "answer": {
+            "a": "To prevent unauthorized direct modification of the balance - balance should only change through controlled deposit/withdraw operations",
+            "b": "Nothing happens - the deposit method checks if amount > 0 before adding to balance",
+            "c": "false (the withdrawal is rejected)",
+            "d": "It hides the internal balance field and controls access through specific methods that enforce business rules"
+        }
+    },
+    {
+        "title": "Inheritance",
+        "text": "Inheritance allows a class to inherit properties and behaviors from another class, promoting code reuse and creating hierarchical relationships. The subclass extends the superclass using the 'extends' keyword. Consider these classes: <code>public class Vehicle {\n    protected String brand;\n    protected int year;\n    \n    public Vehicle(String brand, int year) {\n        this.brand = brand;\n        this.year = year;\n    }\n    \n    public void start() {\n        System.out.println(\"Vehicle starting...\");\n    }\n}\n\npublic class Car extends Vehicle {\n    private int doors;\n    \n    public Car(String brand, int year, int doors) {\n        super(brand, year);\n        this.doors = doors;\n    }\n    \n    @Override\n    public void start() {\n        System.out.println(\"Car engine starting...\");\n    }\n    \n    public void honk() {\n        System.out.println(\"Beep beep!\");\n    }\n}</code>",
+        "question": {
+            "a": "What does 'super(brand, year)' do in the Car constructor?",
+            "b": "If you create: Car myCar = new Car(\"Toyota\", 2020, 4); and call myCar.start(), what will be printed?",
+            "c": "Can a Car object access the 'brand' field directly? Why or why not?",
+            "d": "What's the difference between the start() method in Vehicle and Car?"
+        },
+        "answer": {
+            "a": "It calls the parent class (Vehicle) constructor to initialize the brand and year fields",
+            "b": "\"Car engine starting...\"",
+            "c": "Yes, because 'brand' is declared as protected in the Vehicle class, making it accessible to subclasses",
+            "d": "Car overrides the start() method to provide its own implementation instead of using the parent's version"
+        }
+    },
+    {
+        "title": "Polymorphism",
+        "text": "Polymorphism allows objects of different types to be treated as objects of a common base type, with the actual method implementation determined at runtime. This enables flexible and extensible code. Consider this example: <code>public class Animal {\n    public void makeSound() {\n        System.out.println(\"Some generic animal sound\");\n    }\n}\n\npublic class Dog extends Animal {\n    @Override\n    public void makeSound() {\n        System.out.println(\"Woof!\");\n    }\n}\n\npublic class Cat extends Animal {\n    @Override\n    public void makeSound() {\n        System.out.println(\"Meow!\");\n    }\n}\n\n// Usage:\nAnimal[] animals = {new Dog(), new Cat(), new Animal()};\nfor (Animal animal : animals) {\n    animal.makeSound();\n}</code>",
+        "question": {
+            "a": "What will be printed when the loop executes?",
+            "b": "How does Java determine which makeSound() method to call for each animal?",
+            "c": "What is this type of polymorphism called?",
+            "d": "Could you assign: Animal myPet = new Dog(); ? Why or why not?"
+        },
+        "answer": {
+            "a": "\"Woof!\" then \"Meow!\" then \"Some generic animal sound\"",
+            "b": "Through dynamic method dispatch - Java determines the actual object type at runtime and calls the appropriate overridden method",
+            "c": "Runtime polymorphism (or method overriding)",
+            "d": "Yes, because Dog IS-A Animal (inheritance relationship allows this assignment)"
+        }
+    },
+    {
+        "title": "Interfaces",
+        "text": "Interfaces define contracts that implementing classes must follow. They contain method signatures that must be implemented by any class that implements the interface. Unlike inheritance, a class can implement multiple interfaces. Consider this example: <code>public interface Drawable {\n    void draw();\n    double getArea();\n}\n\npublic interface Colorable {\n    void setColor(String color);\n    String getColor();\n}\n\npublic class Circle implements Drawable, Colorable {\n    private double radius;\n    private String color;\n    \n    public Circle(double radius) {\n        this.radius = radius;\n        this.color = \"black\";\n    }\n    \n    @Override\n    public void draw() {\n        System.out.println(\"Drawing a circle with radius \" + radius);\n    }\n    \n    @Override\n    public double getArea() {\n        return Math.PI * radius * radius;\n    }\n    \n    @Override\n    public void setColor(String color) {\n        this.color = color;\n    }\n    \n    @Override\n    public String getColor() {\n        return color;\n    }\n}</code>",
+        "question": {
+            "a": "What must any class that implements Drawable provide?",
+            "b": "Why can Circle implement both Drawable and Colorable interfaces?",
+            "c": "What would happen if Circle didn't implement the getArea() method?",
+            "d": "Can you create: Drawable shape = new Circle(5.0); ?"
+        },
+        "answer": {
+            "a": "Implementations for both draw() and getArea() methods",
+            "b": "Java allows multiple interface implementation, unlike single inheritance with classes",
+            "c": "Compilation error - Circle must implement all methods from interfaces it implements",
+            "d": "Yes, because Circle implements Drawable interface (polymorphic assignment)"
+        }
+    },
+    {
+        "title": "Abstract Classes",
+        "text": "Abstract classes are classes that cannot be instantiated and may contain both abstract methods (without implementation) and concrete methods (with implementation). They provide a middle ground between interfaces and regular classes. Consider this example: <code>public abstract class Shape {\n    protected String name;\n    \n    public Shape(String name) {\n        this.name = name;\n    }\n    \n    // Abstract method - must be implemented by subclasses\n    public abstract double getArea();\n    \n    // Concrete method - inherited by all subclasses\n    public void printInfo() {\n        System.out.println(\"Shape: \" + name + \", Area: \" + getArea());\n    }\n}\n\npublic class Rectangle extends Shape {\n    private double width, height;\n    \n    public Rectangle(double width, double height) {\n        super(\"Rectangle\");\n        this.width = width;\n        this.height = height;\n    }\n    \n    @Override\n    public double getArea() {\n        return width * height;\n    }\n}</code>",
+        "question": {
+            "a": "Can you create an object like: Shape s = new Shape(\"test\"); ?",
+            "b": "What must the Rectangle class provide since it extends Shape?",
+            "c": "Does Rectangle inherit the printInfo() method?",
+            "d": "What's the main difference between an abstract class and an interface?"
+        },
+        "answer": {
+            "a": "No, compilation error - cannot instantiate abstract classes",
+            "b": "An implementation of the abstract getArea() method",
+            "c": "Yes, concrete methods in abstract classes are inherited normally",
+            "d": "Abstract classes can have constructors, instance variables, and concrete methods; interfaces (before Java 8) could only have abstract methods"
+        }
+    },
+    {
+        "title": "Aggregation",
+        "text": "Aggregation represents a 'has-a' relationship where objects are composed of other objects, but the contained objects can exist independently. It's a weaker form of composition. Consider this example: <code>public class Student {\n    private String name;\n    private int id;\n    \n    public Student(String name, int id) {\n        this.name = name;\n        this.id = id;\n    }\n    \n    public String getName() { return name; }\n    public int getId() { return id; }\n}\n\npublic class Course {\n    private String courseName;\n    private List<Student> enrolledStudents;\n    \n    public Course(String courseName) {\n        this.courseName = courseName;\n        this.enrolledStudents = new ArrayList<>();\n    }\n    \n    public void enrollStudent(Student student) {\n        enrolledStudents.add(student);\n    }\n    \n    public void removeStudent(Student student) {\n        enrolledStudents.remove(student);\n    }\n    \n    public int getEnrollmentCount() {\n        return enrolledStudents.size();\n    }\n}</code>",
+        "question": {
+            "a": "What type of relationship exists between Course and Student?",
+            "b": "If a Course object is destroyed, what happens to the Student objects?",
+            "c": "Can a Student be enrolled in multiple courses?",
+            "d": "What does the enrollStudent() method demonstrate about aggregation?"
+        },
+        "answer": {
+            "a": "Aggregation (has-a relationship) - a Course has Students",
+            "b": "Nothing - Student objects continue to exist independently",
+            "c": "Yes, the same Student object can be referenced by multiple Course objects",
+            "d": "It shows that objects can be added to aggregations dynamically, and they maintain their independent existence"
+        }
+    },
+    {
+        "title": "Association",
+        "text": "Association represents relationships between classes where objects of one class are connected to objects of another class. Unlike aggregation, association doesn't imply ownership. Consider this example: <code>public class Author {\n    private String name;\n    private List<Book> booksWritten;\n    \n    public Author(String name) {\n        this.name = name;\n        this.booksWritten = new ArrayList<>();\n    }\n    \n    public void addBook(Book book) {\n        booksWritten.add(book);\n        book.setAuthor(this);\n    }\n    \n    public String getName() { return name; }\n}\n\npublic class Book {\n    private String title;\n    private Author author;\n    \n    public Book(String title) {\n        this.title = title;\n    }\n    \n    public void setAuthor(Author author) {\n        this.author = author;\n    }\n    \n    public Author getAuthor() { return author; }\n    public String getTitle() { return title; }\n}\n\n// Usage:\nAuthor author = new Author(\"J.K. Rowling\");\nBook book = new Book(\"Harry Potter\");\nauthor.addBook(book);</code>",
+        "question": {
+            "a": "What type of association exists between Author and Book?",
+            "b": "How many authors can a book have in this design?",
+            "c": "What happens when author.addBook(book) is called?",
+            "d": "Is this association unidirectional or bidirectional?"
+        },
+        "answer": {
+            "a": "Author knows about Books, and Book knows about its Author (Bidirectional)",
+            "b": "One - each Book has a single Author reference",
+            "c": "The book is added to the author's list AND the book's author reference is set to this author",
+            "d": "Bidirectional - both classes maintain references to each other"
+        }
+    }
+];
