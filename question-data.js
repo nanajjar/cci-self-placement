@@ -250,22 +250,6 @@ const questionDataJava = [
 
 const oopQuestionData = [
     {
-        "title": "Class Design",
-        "text": "Classes are the foundation of Object-Oriented Programming. They serve as blueprints for creating objects that contain both data (fields) and behavior (methods). Consider this basic class: <code>public class Student {\n    private String name;\n    private int age;\n    \n    public Student(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    public String getName() {\n        return name;\n    }\n    \n    public int getAge() {\n        return age;\n    }\n}</code>",
-        "question": {
-            "a": "What does the constructor do in this class?",
-            "b": "Why are the fields 'name' and 'age' declared as private?",
-            "c": "If you create a Student object with: Student s = new Student(\"Alice\", 20); what would s.getName() return?",
-            "d": "What would happen if you tried to access s.name directly?"
-        },
-        "answer": {
-            "a": "The constructor initializes a new Student object with the provided name and age values",
-            "b": "Private fields ensure encapsulation by preventing direct access from outside the class",
-            "c": "\"Alice\"",
-            "d": "Compilation error - cannot access private field from outside the class"
-        }
-    },
-    {
         "title": "Encapsulation",
         "text": "Encapsulation is the principle of bundling data and methods that work on that data within a single unit (class) and restricting access to some components. This is achieved through access modifiers and getter/setter methods. Consider this enhanced class: <code>public class BankAccount {\n    private double balance;\n    private String accountNumber;\n    \n    public BankAccount(String accountNumber, double initialBalance) {\n        this.accountNumber = accountNumber;\n        this.balance = initialBalance;\n    }\n    \n    public void deposit(double amount) {\n        if (amount > 0) {\n            balance += amount;\n        }\n    }\n    \n    public boolean withdraw(double amount) {\n        if (amount > 0 && amount <= balance) {\n            balance -= amount;\n            return true;\n        }\n        return false;\n    }\n    \n    public double getBalance() {\n        return balance;\n    }\n}</code>",
         "question": {
@@ -371,7 +355,7 @@ const oopQuestionData = [
             "d": "Is this association unidirectional or bidirectional?"
         },
         "answer": {
-            "a": "Bidirectional association - Author knows about Books, and Book knows about its Author",
+            "a": "Author knows about Books, and Book knows about its Author (Bidirectional)",
             "b": "One - each Book has a single Author reference",
             "c": "The book is added to the author's list AND the book's author reference is set to this author",
             "d": "Bidirectional - both classes maintain references to each other"
