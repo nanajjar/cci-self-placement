@@ -343,9 +343,10 @@
                 <label for="p_1212p1">Programming is, at it's core, all about solving problems. Read the following cases
                     and try to determine how you would approach each one. You may want to think in terms of pseudo-code
                     or flow charts.</b></label><br />
+                <h3>Problem-Solving </h3>
 
                 <!-- Nav tabs -->
-                <ul class="nav nav-pills mb-2" id="p_1212p1-lang" role="tablist">
+                <ul class="nav nav-pills mb-2" id="p_1212p1-lang" role="tablist" style="display: none;">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="p_1212p1-java-tab" data-bs-toggle="tab"
                             data-bs-target="#p_1212p1-java" type="button" role="tab" aria-controls="p_1212p1-java"
@@ -873,7 +874,7 @@ C: "15"
                     <div class="tab-pane" id="p_1212p5-java" role="tabpanel" aria-labelledby="p_1212p5-java-tab">
                         <div class="row">
                             <div class="col-12" id="p_1212p3-java-problem-col">
-                                <pre><code class="language-java"><code>
+                                <pre><code class="language-java">
 public static String checkSteak(int temp) {
     if (temp >= 145) {
         return \"Ready to eat\";
@@ -884,7 +885,7 @@ public static String checkSteak(int temp) {
 A: "checkSteak(150)",
 B: "checkSteak(140)",
 C: "checkSteak(145)"
-}</code></code></pre>
+}</code></pre>
                             </div>
 
                             <div class="col-12 toggle-solutions" id="p_1212p3-java-solution-col">
@@ -918,7 +919,13 @@ C: "\"Ready to eat\""</code></pre>
                         aria-labelledby="p_1212p5-python-tab">
                         <div class="row">
                             <div class="col-12" id="p_1212p5-python-problem-col">
-                                <pre><code class="language-python">A: "check_steak(150)",
+                                <pre><code class="language-python">def check_steak(temp):
+    if temp >= 145:
+        return \"Ready to eat\"
+    else:
+        return \"Keep cooking\
+
+A: "check_steak(150)",
 B: "check_steak(140)",
 C: "check_steak(145)"</code></pre>
                             </div>
