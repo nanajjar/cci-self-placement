@@ -360,5 +360,37 @@ const oopQuestionData = [
             "c": "The book is added to the author's list AND the book's author reference is set to this author",
             "d": "Bidirectional - both classes maintain references to each other"
         }
+    },
+    {
+        "title": "Exception Handling",
+        "text": "Exception handling allows programs to gracefully handle runtime errors and unexpected situations. Java uses try-catch-finally blocks to handle exceptions, and you can create custom exceptions for specific scenarios. Consider this example: <code>public class BankingService {\n    public static class InsufficientFundsException extends Exception {\n        public InsufficientFundsException(String message) {\n            super(message);\n        }\n    }\n    \n    public void transferMoney(BankAccount from, BankAccount to, double amount) \n            throws InsufficientFundsException {\n        try {\n            if (from.getBalance() < amount) {\n                throw new InsufficientFundsException(\n                    \"Insufficient funds. Available: \" + from.getBalance());\n            }\n            \n            from.withdraw(amount);\n            to.deposit(amount);\n            System.out.println(\"Transfer successful\");\n            \n        } catch (IllegalArgumentException e) {\n            System.err.println(\"Invalid transfer amount: \" + e.getMessage());\n            throw e;\n        } finally {\n            System.out.println(\"Transfer operation completed\");\n        }\n    }\n    \n    public static void main(String[] args) {\n        BankAccount acc1 = new BankAccount(\"123\", 100.0);\n        BankAccount acc2 = new BankAccount(\"456\", 50.0);\n        BankingService service = new BankingService();\n        \n        try {\n            service.transferMoney(acc1, acc2, 150.0);\n        } catch (InsufficientFundsException e) {\n            System.err.println(\"Transfer failed: \" + e.getMessage());\n        }\n    }\n}</code>",
+        "question": {
+            "a": "What type of exception is InsufficientFundsException and why does the transferMoney method need 'throws' in its signature?",
+            "b": "What will be printed when the main method tries to transfer $150 from an account with $100?",
+            "c": "When does the finally block execute?",
+            "d": "What's the difference between throwing an InsufficientFundsException and an IllegalArgumentException in this code?"
+        },
+        "answer": {
+            "a": "It's a checked exception (extends Exception) - checked exceptions must be declared in method signatures with 'throws' or handled with try-catch",
+            "b": "\"Transfer operation completed\" (from finally) then \"Transfer failed: Insufficient funds. Available: 100.0\" (from catch in main)",
+            "c": "Always - whether the try block succeeds, an exception is thrown, or an exception is caught",
+            "d": "InsufficientFundsException is custom/checked and must be declared; IllegalArgumentException is unchecked (runtime) and doesn't need to be declared"
+        }
+    },
+    {
+        "title": "Generics",
+        "text": "Generics enable type safety by allowing classes, interfaces, and methods to operate on objects of various types while providing compile-time type checking. They eliminate the need for casting and prevent ClassCastException at runtime. Consider this example: <code>public class DataContainer<T> {\n    private List<T> items;\n    \n    public DataContainer() {\n        this.items = new ArrayList<T>();\n    }\n    \n    public void addItem(T item) {\n        items.add(item);\n    }\n    \n    public T getItem(int index) {\n        if (index >= 0 && index < items.size()) {\n            return items.get(index);\n        }\n        return null;\n    }\n    \n    public <U extends Comparable<U>> U findMax(List<U> list) {\n        if (list.isEmpty()) return null;\n        \n        U max = list.get(0);\n        for (U item : list) {\n            if (item.compareTo(max) > 0) {\n                max = item;\n            }\n        }\n        return max;\n    }\n    \n    public int getSize() {\n        return items.size();\n    }\n}\n\n// Usage:\nDataContainer<String> stringContainer = new DataContainer<>();\nstringContainer.addItem(\"Hello\");\nString result = stringContainer.getItem(0); // No casting needed\n\nDataContainer<Integer> intContainer = new DataContainer<>();\nintContainer.addItem(42);</code>",
+        "question": {
+            "a": "What does the <T> in the class declaration mean and what advantage does it provide?",
+            "b": "Why doesn't stringContainer.getItem(0) require casting to String?",
+            "c": "What does <U extends Comparable<U>> mean in the findMax method signature?",
+            "d": "What would happen if you tried: stringContainer.addItem(123)?"
+        },
+        "answer": {
+            "a": "T is a type parameter that acts as a placeholder for any type; it provides compile-time type safety and eliminates the need for casting",
+            "b": "Because generics preserve type information - the compiler knows stringContainer holds String objects, so getItem(0) returns a String",
+            "c": "U is a bounded type parameter that must implement Comparable<U> interface, ensuring objects can be compared with compareTo()",
+            "d": "Compilation error - 123 is an Integer, but stringContainer only accepts String objects"
+        }
     }
 ];
