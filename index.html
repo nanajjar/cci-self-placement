@@ -33,6 +33,16 @@
     <script src="script.js"></script>
 
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVN5WTXTKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FVN5WTXTKP');
+    </script>
+
     <title>ITSC 121X Self-Placement</title>
 </head>
 
@@ -738,7 +748,7 @@ b: "Jane Doe is 35 years old."</code></pre>
                                 <pre><code class="language-java">public static int addByTwos() {
     int total = 0;
     for (int i = 0; i < 5; i++) {
-        total = total + 2;\n    
+        total = total + 2;
     }
     return total;
 }
@@ -1278,7 +1288,8 @@ D: "4"</code></pre>
             <!-- Java/1213 Topics (Data Types)-->
             <div class="mb-3 question" id="topics-1213" style="display:none">
                 <div>
-                    <h3 class="text-center">If you've made it this far, you should consider taking the Credit by Exam
+                    <h3 class="text-center alert-info alert" role="alert">If you've made it this far, you should
+                        consider taking the Credit by Exam
                         for ITSC 1212. <br />
                         Since ITSC 1213 primarily focuses on Java syntax, the following questions will be given in Java.
                     </h3>
@@ -1538,7 +1549,7 @@ D: "It hides the internal balance field and controls access through specific met
         }
 
     public void start() {
-        System.out.println(\"Vehicle starting...\");
+        System.out.println("Vehicle starting...");
     }
     
     public class Car extends Vehicle {
@@ -1552,17 +1563,17 @@ D: "It hides the internal balance field and controls access through specific met
     
     @Override
     public void start() {
-        System.out.println(\"Car engine starting...\");
+        System.out.println("Car engine starting...");
     }
     
     public void honk() {
-        System.out.println(\"Beep beep!\");
+        System.out.println("Beep beep!");
     }
 }
 
-A: "What does" super(brand, year) "do in the Car constructor?",
-B: "If you create:"" Car myCar = new Car("Toyota", 2020, 4); "and call" myCar.start()", what will be printed?",
-C: "Can a Car object access the 'brand' field directly? Why or why not?",
+A: "What does" super(brand, year) "do in the Car constructor?"
+B: "If you create:"" Car myCar = new Car("Toyota", 2020, 4); "and call" myCar.start()", what will be printed?"
+C: "Can a Car object access the 'brand' field directly? Why or why not?"
 D: "What's the difference between the" start() "method in" Vehicle "and" Car?"</code></pre>
                             </div>
 
@@ -1652,7 +1663,7 @@ D: "Car overrides the" start() "method to provide its own implementation instead
                                 <pre><code class="language-java">public class Animal {
 
     public void makeSound() {
-        System.out.println(\"Some generic animal sound\");
+        System.out.println("Some generic animal sound");
     }
 }
 
@@ -1660,7 +1671,7 @@ public class Dog extends Animal {
     
     @Override
     public void makeSound() {
-        System.out.println(\"Woof!\");
+        System.out.println("Woof!");
     }
 }
     
@@ -1668,7 +1679,7 @@ public class Cat extends Animal {
 
     @Override
     public void makeSound() {
-        System.out.println(\"Meow!\");
+        System.out.println("Meow!");
     }
 }
 
@@ -1784,11 +1795,11 @@ public class Circle implements Drawable, Colorable {
 
 public Circle(double radius) {
         this.radius = radius;
-        this.color = \"black\";
+        this.color = "black";
         
     @Override
     public void draw() {
-        System.out.println(\"Drawing a circle with radius \" + radius);
+        System.out.println("Drawing a circle with radius " + radius);
     }
     
     @Override
@@ -1911,7 +1922,7 @@ D: "Yes, because Circle implements Drawable interface (polymorphic assignment)"
     
     // Concrete method - inherited by all subclasses
     public void printInfo() {
-        System.out.println(\"Shape: \" + name + \", Area: \" + getArea());    
+        System.out.println("Shape: " + name + ", Area: " + getArea());    
     }
 }
     
@@ -1919,7 +1930,7 @@ public class Rectangle extends Shape {
     private double width, height;
         
     public Rectangle(double width, double height) {
-        super(\"Rectangle\");
+        super("Rectangle");
             this.width = width;
             this.height = height;
         }
@@ -1930,7 +1941,7 @@ public class Rectangle extends Shape {
     }
 }
 
-A: "Can you create an object like:" Shape s = new Shape("test");"" ?"
+A: "Can you create an object like:" Shape s = new Shape("test");" ?"
 B: "What must the" Rectangle "class provide since it" extends Shape"?"
 C: "Does" Rectangle "inherit the" printInfo() "method?"
 D: "What's the main difference between an abstract class and an interface?"</code></pre>
@@ -2393,7 +2404,7 @@ D: InsufficientFundsException "is custom/checked and must be declared;"" Illegal
                 </div>
             </div>
 
-            <!-- Generics -->
+            <!-- Java/1213 Q9 Generics -->
             <div class="mb-3 question" id="p_1213p9" style="display: none;">
                 <label for="p_1213p9">Generics enable type safety by allowing classes, interfaces, and methods to
                     operate on objects of various types while providing compile-time type checking. They eliminate the
@@ -2420,11 +2431,11 @@ D: InsufficientFundsException "is custom/checked and must be declared;"" Illegal
                     <div class="tab-pane active" id="p_1213p9-java" role="tabpanel" aria-labelledby="p_1213p9-java-tab">
                         <div class="row">
                             <div class="col-12" id="p_1213p9-java-problem-col">
-                                <pre><code class="language-java">public class DataContainer<T> {
-    private List<T> items;
+                                <pre><code class="language-java">public class DataContainer&#60;T&#62; {
+    private List&#60;T&#62; items;
     
     public DataContainer() {
-        this.items = new ArrayList<T>();
+        this.items = new ArrayList&#60;T>&#62;();
             }
             
     public void addItem(T item) {
@@ -2438,7 +2449,7 @@ D: InsufficientFundsException "is custom/checked and must be declared;"" Illegal
         return null;
     }
     
-    public <U extends Comparable<U>> U findMax(List<U> list) {
+    public &#60;U extends Comparable&#60;U&#62;&#62; U findMax(List&#60;U&#62; list) {
         if (list.isEmpty()) 
             return null;
 
@@ -2459,16 +2470,16 @@ D: InsufficientFundsException "is custom/checked and must be declared;"" Illegal
 }
 
 // Usage:
-    DataContainer<String> stringContainer = new DataContainer<>();
+    DataContainer&#60;String&#62; stringContainer = new DataContainer&#60;&#62;();
     stringContainer.addItem("Hello");
     String result = stringContainer.getItem(0); 
 
-    DataContainer<Integer> intContainer = new DataContainer<>();
+    DataContainer&#60;Integer&#62; intContainer = new DataContainer&#60;&#62;();
     intContainer.addItem(42);
 
-A: "What does the" <T> "in the class declaration mean and what advantage does it provide?"
+A: "What does the" &#60;T&#62; "in the class declaration mean and what advantage does it provide?"
 B: "Why doesn't" stringContainer.getItem(0) "require casting to String?"
-C: "What does" <U extends Comparable<U> "mean in the findMax method signature?"
+C: "What does" &#60;U extends Comparable&#60;U&#62;&#62; "mean in the findMax method signature?"
 D: "What would happen if you tried:" stringContainer.addItem(123)"?"</code></pre>
                             </div>
 
@@ -2483,7 +2494,7 @@ D: "What would happen if you tried:" stringContainer.addItem(123)"?"</code></pre
                                         <samp>
                                             <pre><code class="language-java">A: T "is a type parameter that acts as a placeholder for any type; it provides compile-time type safety and eliminates the need for casting"
 B: "Because generics preserve type information - the compiler knows stringContainer holds String objects, so getItem(0) returns a String"
-C: "U is a bounded type parameter that must implement" Comparable<U> "interface, ensuring objects can be compared with" compareTo()
+C: "U is a bounded type parameter that must implement" Comparable&#60;U&#62; "interface, ensuring objects can be compared with" compareTo()
 D: "Compilation error - 123 is an Integer, but stringContainer only accepts String objects"
                                                 </code></pre>
                                         </samp>
@@ -2698,9 +2709,11 @@ D: "Compilation error - 123 is an Integer, but stringContainer only accepts Stri
             <div class="mb-3 alert alert-warning result" role="alert" id="result-adv" style="display:none">
                 <h1 class="text-center"><span class="badge bg-warning text-dark">Talk to Advising</span></h1>
                 <p>
-                    Based on your responses, there are multiple courses that might be a good fit for you. We encourage
-                    you to attempt the credit by exam for ITSC 1212 as there is no cost nor penalty for attempting the
-                    exam.<br />
+                    Based on your responses, there are multiple courses that might be a good fit for you. It may be in
+                    your best interest to attempt the credit by exam for ITSC 1212 as there is no cost nor penalty for
+                    attempting the exam; the only time payment is required is if you were to psas the exam <em>and</em>
+                    wish to receive
+                    credit.<br />
                     We recommend you speak with a member of <a
                         href="https://advising.charlotte.edu/your-design-team/find-my-advisor/">
                         advising team</a> so they can learn more about your situation and help you find the best
