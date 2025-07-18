@@ -33,17 +33,7 @@
     <script src="script.js"></script>
 
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVN5WTXTKP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-FVN5WTXTKP');
-    </script>
-
-    <title>ITSC 121X Self-Placement</title>
+    <title>CSE 121X Self-Placement</title>
 </head>
 
 <body>
@@ -894,9 +884,10 @@ public static String checkSteak(int temp) {
     }
 }
 
-A: checkSteak(150)
-B: checkSteak(140)
-C: checkSteak(145)</code></pre>
+A: "checkSteak(150)",
+B: "checkSteak(140)",
+C: "checkSteak(145)"
+}</code></code></pre>
                             </div>
 
                             <div class="col-12 toggle-solutions" id="p_1212p5-java-solution-col">
@@ -908,10 +899,16 @@ C: checkSteak(145)</code></pre>
                                 <div class="collapse" id="p_1212p5-java-solution">
                                     <div class="card card-body">
                                         <samp>
-                                            <pre><code class="language-java">A: "Ready to eat"
-B: "Keep cooking"
-C: "Ready to eat
-</code></pre>
+                                            <pre><code class="language-java">
+def check_steak(temp):
+    if temp >= 145:
+        return \"Ready to eat\"
+    else:
+        return \"Keep cooking\"
+        
+A: "\"Ready to eat\"",
+B: "\"Keep cooking\"",
+C: "\"Ready to eat\""</code></pre>
                                         </samp>
                                     </div>
                                 </div>
@@ -924,15 +921,9 @@ C: "Ready to eat
                         aria-labelledby="p_1212p5-python-tab">
                         <div class="row">
                             <div class="col-12" id="p_1212p5-python-problem-col">
-                                <pre><code class="language-python">def check_steak(temp):
-    if temp >= 145:
-        return "Ready to eat"
-    else:
-        return "Keep cooking"
-        
-A: checkSteak(150)
-B: checkSteak(140)
-C: checkSteak(145)</code></pre>
+                                <pre><code class="language-python">A: "check_steak(150)",
+B: "check_steak(140)",
+C: "check_steak(145)"</code></pre>
                             </div>
 
                             <div class="col-12 toggle-solutions" id="p_1212p5-python-solution-col">
